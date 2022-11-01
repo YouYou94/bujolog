@@ -1,12 +1,10 @@
-import { Routes } from 'react-router-dom';
 import './App.css';
-import TopBar from './components/TopBar/TopBar.jsx';
+import Router from './Router/Router';
 
 function App() {
   return (
     <div className="App">
-      <TopBar />
-      <Routes></Routes>
+      <Router />
     </div>
   );
 }
