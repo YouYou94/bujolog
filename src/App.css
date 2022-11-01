@@ -14,6 +14,9 @@ font style
 etc..
 
 */
+body {
+  font-size: 16px;
+}
 
 .App {
   height: 100vh;
@@ -23,5 +26,5 @@ etc..
   display: flex;
   flex-direction: column;
 
-  margin: 0;
+  margin: 0 5rem;
 }
