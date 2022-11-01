@@ -2,6 +2,9 @@ import styled from 'styled-components';
 
 export const TopBarContainer = styled.div`
   height: 3rem;
+
+  border-bottom: 1px solid black;
+  padding: 0 5rem;
 `;
 
 /* Contact Styled-Components */
@@ -16,11 +19,17 @@ export const TopBarContactContainer = styled.div`
 export const TopBarContactSite = styled.a`
   margin: 0 0.5rem;
 
-  font-size: 1.3rem;
+  color: black;
+
+  font-size: 1.1rem;
 
   text-decoration: none;
 
   &:visited {
+    color: gray;
+  }
+
+  &:hover {
     color: black;
   }
 `;
@@ -28,13 +37,17 @@ export const TopBarContactSite = styled.a`
 export const TopBarContactEmail = styled.a`
   margin: 0 0.5rem;
 
-  color: black;
+  color: gray;
 
-  font-size: 1.3rem;
+  font-size: 1.1rem;
 
   text-decoration: none;
 
   &:visited {
+    color: gray;
+  }
+
+  &:hover {
     color: black;
   }
 `;
