@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const TopBarContainer = styled.div`
-  height: 3rem;
+  height: 2.5rem;
 
   border-bottom: 1px solid black;
   padding: 0 5rem;
