@@ -1,9 +1,10 @@
 /* CSS */
 /*
+position
 
 width & height
 
-box-model - flex & grid
+box-model - display - flex & grid
 
 margin - border - padding
 
@@ -29,4 +30,5 @@ body {
 
 .practice {
   align-items: center;
+  color: blanchedalmond;
 }

@@ -14,6 +14,11 @@ export const TopBarContactContainer = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
+
+  @media screen and (max-width: 48rem) {
+    flex-direction: row;
+    justify-content: center;
+  }
 `;
 
 export const TopBarContactSite = styled.a`

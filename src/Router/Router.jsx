@@ -2,11 +2,11 @@ import { Routes } from 'react-router-dom';
 import Header from '../components/Header/Header.jsx';
 import TopBar from '../components/TopBar/TopBar.jsx';
 
-const Router = () => {
+const Router = ({ isToggle, setIsToggle }) => {
   return (
     <>
       <TopBar />
-      <Header />
+      <Header isToggle={isToggle} setIsToggle={setIsToggle} />
       <Routes></Routes>
     </>
   );
