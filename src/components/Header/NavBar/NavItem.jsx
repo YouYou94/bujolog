@@ -1,3 +1,4 @@
+import { useNavigate } from 'react-router-dom';
 import * as Styled from '../styled.jsx';
 
 /* On Login */
@@ -6,7 +7,12 @@ export const Home = () => {
 };
 
 export const Mybujo = () => {
-  return <Styled.HeaderNavItem>내 저널</Styled.HeaderNavItem>;
+  const navigate = useNavigate();
+  return (
+    <Styled.HeaderNavItem onClick={() => navigate('/bujolog/@:username')}>
+      내 저널
+    </Styled.HeaderNavItem>
+  );
 };
 
 export const Bujotalk = () => {
@@ -14,10 +20,24 @@ export const Bujotalk = () => {
 };
 
 export const Logout = () => {
-  return <Styled.HeaderNavItem>로그아웃</Styled.HeaderNavItem>;
+  const navigate = useNavigate();
+  return (
+    <Styled.HeaderNavItem
+      onClick={() => {
+        navigate('/bujolog');
+      }}
+    >
+      로그아웃
+    </Styled.HeaderNavItem>
+  );
 };
 
 /* Non Login */
 export const Login = () => {
-  return <Styled.HeaderNavItem>로그인</Styled.HeaderNavItem>;
+  const navigate = useNavigate();
+  return (
+    <Styled.HeaderNavItem onClick={() => navigate('/bujolog/auth/login')}>
+      로그인
+    </Styled.HeaderNavItem>
+  );
 };
