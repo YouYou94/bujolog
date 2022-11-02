@@ -5,6 +5,10 @@ export const TopBarContainer = styled.div`
 
   border-bottom: 1px solid black;
   padding: 0 5rem;
+
+  @media screen and (max-width: 48rem) {
+    padding: 0 1rem;
+  }
 `;
 
 /* Contact Styled-Components */
