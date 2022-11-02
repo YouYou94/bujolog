@@ -1,11 +1,19 @@
 import * as Styled from '../styled.jsx';
-import { Mybujo, Logout } from './NavItem.jsx';
+import { Mybujo, Logout, Login } from './NavItem.jsx';
 
-const NavBar = ({ isToggle }) => {
+const NavBar = ({ isToggle, isLogin, setIsLogin }) => {
   return (
     <Styled.HeaderNavBar isToggle={isToggle}>
-      <Mybujo />
-      <Logout />
+      {isLogin ? (
+        <>
+          <Mybujo />
+          <Logout />
+        </>
+      ) : (
+        <>
+          <Login />
+        </>
+      )}
     </Styled.HeaderNavBar>
   );
 };
