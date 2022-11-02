@@ -35,7 +35,6 @@ export const HeaderNavBar = styled.div`
     position: absolute;
 
     width: 12rem;
-    height: 6rem;
 
     display: ${prop => (prop.isToggle === true ? 'flex' : 'none')};
     flex-direction: column;
