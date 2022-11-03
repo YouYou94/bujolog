@@ -10,11 +10,7 @@ const Router = ({ user, isLogin }) => {
   return (
     <>
       <TopBar isLogin={isLogin} />
-      {useLocation().pathname === AUTHPATH ? (
-        <></>
-      ) : (
-        <Header isLogin={isLogin} user={user} />
-      )}
+      {useLocation().pathname === AUTHPATH ? <></> : <Header />}
 
       <Routes>
         {/* Main */}
