@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const AuthPageTitle = styled.div`
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
 
   font-family: 'CormorantGaramond';
   font-size: 3rem;
