@@ -31,8 +31,6 @@ export const TopBarUserMenu = styled.div`
 export const TopBarUserName = styled.span`
   margin: 0 0.2rem;
 
-  font-size: 0.8rem;
-
   ${TopBarUserMenu}:hover & {
     color: gray;
     text-decoration: underline;
@@ -41,8 +39,6 @@ export const TopBarUserName = styled.span`
 
 export const TopBarSpan = styled.span`
   margin: 0 0.2rem;
-
-  font-size: 0.8rem;
 `;
 
 export const TopBarUserMenuBar = styled.div`
@@ -56,7 +52,7 @@ export const TopBarUserMenuBar = styled.div`
 
   display: none;
 
-  border: 1px solid black;
+  border: 1px solid gray;
 
   background-color: white;
 
@@ -74,8 +70,6 @@ export const TopBarUserMenuContent = styled.div`
   align-items: center;
 
   padding-left: 0.5rem;
-
-  font-size: 0.8rem;
 
   &:hover {
     background-color: rgb(250, 250, 250);
