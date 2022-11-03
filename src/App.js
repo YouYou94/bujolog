@@ -27,7 +27,7 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
-        <Router user={user} isLogin={isLogin} setIsLogin={setIsLogin} />
+        <Router user={user} isLogin={isLogin} />
       </BrowserRouter>
     </div>
   );

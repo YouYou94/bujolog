@@ -4,7 +4,7 @@ import Header from '../components/Header/Header.jsx';
 import TopBar from '../components/TopBar/TopBar.jsx';
 import AuthPage from '../pages/Auth/AuthPage.jsx';
 
-const Router = ({ user, isLogin, setIsLogin }) => {
+const Router = ({ user, isLogin }) => {
   console.log(user);
   return (
     <>
@@ -12,7 +12,7 @@ const Router = ({ user, isLogin, setIsLogin }) => {
       {useLocation().pathname === AUTHPATH ? (
         <></>
       ) : (
-        <Header isLogin={isLogin} setIsLogin={setIsLogin} />
+        <Header isLogin={isLogin} />
       )}
 
       <Routes>
