@@ -1,12 +1,14 @@
 import * as Styled from '../styled.jsx';
-import { Mybujo, Logout, Login } from './NavItem.jsx';
+import Login from './NavItem/Login.jsx';
+import Logout from './NavItem/Logout.jsx';
+import Myjournal from './NavItem/Myjournal.jsx';
 
 const NavBar = ({ isToggle, isLogin, setIsLogin }) => {
   return (
     <Styled.HeaderNavBar isToggle={isToggle}>
       {isLogin ? (
         <>
-          <Mybujo />
+          <Myjournal />
           <Logout />
         </>
       ) : (
