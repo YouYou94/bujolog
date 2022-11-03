@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/bujolog/static/css/main.da0230a1.css",
-    "main.js": "/bujolog/static/js/main.7f942f32.js",
+    "main.js": "/bujolog/static/js/main.6dce7a5f.js",
     "static/media/GowunDodum-Regular.ttf": "/bujolog/static/media/GowunDodum-Regular.39c9a39c246c3c54c53e.ttf",
     "static/media/YeonSung-Regular.ttf": "/bujolog/static/media/YeonSung-Regular.7ed1d94edc5aa5a9e78a.ttf",
     "static/media/Nabla-Regular.ttf": "/bujolog/static/media/Nabla-Regular.987a0a27b3d98e6ae920.ttf",
@@ -9,10 +9,10 @@
     "static/media/CormorantGaramond-MediumItalic.ttf": "/bujolog/static/media/CormorantGaramond-MediumItalic.9cfefa19b48747b36e42.ttf",
     "index.html": "/bujolog/index.html",
     "main.da0230a1.css.map": "/bujolog/static/css/main.da0230a1.css.map",
-    "main.7f942f32.js.map": "/bujolog/static/js/main.7f942f32.js.map"
+    "main.6dce7a5f.js.map": "/bujolog/static/js/main.6dce7a5f.js.map"
   },
   "entrypoints": [
     "static/css/main.da0230a1.css",
-    "static/js/main.7f942f32.js"
+    "static/js/main.6dce7a5f.js"
   ]
 }
