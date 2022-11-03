@@ -21,7 +21,7 @@ export const HeaderWrapper = styled.div``;
 
 /* Header Title */
 export const HeaderTitle = styled.div`
-  font-family: 'Nabla';
+  font-family: 'CormorantGaramond';
   font-size: 3rem;
 
   cursor: pointer;

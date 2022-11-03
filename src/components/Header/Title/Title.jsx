@@ -7,7 +7,7 @@ const Title = () => {
   return (
     <Styled.HeaderWrapper>
       <Styled.HeaderTitle onClick={() => navigate('/bujolog')}>
-        bujolog
+        bujo-log
       </Styled.HeaderTitle>
     </Styled.HeaderWrapper>
   );
