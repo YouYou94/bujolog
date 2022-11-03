@@ -1,4 +1,4 @@
-import * as Styled from './styled.jsx';
+import * as Styled from './TopBarContactStyled.jsx';
 import BlogContact from './ContactContents/BlogContact.jsx';
 import EmailContact from './ContactContents/EmailContact.jsx';
 import GithubContact from './ContactContents/GithubContact.jsx';

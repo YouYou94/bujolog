@@ -1,11 +1,11 @@
-import * as Styled from './styled.jsx';
+import * as Styled from './TopBarMenuStyled.jsx';
 import Login from './NonLogin/Login.jsx';
-import UserMenu from './OnLogin/UserMenu.jsx';
+import UserBar from './OnLogin/UserBar.jsx';
 
-const TopBarMenu = ({ isLogin }) => {
+const TopBarMenu = ({ isLogin, user }) => {
   return (
     <Styled.TopBarMenuContainer>
-      {isLogin ? <UserMenu /> : <Login />}
+      {isLogin ? <UserBar user={user} /> : <Login />}
     </Styled.TopBarMenuContainer>
   );
 };

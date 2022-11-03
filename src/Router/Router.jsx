@@ -9,7 +9,7 @@ import MainPage from '../pages/Main/MainPage.jsx';
 const Router = ({ user, isLogin }) => {
   return (
     <>
-      <TopBar isLogin={isLogin} />
+      <TopBar isLogin={isLogin} user={user} />
       {useLocation().pathname === AUTHPATH ? <></> : <Header />}
 
       <Routes>
