@@ -3,12 +3,12 @@ import Login from './NavItem/Login.jsx';
 import Logout from './NavItem/Logout.jsx';
 import Myjournal from './NavItem/Myjournal.jsx';
 
-const NavBar = ({ isToggle, isLogin }) => {
+const NavBar = ({ isToggle, isLogin, user }) => {
   return (
     <Styled.HeaderNavBar isToggle={isToggle}>
       {isLogin ? (
         <>
-          <Myjournal />
+          <Myjournal user={user} />
           <Logout />
         </>
       ) : (
