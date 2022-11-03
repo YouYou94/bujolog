@@ -1,5 +1,5 @@
-import * as Styled from '../styled.jsx';
-import Login from './MenuContents/Login.jsx';
+import * as Styled from './styled.jsx';
+import Login from './NonLogin/Login.jsx';
 
 const TopBarMenu = ({ isLogin }) => {
   return (

@@ -1,4 +1,4 @@
-import * as Styled from '../../styled.jsx';
+import * as Styled from '../styled.jsx';
 import { faBlog } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 

@@ -1,4 +1,4 @@
-import * as Styled from '../../styled.jsx';
+import * as Styled from '../styled.jsx';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
