@@ -4,7 +4,8 @@ import Header from '../components/Header/Header.jsx';
 import TopBar from '../components/TopBar/TopBar.jsx';
 import AuthPage from '../pages/Auth/AuthPage.jsx';
 
-const Router = ({ isLogin, setIsLogin }) => {
+const Router = ({ user, isLogin, setIsLogin }) => {
+  console.log(user);
   return (
     <>
       <TopBar />

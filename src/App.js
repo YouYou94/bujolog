@@ -7,11 +7,17 @@ import { onAuthStateChanged } from 'firebase/auth';
 
 function App() {
   const [isLogin, setIsLogin] = useState(false);
+  const [user, setUser] = useState(null);
 
   useEffect(() => {
     onAuthStateChanged(authService, user => {
       if (user) {
         setIsLogin(true);
+        setUser({
+          displayName: user.displayName,
+          id: user.email.split('@')[0],
+          provider: user.providerData[0].providerId.split('.')[0],
+        });
       } else {
         setIsLogin(false);
       }
@@ -21,7 +27,7 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
-        <Router isLogin={isLogin} setIsLogin={setIsLogin} />
+        <Router user={user} isLogin={isLogin} setIsLogin={setIsLogin} />
       </BrowserRouter>
     </div>
   );
