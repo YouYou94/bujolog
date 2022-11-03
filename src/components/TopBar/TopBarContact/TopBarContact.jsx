@@ -3,7 +3,7 @@ import BlogContact from './ContactContents/BlogContact.jsx';
 import EmailContact from './ContactContents/EmailContact.jsx';
 import GithubContact from './ContactContents/GithubContact.jsx';
 
-const Contact = () => {
+const TopBarContact = () => {
   return (
     <Styled.TopBarContactContainer>
       <GithubContact />
@@ -13,4 +13,4 @@ const Contact = () => {
   );
 };
 
-export default Contact;
+export default TopBarContact;

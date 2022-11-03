@@ -3,10 +3,11 @@ import * as Styled from '../../styled.jsx';
 
 const Login = () => {
   const navigate = useNavigate();
+
   return (
-    <Styled.HeaderNavItem onClick={() => navigate('/bujolog/auth/login')}>
+    <Styled.TopBarMenuLogin onClick={() => navigate('/bujolog/auth/login')}>
       로그인
-    </Styled.HeaderNavItem>
+    </Styled.TopBarMenuLogin>
   );
 };
 

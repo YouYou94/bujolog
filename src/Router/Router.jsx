@@ -9,7 +9,7 @@ import MainPage from '../pages/Main/MainPage.jsx';
 const Router = ({ user, isLogin }) => {
   return (
     <>
-      <TopBar />
+      <TopBar isLogin={isLogin} />
       {useLocation().pathname === AUTHPATH ? (
         <></>
       ) : (
@@ -24,7 +24,9 @@ const Router = ({ user, isLogin }) => {
         <Route path="/bujolog/auth/login" element={<AuthPage />} />
 
         {/* User */}
-        <Route path={`/bujolog/${user.url}`} element={<UserPage />} />
+        {user !== null ? (
+          <Route path={`/bujolog/${user.url}`} element={<UserPage />} />
+        ) : null}
       </Routes>
     </>
   );

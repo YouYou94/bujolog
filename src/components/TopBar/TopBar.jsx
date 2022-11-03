@@ -1,10 +1,12 @@
-import Contact from './Contact/Contact.jsx';
+import TopBarContact from './TopBarContact/TopBarContact.jsx';
+import TopBarMenu from './TopBarMenu/TopBarMenu.jsx';
 import * as Styled from './styled.jsx';
 
-const TopBar = () => {
+const TopBar = ({ isLogin }) => {
   return (
     <Styled.TopBarContainer>
-      <Contact />
+      <TopBarContact />
+      <TopBarMenu isLogin={isLogin} />
     </Styled.TopBarContainer>
   );
 };
