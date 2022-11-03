@@ -1,6 +1,6 @@
 import { useNavigate } from 'react-router-dom';
-import Swal from 'sweetalert2';
 import { authService } from '../../../../../Firebase.js';
+import Swal from 'sweetalert2';
 import * as Styled from '../../TopBarMenuStyled.jsx';
 
 const Logout = () => {

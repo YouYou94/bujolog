@@ -6,7 +6,7 @@ const UserBar = ({ user }) => {
   return (
     <Styled.TopBarUserMenu>
       <NameBar user={user} />
-      <MenuBar />
+      <MenuBar url={user.url} />
     </Styled.TopBarUserMenu>
   );
 };
