@@ -2,4 +2,4 @@
 
 #### 링크
 
-LINK [https://youyou94.github.io/bujolog/]
+[LINK](https://youyou94.github.io/bujolog/)
