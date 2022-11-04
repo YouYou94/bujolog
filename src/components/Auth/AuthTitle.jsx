@@ -6,7 +6,7 @@ const AuthTitle = () => {
 
   return (
     <Styled.AuthPageTitle onClick={() => navigate('/bujolog')}>
-      bujo-log
+      Bujo-log
     </Styled.AuthPageTitle>
   );
 };

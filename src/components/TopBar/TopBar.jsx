@@ -1,12 +1,14 @@
-import TopBarContact from './TopBarContact/TopBarContact.jsx';
-import TopBarMenu from './TopBarMenu/TopBarMenu.jsx';
-import * as Styled from './styled.jsx';
+import LeftContents from './LeftContents.jsx';
+import MiddleContents from './MiddleContents.jsx';
+import RightContents from './RightContents.jsx';
+import * as Styled from './TopBarStyled.jsx';
 
-const TopBar = ({ isLogin, user }) => {
+const TopBar = () => {
   return (
     <Styled.TopBarContainer>
-      <TopBarContact />
-      <TopBarMenu isLogin={isLogin} user={user} />
+      <LeftContents />
+      <MiddleContents />
+      <RightContents />
     </Styled.TopBarContainer>
   );
 };

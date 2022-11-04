@@ -1,9 +1,9 @@
 import { BrowserRouter } from 'react-router-dom';
 import { useEffect, useState } from 'react';
-import Router from './Router/Router.jsx';
-import './App.css';
 import { authService } from './Firebase.js';
 import { onAuthStateChanged } from 'firebase/auth';
+import Router from './Router/Router.jsx';
+import './App.css';
 
 function App() {
   const [isLogin, setIsLogin] = useState(false);
@@ -26,6 +26,7 @@ function App() {
     return (url += id);
   };
 
+  // 유저 정보 확인!
   useEffect(() => {
     onAuthStateChanged(authService, user => {
       if (user) {

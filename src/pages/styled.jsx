@@ -4,8 +4,10 @@ export const PageContainer = styled.div`
   flex: 1;
 
   display: flex;
+  justify-content: center;
+  align-items: center;
 
-  padding: 0 5rem;
+  margin: 0 15rem;
 `;
 
 /* Auth Page */
