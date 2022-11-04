@@ -8,7 +8,7 @@ const TopBar = ({ user, isLogin }) => {
     <Styled.TopBarContainer>
       <LeftContents isLogin={isLogin} user={user} />
       <MiddleContents />
-      <RightContents isLogin={isLogin} user={user} />
+      <RightContents isLogin={isLogin} />
     </Styled.TopBarContainer>
   );
 };

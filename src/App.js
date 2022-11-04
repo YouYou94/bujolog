@@ -9,35 +9,15 @@ function App() {
   const [isLogin, setIsLogin] = useState(false);
   const [user, setUser] = useState(null);
 
-  const getUserUrl = (id, provider) => {
-    let url = '';
-    switch (provider) {
-      case 'google':
-        url = 'GG@';
-        break;
-      case 'github':
-        url = 'GH@';
-        break;
-      default:
-        url = 'DE@';
-        break;
-    }
-
-    return (url += id);
-  };
-
   // 유저 정보 확인!
   useEffect(() => {
     onAuthStateChanged(authService, user => {
       if (user) {
+        console.log(user.uid);
         setIsLogin(true);
         setUser({
           displayName: user.displayName,
-          id: user.email.split('@')[0],
-          url: getUserUrl(
-            user.email.split('@')[0],
-            user.providerData[0].providerId.split('.')[0]
-          ),
+          id: user.uid,
         });
       } else {
         setIsLogin(false);
