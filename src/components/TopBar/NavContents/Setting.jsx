@@ -1,6 +1,6 @@
-import * as Styled from '../TopBarStyled.jsx';
 import Login from './SettingItem/Login.jsx';
 import Logout from './SettingItem/Logout.jsx';
+import * as Styled from './NavContentsStyled.jsx';
 
 const Setting = ({ isLogin, setDisplay }) => {
   return (

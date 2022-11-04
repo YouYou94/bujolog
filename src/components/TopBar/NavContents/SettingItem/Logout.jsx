@@ -1,7 +1,7 @@
 import { useNavigate } from 'react-router-dom';
 import { authService } from '../../../../Firebase.js';
 import Swal from 'sweetalert2';
-import * as Styled from '../../TopBarStyled.jsx';
+import * as Styled from '../NavContentsStyled.jsx';
 
 const Logout = ({ setDisplay }) => {
   const navigate = useNavigate();

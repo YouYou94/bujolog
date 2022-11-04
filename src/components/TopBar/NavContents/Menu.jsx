@@ -1,4 +1,4 @@
-import * as Styled from '../TopBarStyled.jsx';
+import * as Styled from './NavContentsStyled.jsx';
 
 const Menu = () => {
   return <Styled.MenuContainer></Styled.MenuContainer>;
