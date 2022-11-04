@@ -5,7 +5,7 @@ const Mybujo = ({ url }) => {
   const navigate = useNavigate();
 
   return (
-    <Styled.TopBarUserMenuContent onClick={() => navigate(`/bujo/${url}`)}>
+    <Styled.TopBarUserMenuContent onClick={() => navigate(`/bujolog/${url}`)}>
       나의저널
     </Styled.TopBarUserMenuContent>
   );
