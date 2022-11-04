@@ -1,14 +1,14 @@
 import { useNavigate } from 'react-router-dom';
 import * as Styled from '../TopBarStyled.jsx';
 
-const LoginButton = () => {
+const StartButton = ({ url }) => {
   const navigate = useNavigate();
 
   return (
-    <Styled.RightContentsButton onClick={() => navigate('/bujolog/auth/login')}>
-      로그인
+    <Styled.RightContentsButton onClick={() => navigate(`/bujolog/${url}`)}>
+      시작하기
     </Styled.RightContentsButton>
   );
 };
 
-export default LoginButton;
+export default StartButton;

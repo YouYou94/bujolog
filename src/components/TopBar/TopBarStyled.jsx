@@ -20,8 +20,7 @@ export const TopBarContentsContainer = styled.div`
 `;
 
 /* Left Contents */
-// 메뉴 버튼
-export const TopBarNavButton = styled.div`
+export const NavButton = styled.div`
   margin-right: 1rem;
 
   font-size: 1.5rem;
@@ -29,15 +28,14 @@ export const TopBarNavButton = styled.div`
   cursor: pointer;
 `;
 
-// 타이틀
-export const TopBarTitle = styled.div`
+export const Title = styled.div`
   font-family: 'CormorantGaramond';
   font-size: 1.5rem;
 
   cursor: pointer;
 `;
 
-// 메뉴 바
+/* Nav Contents */
 const open = keyframes`
   from {
     left: -20rem;
@@ -53,7 +51,7 @@ const close = keyframes`
   }
 `;
 
-export const TopBarNavBar = styled.div`
+export const NavBar = styled.div`
   position: absolute;
 
   width: 18rem;
@@ -64,6 +62,9 @@ export const TopBarNavBar = styled.div`
 
   z-index: 999;
 
+  display: flex;
+  flex-direction: column;
+
   border-right: 1px solid gray;
   background-color: white;
 
@@ -72,7 +73,7 @@ export const TopBarNavBar = styled.div`
     0.8s;
 `;
 
-export const TopBarNavBarWhiteSpace = styled.div`
+export const NavBarWhiteSpace = styled.div`
   position: absolute;
 
   width: 100%;
@@ -84,11 +85,47 @@ export const TopBarNavBarWhiteSpace = styled.div`
   background-color: rgb(0, 0, 0, 0.2);
 `;
 
+export const ProfileContainer = styled.div`
+  height: 18rem;
+`;
+
+export const MenuContainer = styled.div`
+  flex: 1;
+`;
+
+export const SettingContainer = styled.div`
+  height: 5rem;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+`;
+
+export const SettingButton = styled.button`
+  width: 5rem;
+  height: 1.8rem;
+
+  border: 1px solid gray;
+  border-radius: 2rem;
+
+  font-family: 'GowunDodum';
+
+  color: black;
+  background-color: white;
+
+  &:hover {
+    color: gray;
+  }
+
+  cursor: pointer;
+`;
+
 /* Middle Contents */
 
 /* Right Contents */
 /* Non Login */
-export const TopBarLoginButton = styled.button`
+export const RightContentsButton = styled.button`
   width: 7rem;
   height: 2rem;
 

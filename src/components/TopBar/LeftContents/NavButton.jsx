@@ -4,9 +4,9 @@ import * as Styled from '../TopBarStyled.jsx';
 
 const NavButton = ({ setDisplay }) => {
   return (
-    <Styled.TopBarNavButton onClick={() => setDisplay('open')}>
+    <Styled.NavButton onClick={() => setDisplay('open')}>
       <FontAwesomeIcon icon={faBarsStaggered} />
-    </Styled.TopBarNavButton>
+    </Styled.NavButton>
   );
 };
 

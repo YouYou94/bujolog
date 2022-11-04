@@ -4,9 +4,7 @@ import * as Styled from '../TopBarStyled';
 const Title = () => {
   const navigate = useNavigate();
   return (
-    <Styled.TopBarTitle onClick={() => navigate('/bujolog')}>
-      Bujo-log
-    </Styled.TopBarTitle>
+    <Styled.Title onClick={() => navigate('/bujolog')}>Bujo-log</Styled.Title>
   );
 };
 
