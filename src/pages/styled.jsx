@@ -8,6 +8,10 @@ export const PageContainer = styled.div`
   align-items: center;
 
   margin: 0 15rem;
+
+  @media screen and (max-width: 768px) {
+    margin: 0 1rem;
+  }
 `;
 
 /* Auth Page */

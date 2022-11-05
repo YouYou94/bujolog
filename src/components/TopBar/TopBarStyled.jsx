@@ -17,6 +17,10 @@ export const TopBarContentsContainer = styled.div`
   display: flex;
 
   margin: 0 2rem;
+
+  @media screen and (max-width: 768px) {
+    margin: 0 1rem;
+  }
 `;
 
 /* Left Contents */
@@ -26,6 +30,10 @@ export const NavButton = styled.div`
   font-size: 1.5rem;
 
   cursor: pointer;
+
+  @media screen and (max-width: 768px) {
+    font-size: 1.1rem;
+  }
 `;
 
 export const Title = styled.div`
@@ -33,6 +41,10 @@ export const Title = styled.div`
   font-size: 1.5rem;
 
   cursor: pointer;
+
+  @media screen and (max-width: 768px) {
+    font-size: 1.1rem;
+  }
 `;
 
 /* Middle Contents */
@@ -57,6 +69,13 @@ export const RightContentsButton = styled.button`
   }
 
   cursor: pointer;
+
+  @media screen and (max-width: 768px) {
+    width: 4rem;
+    height: 1.5rem;
+
+    font-size: 0.7rem;
+  }
 `;
 
 /* On Login */

@@ -7,6 +7,12 @@ export const AuthPageTitle = styled.div`
   font-size: 3rem;
 
   cursor: pointer;
+
+  @media screen and (max-width: 768px) {
+    margin-bottom: 2rem;
+
+    font-size: 2rem;
+  }
 `;
 
 export const AuthSocialLoginButton = styled.button`
@@ -22,4 +28,11 @@ export const AuthSocialLoginButton = styled.button`
   font-size: 1.3rem;
 
   cursor: pointer;
+
+  @media screen and (max-width: 768px) {
+    width: 20rem;
+    height: 2rem;
+
+    font-size: 1.1rem;
+  }
 `;
