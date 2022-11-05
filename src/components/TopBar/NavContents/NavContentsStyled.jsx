@@ -51,6 +51,7 @@ export const NavBarWhiteSpace = styled.div`
   background-color: rgb(0, 0, 0, 0.2);
 `;
 
+/* Profile */
 export const ProfileContainer = styled.div`
   height: 16rem;
 
@@ -109,10 +110,47 @@ export const ProfileButton = styled.button`
   cursor: pointer;
 `;
 
+/* Menu */
 export const MenuContainer = styled.div`
   flex: 1;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 `;
 
+const emphasis = keyframes`
+  from {
+    font-size: 1rem;
+  } to {
+    font-size: 1.1rem;
+  }
+
+`;
+
+export const MenuItem = styled.div`
+  width: 100%;
+  height: 3rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-family: 'GowunDodum';
+
+  cursor: pointer;
+
+  &:hover {
+    font-size: 1.1rem;
+
+    background-color: rgb(150, 150, 255, 0.1);
+
+    animation: ${emphasis} 0.3s;
+  }
+`;
+
+/* Setting */
 export const SettingContainer = styled.div`
   height: 5rem;
 
