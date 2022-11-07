@@ -36,11 +36,11 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
-        <LoginContext.Provider value={isLogin}>
-          <UserContext.Provider value={user}>
+        <UserContext.Provider value={user}>
+          <LoginContext.Provider value={isLogin}>
             <Router />
-          </UserContext.Provider>
-        </LoginContext.Provider>
+          </LoginContext.Provider>
+        </UserContext.Provider>
       </BrowserRouter>
     </div>
   );

@@ -1,4 +1,6 @@
 // Menu Header Components
+import UserName from './MenuHeader/UserName.jsx';
+import MenuBarTitle from './MenuHeader/MenuBarTitle.jsx';
 
 // Menu Section Components
 import DefaultMenu from './MenuSection/DefaultItem/DefaultMenu.jsx';
@@ -15,8 +17,15 @@ import { LoginContext } from '../../Context/Context.jsx';
 // styled-components
 import * as Styled from './MenuStyled.jsx';
 
-export const MenuHeader = () => {
-  return <Styled.MenuHeaderContainer></Styled.MenuHeaderContainer>;
+export const MenuHeader = ({ setDisplay }) => {
+  const isLogin = useContext(LoginContext);
+
+  return (
+    <Styled.MenuHeaderContainer>
+      <MenuBarTitle />
+      {isLogin ? <UserName setDisplay={setDisplay} /> : <></>}
+    </Styled.MenuHeaderContainer>
+  );
 };
 
 export const MenuSection = ({ setDisplay }) => {

@@ -9,7 +9,7 @@ const NavBar = ({ display, setDisplay }) => {
   return (
     <>
       <Styled.MenuBar display={display}>
-        <MenuHeader />
+        <MenuHeader setDisplay={setDisplay} />
         <MenuSection setDisplay={setDisplay} />
         <MenuFooter setDisplay={setDisplay} />
       </Styled.MenuBar>

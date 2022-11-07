@@ -54,7 +54,36 @@ export const MenuBarWhiteSpace = styled.div`
   Menu Header
 */
 export const MenuHeaderContainer = styled.div`
-  height: 5rem;
+  height: 3rem;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  border-bottom: 2px solid rgb(220, 220, 220);
+`;
+
+export const MenuBarTitle = styled.div`
+  margin-left: 1rem;
+
+  font-family: 'CormorantGaramond';
+  font-size: 1.5rem;
+
+  cursor: pointer;
+`;
+
+export const UserNameWrap = styled.div`
+  margin-right: 1rem;
+
+  font-family: 'GowunDodum';
+
+  cursor: pointer;
+`;
+
+export const UserName = styled.span`
+  ${UserNameWrap}:hover & {
+    text-decoration: underline;
+  }
 `;
 
 /* 
@@ -73,6 +102,9 @@ export const MenuContainer = styled.div`
 
   display: flex;
   flex-direction: column;
+
+  border-bottom: 2px solid rgb(220, 220, 220);
+  padding: 2rem 0;
 `;
 
 export const MenuTitle = styled.div`
