@@ -2,6 +2,7 @@
 // Menu Section Components
 // Menu Footer Components
 import Contact from './MenuFooter/ContactItem/Contact.jsx';
+import Setting from './MenuFooter/SettingItem/Setting.jsx';
 
 // styled-components
 import * as Styled from './MenuStyled.jsx';
@@ -17,6 +18,7 @@ export const MenuSection = () => {
 export const MenuFooter = ({ setDisplay }) => {
   return (
     <Styled.MenuFooterContainer>
+      <Setting setDisplay={setDisplay} />
       <Contact />
     </Styled.MenuFooterContainer>
   );
