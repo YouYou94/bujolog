@@ -1,8 +1,8 @@
 // Menu Header Components
 
 // Menu Section Components
-import DefaultMenu from './MenuSection/DefaultMenu/DefaultMenu.jsx';
-import UserMenu from './MenuSection/UserMenu/UserMenu.jsx';
+import DefaultMenu from './MenuSection/DefaultItem/DefaultMenu.jsx';
+import UserMenu from './MenuSection/UserItem/UserMenu.jsx';
 
 // Menu Footer Components
 import Contact from './MenuFooter/ContactItem/Contact.jsx';
