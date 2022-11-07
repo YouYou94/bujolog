@@ -1,8 +1,12 @@
 import Login from './SettingItem/Login.jsx';
 import Logout from './SettingItem/Logout.jsx';
 import * as Styled from './NavContentsStyled.jsx';
+import { useContext } from 'react';
+import { LoginContext } from '../../../Context/Context.jsx';
 
-const Setting = ({ isLogin, setDisplay }) => {
+const Setting = ({ setDisplay }) => {
+  const isLogin = useContext(LoginContext);
+
   return (
     <Styled.SettingContainer>
       {isLogin ? (

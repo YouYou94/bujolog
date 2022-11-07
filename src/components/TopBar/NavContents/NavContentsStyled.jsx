@@ -35,7 +35,7 @@ export const NavBar = styled.div`
   background-color: white;
 
   animation: ${prop =>
-      prop.display === 'open' ? open : prop.display ? close : ''}
+      prop.display === 'open' ? open : prop.display === 'close' ? close : ''}
     0.8s;
 `;
 

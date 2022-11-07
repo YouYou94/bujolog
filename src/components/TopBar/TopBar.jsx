@@ -3,12 +3,12 @@ import MiddleContents from './MiddleContents.jsx';
 import RightContents from './RightContents.jsx';
 import * as Styled from './TopBarStyled.jsx';
 
-const TopBar = ({ user, isLogin }) => {
+const TopBar = ({ user }) => {
   return (
     <Styled.TopBarContainer>
-      <LeftContents isLogin={isLogin} user={user} />
+      <LeftContents user={user} />
       <MiddleContents />
-      <RightContents isLogin={isLogin} />
+      <RightContents />
     </Styled.TopBarContainer>
   );
 };

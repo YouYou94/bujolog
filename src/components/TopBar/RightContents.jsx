@@ -1,10 +1,14 @@
+import { useContext } from 'react';
 import { useLocation } from 'react-router-dom';
+import { LoginContext } from '../../Context/Context.jsx';
 import LoginButton from './RightContents/LoginButton.jsx';
 import StartButton from './RightContents/StartButton.jsx';
 import * as Styled from './TopBarStyled.jsx';
 
-const RightContents = ({ isLogin }) => {
+const RightContents = () => {
   const pathName = useLocation().pathname;
+
+  const isLogin = useContext(LoginContext);
 
   return (
     <Styled.TopBarContentsContainer>
