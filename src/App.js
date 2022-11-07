@@ -10,7 +10,7 @@ import Router from './Router/Router.jsx';
 
 // CSS
 import './App.css';
-import { LoginContext } from './Context/Context.jsx';
+import { LoginContext, UserContext } from './Context/Context.jsx';
 
 function App() {
   const [isLogin, setIsLogin] = useState(false);
@@ -37,7 +37,9 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <LoginContext.Provider value={isLogin}>
-          <Router user={user} />
+          <UserContext.Provider value={user}>
+            <Router />
+          </UserContext.Provider>
         </LoginContext.Provider>
       </BrowserRouter>
     </div>

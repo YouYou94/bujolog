@@ -1,6 +1,9 @@
+import { useContext } from 'react';
+import { UserContext } from '../../../../Context/Context.jsx';
 import * as Styled from '../NavContentsStyled.jsx';
 
-const OnLoginProfile = ({ user }) => {
+const OnLoginProfile = () => {
+  const user = useContext(UserContext);
   return (
     <>
       <Styled.ProfilePicture></Styled.ProfilePicture>

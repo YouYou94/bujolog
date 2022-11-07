@@ -3,11 +3,11 @@ import Profile from './Profile.jsx';
 import Setting from './Setting.jsx';
 import * as Styled from './NavContentsStyled.jsx';
 
-const NavBar = ({ user, display, setDisplay }) => {
+const NavBar = ({ display, setDisplay }) => {
   return (
     <>
       <Styled.NavBar display={display}>
-        <Profile user={user} />
+        <Profile />
         <Menu />
         <Setting setDisplay={setDisplay} />
       </Styled.NavBar>

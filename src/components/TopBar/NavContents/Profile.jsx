@@ -6,12 +6,12 @@ import { LoginContext } from '../../../Context/Context.jsx';
 
 // 프로필 이미지 나중에 로그인 접속자에 따라 변경하기
 
-const Profile = ({ user }) => {
+const Profile = () => {
   const isLogin = useContext(LoginContext);
 
   return (
     <Styled.ProfileContainer>
-      {isLogin ? <OnLoginProfile user={user} /> : <NonLoginProfile />}
+      {isLogin ? <OnLoginProfile /> : <NonLoginProfile />}
     </Styled.ProfileContainer>
   );
 };
