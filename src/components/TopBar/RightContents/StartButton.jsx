@@ -1,5 +1,5 @@
 import { useNavigate } from 'react-router-dom';
-import * as Styled from '../../../styled/TopBarStyled.jsx';
+import * as Styled from '../TopBarStyled.jsx';
 
 const StartButton = () => {
   const navigate = useNavigate();

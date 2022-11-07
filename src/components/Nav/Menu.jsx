@@ -1,5 +1,5 @@
 import MyBujo from './MenuItem/MyBujo.jsx';
-import * as Styled from '../../../styled/NavContentsStyled.jsx';
+import * as Styled from './NavStyled.jsx';
 
 // 로그인 여부 확인하기!
 const Menu = () => {

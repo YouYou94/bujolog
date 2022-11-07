@@ -1,5 +1,5 @@
 import { useNavigate } from 'react-router-dom';
-import * as Styled from '../../../styled/TopBarStyled';
+import * as Styled from '../TopBarStyled';
 
 const Title = () => {
   const navigate = useNavigate();

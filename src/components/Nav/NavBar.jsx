@@ -1,13 +1,11 @@
 import Menu from './Menu.jsx';
-import Profile from './Profile.jsx';
 import Setting from './Setting.jsx';
-import * as Styled from '../../../styled/NavContentsStyled.jsx';
+import * as Styled from './NavStyled.jsx';
 
 const NavBar = ({ display, setDisplay }) => {
   return (
     <>
       <Styled.NavBar display={display}>
-        <Profile />
         <Menu />
         <Setting setDisplay={setDisplay} />
       </Styled.NavBar>

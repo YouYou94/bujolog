@@ -1,5 +1,5 @@
 import { useNavigate } from 'react-router-dom';
-import * as Styled from '../../../../styled/NavContentsStyled.jsx';
+import * as Styled from '../NavStyled.jsx';
 
 const Login = ({ setDisplay }) => {
   const navigate = useNavigate();

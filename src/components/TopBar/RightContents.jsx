@@ -3,7 +3,7 @@ import { useLocation } from 'react-router-dom';
 import { LoginContext } from '../../Context/Context.jsx';
 import LoginButton from './RightContents/LoginButton.jsx';
 import StartButton from './RightContents/StartButton.jsx';
-import * as Styled from '../../styled/TopBarStyled.jsx';
+import * as Styled from './TopBarStyled.jsx';
 
 const RightContents = () => {
   const pathName = useLocation().pathname;
