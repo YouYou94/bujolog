@@ -1,6 +1,11 @@
-import LeftContents from './LeftContents.jsx';
-import MiddleContents from './MiddleContents.jsx';
-import RightContents from './RightContents.jsx';
+// Contents Components
+import {
+  LeftContents,
+  MiddleContents,
+  RightContents,
+} from './TopBarContents.jsx';
+
+// styled-components
 import * as Styled from './TopBarStyled.jsx';
 
 const TopBar = () => {

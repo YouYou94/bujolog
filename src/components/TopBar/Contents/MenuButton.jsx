@@ -2,12 +2,12 @@ import { faBarsStaggered } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import * as Styled from '../TopBarStyled.jsx';
 
-const NavButton = ({ setDisplay }) => {
+const MenuButton = ({ setDisplay }) => {
   return (
-    <Styled.NavButton onClick={() => setDisplay('open')}>
+    <Styled.MenuIcon onClick={() => setDisplay('open')}>
       <FontAwesomeIcon icon={faBarsStaggered} />
-    </Styled.NavButton>
+    </Styled.MenuIcon>
   );
 };
 
-export default NavButton;
+export default MenuButton;

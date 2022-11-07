@@ -13,7 +13,7 @@ export const TopBarContainer = styled.div`
   border-bottom: 1px solid gray;
 `;
 
-export const TopBarContentsContainer = styled.div`
+export const ContentsContainer = styled.div`
   display: flex;
 
   margin: 0 2rem;
@@ -24,7 +24,7 @@ export const TopBarContentsContainer = styled.div`
 `;
 
 /* Left Contents */
-export const NavButton = styled.div`
+export const MenuIcon = styled.div`
   margin-right: 1rem;
 
   font-size: 1.5rem;
@@ -50,7 +50,6 @@ export const Title = styled.div`
 /* Middle Contents */
 
 /* Right Contents */
-/* Non Login */
 export const RightContentsButton = styled.button`
   width: 7rem;
   height: 2rem;
@@ -77,5 +76,3 @@ export const RightContentsButton = styled.button`
     font-size: 0.7rem;
   }
 `;
-
-/* On Login */
