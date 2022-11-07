@@ -62,7 +62,59 @@ export const MenuHeaderContainer = styled.div`
 */
 export const MenuSectionContainer = styled.div`
   flex: 1;
+
+  display: flex;
+  flex-direction: column;
 `;
+
+/* Common */
+export const MenuContainer = styled.div`
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+`;
+
+export const MenuTitle = styled.div`
+  margin: 0 0 1rem 1rem;
+
+  font-family: 'GowunDodum';
+  font-size: 1.1rem;
+`;
+
+const emphasis = keyframes`
+  from {
+    font-size: 0.9rem;
+  } to {
+    font-size: 1rem;
+  }
+
+`;
+
+export const MenuItem = styled.div`
+  width: 100%;
+  height: 3rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-family: 'GowunDodum';
+  font-size: 0.9rem;
+
+  cursor: pointer;
+
+  &:hover {
+    font-size: 1rem;
+
+    background-color: rgb(250, 250, 250, 0.5);
+
+    animation: ${emphasis} 0.3s;
+  }
+`;
+
+/* Default */
+/* User */
 
 /* 
   Menu Footer 
@@ -74,7 +126,7 @@ export const MenuFooterContainer = styled.div`
   flex-direction: column;
 `;
 
-// Setting
+/* Setting */
 export const SettingWrapper = styled.div`
   flex: 1;
 
@@ -102,7 +154,7 @@ export const SettingButton = styled.button`
   cursor: pointer;
 `;
 
-// Contact
+/* Contact */
 export const ContactWrapper = styled.div`
   flex: 1;
 
@@ -144,45 +196,5 @@ export const ContactEmail = styled.a`
 
   &:hover {
     color: black;
-  }
-`;
-
-////
-export const MenuContainer = styled.div`
-  flex: 1;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-`;
-
-const emphasis = keyframes`
-  from {
-    font-size: 1rem;
-  } to {
-    font-size: 1.1rem;
-  }
-
-`;
-
-export const MenuItem = styled.div`
-  width: 100%;
-  height: 3rem;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  font-family: 'GowunDodum';
-
-  cursor: pointer;
-
-  &:hover {
-    font-size: 1.1rem;
-
-    background-color: rgb(150, 150, 255, 0.1);
-
-    animation: ${emphasis} 0.3s;
   }
 `;
