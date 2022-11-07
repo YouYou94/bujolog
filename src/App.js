@@ -7,10 +7,10 @@ import { onAuthStateChanged } from 'firebase/auth';
 import Router from './Router/Router.jsx';
 
 // Context
+import { LoginContext, UserContext } from './Context/Context.jsx';
 
 // CSS
 import './App.css';
-import { LoginContext, UserContext } from './Context/Context.jsx';
 
 function App() {
   const [isLogin, setIsLogin] = useState(false);

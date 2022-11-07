@@ -83,6 +83,25 @@ export const SettingWrapper = styled.div`
   align-items: center;
 `;
 
+export const SettingButton = styled.button`
+  width: 5rem;
+  height: 1.8rem;
+
+  border: 1px solid gray;
+  border-radius: 2rem;
+
+  font-family: 'GowunDodum';
+
+  color: black;
+  background-color: white;
+
+  &:hover {
+    color: gray;
+  }
+
+  cursor: pointer;
+`;
+
 // Contact
 export const ContactWrapper = styled.div`
   flex: 1;
@@ -166,33 +185,4 @@ export const MenuItem = styled.div`
 
     animation: ${emphasis} 0.3s;
   }
-`;
-
-/* Setting */
-export const SettingContainer = styled.div`
-  height: 5rem;
-
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-`;
-
-export const SettingButton = styled.button`
-  width: 5rem;
-  height: 1.8rem;
-
-  border: 1px solid gray;
-  border-radius: 2rem;
-
-  font-family: 'GowunDodum';
-
-  color: black;
-  background-color: white;
-
-  &:hover {
-    color: gray;
-  }
-
-  cursor: pointer;
 `;
