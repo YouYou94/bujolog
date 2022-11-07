@@ -1,5 +1,5 @@
 import styled, { keyframes } from 'styled-components';
-import blankimage from '../../../assets/blankprofile.png';
+import blankimage from '../assets/blankprofile.png';
 
 /* Nav Contents */
 const open = keyframes`

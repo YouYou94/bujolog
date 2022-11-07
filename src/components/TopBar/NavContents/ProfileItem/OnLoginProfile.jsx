@@ -1,6 +1,6 @@
 import { useContext } from 'react';
 import { UserContext } from '../../../../Context/Context.jsx';
-import * as Styled from '../NavContentsStyled.jsx';
+import * as Styled from '../../../../styled/NavContentsStyled.jsx';
 
 const OnLoginProfile = () => {
   const user = useContext(UserContext);

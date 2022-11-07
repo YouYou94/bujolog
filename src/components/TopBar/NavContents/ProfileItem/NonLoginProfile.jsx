@@ -1,4 +1,4 @@
-import * as Styled from '../NavContentsStyled.jsx';
+import * as Styled from '../../../../styled/NavContentsStyled.jsx';
 
 const NonLoginProfile = () => {
   return (

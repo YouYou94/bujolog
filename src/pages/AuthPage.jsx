@@ -1,7 +1,7 @@
 import AuthTitle from '../components/Auth/AuthTitle.jsx';
 import GithubLogin from '../components/Auth/GithubLogin.jsx';
 import GoogleLogin from '../components/Auth/GoogleLogin.jsx';
-import * as Styled from './styled.jsx';
+import * as Styled from '../styled/PageStyled.jsx';
 
 const AuthPage = () => {
   return (

@@ -1,6 +1,6 @@
 import NonLoginProfile from './ProfileItem/NonLoginProfile.jsx';
 import OnLoginProfile from './ProfileItem/OnLoginProfile.jsx';
-import * as Styled from './NavContentsStyled.jsx';
+import * as Styled from '../../../styled/NavContentsStyled.jsx';
 import { useContext } from 'react';
 import { LoginContext } from '../../../Context/Context.jsx';
 

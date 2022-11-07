@@ -1,7 +1,7 @@
 import Menu from './Menu.jsx';
 import Profile from './Profile.jsx';
 import Setting from './Setting.jsx';
-import * as Styled from './NavContentsStyled.jsx';
+import * as Styled from '../../../styled/NavContentsStyled.jsx';
 
 const NavBar = ({ display, setDisplay }) => {
   return (
