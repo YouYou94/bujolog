@@ -5,7 +5,7 @@ import { useLocation } from 'react-router-dom';
 // TopBar Contents Components
 import MenuButton from './Contents/MenuButton.jsx';
 import Title from './Contents/Title.jsx';
-import NavBar from '../Nav/NavBar.jsx';
+import MenuBar from '../Menu/MenuBar.jsx';
 import StartButton from './Contents/StartButton.jsx';
 import LoginButton from './Contents/LoginButton.jsx';
 
@@ -23,7 +23,7 @@ export const LeftContents = () => {
     <Styled.ContentsContainer>
       <MenuButton setDisplay={setDisplay} />
       <Title />
-      <NavBar display={display} setDisplay={setDisplay} />
+      <MenuBar display={display} setDisplay={setDisplay} />
     </Styled.ContentsContainer>
   );
 };
