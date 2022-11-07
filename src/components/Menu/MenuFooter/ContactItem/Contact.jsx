@@ -1,9 +1,10 @@
 // Contact Components
 import { ContactBlog } from './ContactBlog.jsx';
+import { ContactGithub } from './ContactGithub.jsx';
+import { ContactEmail } from './ContactEmail.jsx';
 
 // styled-components
 import * as Styled from '../../MenuStyled.jsx';
-import { ContactGithub } from './ContactGithub.jsx';
 
 const Contact = () => {
   return (
@@ -13,7 +14,7 @@ const Contact = () => {
       {/* 블로그 */}
       <ContactBlog />
       {/* 이메일 */}
-      <Styled.ContactEmail />
+      <ContactEmail />
     </Styled.ContactWrapper>
   );
 };
