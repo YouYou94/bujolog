@@ -30,12 +30,12 @@ export const MenuBar = styled.div`
   display: flex;
   flex-direction: column;
 
-  border-right: 1px solid gray;
+  border-right: 1px solid rgb(220, 220, 220);
   background-color: white;
 
   animation: ${prop =>
       prop.display === 'open' ? open : prop.display === 'close' ? close : ''}
-    0.8s;
+    0.5s;
 `;
 
 export const MenuBarWhiteSpace = styled.div`
