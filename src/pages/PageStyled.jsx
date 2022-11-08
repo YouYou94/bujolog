@@ -83,3 +83,8 @@ export const NotFoundButton = styled.button`
     color: gray;
   }
 `;
+
+/* Mine Page */
+export const MinePageContainer = styled.div`
+  flex: 1;
+`;
