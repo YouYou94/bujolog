@@ -5,7 +5,7 @@ import { MenuFooter, MenuHeader, MenuSection } from './MenuContents.jsx';
 import * as Styled from './MenuStyled.jsx';
 
 // Redux로 prop drilling 해결하기!
-const NavBar = ({ display, setDisplay }) => {
+const MenuBar = ({ display, setDisplay }) => {
   return (
     <>
       <Styled.MenuBar display={display}>
@@ -32,4 +32,4 @@ const NavBar = ({ display, setDisplay }) => {
   );
 };
 
-export default NavBar;
+export default MenuBar;
