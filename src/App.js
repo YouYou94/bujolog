@@ -9,10 +9,18 @@ import Router from './Router/Router.jsx';
 // Context
 import { LoginContext, UserContext } from './Context/Context.jsx';
 
+// Redux
+import { legacy_createStore as createStore } from 'redux';
+import { Provider } from 'react-redux';
+import AppReducer from './store/store.js';
+
 // CSS
 import './App.css';
 
 function App() {
+  const store = createStore(AppReducer);
+  console.log(store.getState());
+
   const [isLogin, setIsLogin] = useState(false);
   const [user, setUser] = useState(null);
 
@@ -38,7 +46,9 @@ function App() {
       <BrowserRouter>
         <UserContext.Provider value={user}>
           <LoginContext.Provider value={isLogin}>
-            <Router />
+            <Provider store={store}>
+              <Router />
+            </Provider>
           </LoginContext.Provider>
         </UserContext.Provider>
       </BrowserRouter>
