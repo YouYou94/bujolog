@@ -59,8 +59,9 @@ export const NotFoundExplanation = styled.div`
 
 export const NotFoundWrapper = styled.div`
   margin: 2rem 0;
+  padding: 0 3rem;
 
-  text-align: center;
+  text-align: ${prop => (prop.center ? 'center' : '')};
 `;
 
 export const NotFoundButton = styled.button`
