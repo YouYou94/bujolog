@@ -1,7 +1,7 @@
 import { useNavigate } from 'react-router-dom';
 import * as Styled from './PageStyled.jsx';
 
-function NotFound() {
+const NotFound = () => {
   const navigate = useNavigate();
 
   const returnMainPage = () => navigate('/bujolog');
@@ -34,6 +34,6 @@ function NotFound() {
       </Styled.NotFoundContainer>
     </Styled.PageContainer>
   );
-}
+};
 
 export default NotFound;
