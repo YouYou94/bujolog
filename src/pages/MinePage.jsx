@@ -1,17 +1,25 @@
+// Constants
+import { NEWBIE } from '../Constants.jsx';
+
 // User Components
+import Newbie from '../components/Bujolog/Newbie/Newbie.jsx';
+import Oldbie from '../components/Bujolog/Oldbie/Oldbie.jsx';
 
 //Redux
-import { useSelector, useDispatch } from 'react-redux';
+import { useSelector } from 'react-redux';
 
 // styled-components
 import * as Styled from './PageStyled.jsx';
 
 const MinePage = () => {
-  const journal = useSelector(state => state.jourReducer);
+  const userIs = useSelector(state => state.jourReducer.is);
+  console.log(userIs);
 
   return (
     <Styled.PageContainer>
-      <Styled.MinePageContainer>나의 페이지</Styled.MinePageContainer>
+      <Styled.MinePageContainer>
+        {userIs === NEWBIE ? <Newbie /> : <Oldbie />}
+      </Styled.MinePageContainer>
     </Styled.PageContainer>
   );
 };
