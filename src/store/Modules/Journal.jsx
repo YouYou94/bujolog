@@ -2,7 +2,7 @@
 /*
 index:
     key:
-        . exist - IS or NOT : 저널 존재의 유무
+        . is - NEWBIE or OLDBIE : 뉴비인지 사용자인지
         . bullet - 배열 
         . index - 배열 : 저널의 인덱스(표지 넘버)를 갖는다.
         . mandal-art : (준비중) 9x9 계획표
@@ -15,7 +15,7 @@ index:
 Create:
     - 기본적으로 Newbie 유저의 저널을 생성한다.
     - key:
-        exist : 'IS'
+        exist : 'NEWBIE'
         나머지 key 빈 배열
 
 ADD:
@@ -31,11 +31,11 @@ UPD:
 /* Initial Value */
 const INITIAL_VALUE = '';
 
-const IS = 'IS';
-const NOT = 'NOT';
+const NEWBIE = 'NEWBIE';
+const OLDBIE = 'OLDBIE';
 
 const initialState = {
-  exist: 'NOT',
+  is: 'NEWBIE',
 };
 
 /* Action Type */
@@ -105,7 +105,7 @@ const jourReducer = (state = initialState, action) => {
     case CREAT_JOUR:
       return {
         ...state,
-        exist: IS,
+        is: OLDBIE,
         bullet: action.data,
         future: action.data,
         monthly: action.data,
@@ -125,7 +125,7 @@ const jourReducer = (state = initialState, action) => {
     case DEL_JOUR:
       return {
         ...state,
-        exist: NOT,
+        is: NEWBIE,
       };
     default:
       return state;
