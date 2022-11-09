@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import { useContext } from 'react';
 import { useLocation } from 'react-router-dom';
 
 // TopBar Contents Components
@@ -9,8 +8,8 @@ import MenuBar from '../Menu/MenuBar.jsx';
 import StartButton from './Contents/StartButton.jsx';
 import LoginButton from './Contents/LoginButton.jsx';
 
-// Context
-import { LoginContext } from '../../Context/Context.jsx';
+// Redux
+import { useSelector } from 'react-redux';
 
 // styled-components
 import * as Styled from './TopBarStyled.jsx';
@@ -36,8 +35,7 @@ export const MiddleContents = () => {
 // Right Contents
 export const RightContents = () => {
   const pathName = useLocation().pathname;
-
-  const isLogin = useContext(LoginContext);
+  const isLogin = useSelector(state => state.isLoginReducer.login);
 
   return (
     <Styled.ContentsContainer>

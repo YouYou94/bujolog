@@ -10,15 +10,14 @@ import UserMenu from './MenuSection/UserItem/UserMenu.jsx';
 import Contact from './MenuFooter/ContactItem/Contact.jsx';
 import Setting from './MenuFooter/SettingItem/Setting.jsx';
 
-// Context
-import { useContext } from 'react';
-import { LoginContext } from '../../Context/Context.jsx';
+// Redux
+import { useSelector } from 'react-redux';
 
 // styled-components
 import * as Styled from './MenuStyled.jsx';
 
 export const MenuHeader = ({ setDisplay }) => {
-  const isLogin = useContext(LoginContext);
+  const isLogin = useSelector(state => state.isLoginReducer.login);
 
   return (
     <Styled.MenuHeaderContainer>
@@ -29,7 +28,7 @@ export const MenuHeader = ({ setDisplay }) => {
 };
 
 export const MenuSection = ({ setDisplay }) => {
-  const isLogin = useContext(LoginContext);
+  const isLogin = useSelector(state => state.isLoginReducer.login);
 
   return (
     <Styled.MenuSectionContainer>

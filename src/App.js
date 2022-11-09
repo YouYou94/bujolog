@@ -7,35 +7,31 @@ import { onAuthStateChanged } from 'firebase/auth';
 import Router from './Router/Router.jsx';
 
 // Context
-import { LoginContext, UserContext } from './Context/Context.jsx';
+import { UserContext } from './Context/Context.jsx';
 
 // Redux
-import { legacy_createStore as createStore } from 'redux';
-import { Provider } from 'react-redux';
-import AppReducer from './store/store.js';
+import { useDispatch } from 'react-redux';
+import { isLogin, notLogin } from './store/Modules/IsLogin.jsx';
 
 // CSS
 import './App.css';
 
 function App() {
-  const store = createStore(AppReducer);
-  console.log(store.getState());
+  const dispatch = useDispatch();
 
-  const [isLogin, setIsLogin] = useState(false);
   const [user, setUser] = useState(null);
 
   // 유저 정보 확인!
   useEffect(() => {
     onAuthStateChanged(authService, user => {
       if (user) {
-        // console.log(user.uid);
-        setIsLogin(true);
+        dispatch(isLogin());
         setUser({
           displayName: user.displayName,
           id: user.uid,
         });
       } else {
-        setIsLogin(false);
+        dispatch(notLogin());
         setUser(null);
       }
     });
@@ -45,11 +41,7 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <UserContext.Provider value={user}>
-          <LoginContext.Provider value={isLogin}>
-            <Provider store={store}>
-              <Router />
-            </Provider>
-          </LoginContext.Provider>
+          <Router />
         </UserContext.Provider>
       </BrowserRouter>
     </div>
