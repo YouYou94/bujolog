@@ -9,7 +9,7 @@ const USERSETTING = 'USERSETTING';
 const USERINITIAL = 'USERINITIAL';
 
 /* Action */
-export const userSetting = ({ displayName, uId }) => {
+export const userSetting = (displayName, uId) => {
   return {
     type: USERSETTING,
     name: displayName,
@@ -25,10 +25,11 @@ export const userInitial = () => {
 const userReducer = (state = initialState, action) => {
   switch (action.type) {
     case USERSETTING:
+      console.log(action);
       return {
         ...state,
         name: action.name,
-        userId: action.uId,
+        userId: action.userId,
       };
     case USERINITIAL:
       return {
