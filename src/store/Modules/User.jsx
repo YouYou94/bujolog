@@ -25,7 +25,6 @@ export const userInitial = () => {
 const userReducer = (state = initialState, action) => {
   switch (action.type) {
     case USERSETTING:
-      console.log(action);
       return {
         ...state,
         name: action.name,

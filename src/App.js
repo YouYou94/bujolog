@@ -7,7 +7,7 @@ import { onAuthStateChanged } from 'firebase/auth';
 import Router from './Router/Router.jsx';
 
 // Redux
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { isLogin, notLogin } from './store/Modules/IsLogin.jsx';
 import { userSetting, userInitial } from './store/Modules/User.jsx';
 
