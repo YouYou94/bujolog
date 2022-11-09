@@ -7,13 +7,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import * as Styled from './PageStyled.jsx';
 
 const MinePage = () => {
-  const display = useSelector(state => state.topBarMenuReducer);
   const journal = useSelector(state => state.jourReducer);
-
-  console.log('display');
-  console.log(display);
-  console.log('journal');
-  console.log(journal);
 
   return (
     <Styled.PageContainer>
