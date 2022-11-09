@@ -1,16 +1,16 @@
-import { useContext } from 'react';
-import { UserContext } from '../../../Context/Context.jsx';
+// Redux
+import { useSelector } from 'react-redux';
 
 // styled-componets
 import * as Styled from '../MenuStyled.jsx';
 
 const UserName = ({ setDisplay }) => {
-  const user = useContext(UserContext);
+  const user = useSelector(state => state.userReducer);
 
   return (
     <>
       <Styled.UserNameWrap onClick={() => setDisplay('close')}>
-        <Styled.UserName>{user ? user.displayName : ''}</Styled.UserName> 님
+        <Styled.UserName>{user ? user.name : ''}</Styled.UserName> 님
       </Styled.UserNameWrap>
     </>
   );
