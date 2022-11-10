@@ -2,8 +2,7 @@
 import { NEWBIE } from '../Constants.jsx';
 
 // User Components
-import Newbie from '../components/Bujolog/Newbie/Newbie.jsx';
-import Oldbie from '../components/Bujolog/Oldbie/Oldbie.jsx';
+import NewbieMessage from '../components/Mine/NewbieMessage.jsx';
 
 //Redux
 import { useSelector } from 'react-redux';
@@ -12,13 +11,11 @@ import { useSelector } from 'react-redux';
 import * as Styled from './PageStyled.jsx';
 
 const MinePage = () => {
-  const userIs = useSelector(state => state.jourReducer.is);
+  const journalIs = useSelector(state => state.jourReducer.is);
 
   return (
     <Styled.PageContainer>
-      <Styled.MinePageContainer>
-        {userIs === NEWBIE ? <Newbie /> : <Oldbie />}
-      </Styled.MinePageContainer>
+      {journalIs === NEWBIE ? <NewbieMessage /> : <></>}
     </Styled.PageContainer>
   );
 };

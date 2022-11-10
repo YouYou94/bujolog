@@ -1,15 +1,6 @@
 import styled from 'styled-components';
 
-export const NewbieContainer = styled.div`
-  height: 100%;
-
-  flex: 1;
-`;
-
-/* Newbie Manual */
-export const ManualContainer = styled.div`
-  height: 100%;
-
+export const NewbieMessageContainer = styled.div`
   flex: 1;
 
   display: flex;
@@ -18,38 +9,25 @@ export const ManualContainer = styled.div`
   align-items: center;
 `;
 
-export const ManualWrap = styled.div``;
+export const NewbieMessageTextWrap = styled.div`
+  text-align: center;
+`;
 
 export const Text = styled.p`
-  color: gray;
-
   font-family: 'GowunDodum';
-
-  cursor: pointer;
-
-  ${ManualContainer}:hover & {
-    color: black;
-  }
+  font-size: 1.5rem;
 `;
 
 export const TextEmphasis = styled.em`
-  color: gray;
-
   font-family: 'GowunDodum';
-
-  cursor: pointer;
-
-  ${ManualContainer}:hover & {
-    font-weight: bold;
-    color: black;
-  }
+  font-size: 2rem;
 `;
 
-export const ManualButton = styled.button`
+export const Button = styled.button`
   width: 20rem;
-  height: 2rem;
+  height: 2.5rem;
 
-  margin-top: 2rem;
+  margin-top: 5rem;
   border: 1px solid gray;
   border-radius: 2rem;
 
