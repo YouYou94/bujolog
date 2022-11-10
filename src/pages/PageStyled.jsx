@@ -7,7 +7,7 @@ export const PageContainer = styled.div`
   justify-content: center;
   align-items: center;
 
-  margin: 0 15rem;
+  margin: 0 10rem;
 
   @media screen and (max-width: 768px) {
     margin: 0 1rem;
@@ -84,5 +84,11 @@ export const NotFoundButton = styled.button`
 
 /* Mine Page */
 export const MinePageContainer = styled.div`
+  height: 100%;
+
   flex: 1;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
