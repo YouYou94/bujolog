@@ -5,7 +5,7 @@ import TopBar from '../components/TopBar/TopBar.jsx';
 
 // Page
 import AuthPage from '../pages/AuthPage.jsx';
-import ManualPage from '../pages/MakePage.jsx';
+import MakePage from '../pages/MakePage.jsx';
 import MinePage from '../pages/MinePage.jsx';
 import NotFound from '../pages/NotFound.jsx';
 
@@ -27,6 +27,7 @@ const Router = () => {
 
         {/* User Page */}
         <Route path="/bujolog/mine" element={<MinePage />} />
+        <Route path="/bujolog/make/*" element={<MakePage />} />
       </Routes>
     </>
   );

@@ -4,7 +4,7 @@ import { authService } from './Firebase.js';
 import { onAuthStateChanged } from 'firebase/auth';
 
 // Router
-import Router from './Router/Router.jsx';
+import AppRouter from './Router/AppRouter.jsx';
 
 // Redux
 import { useDispatch } from 'react-redux';
@@ -33,7 +33,7 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
-        <Router />
+        <AppRouter />
       </BrowserRouter>
     </div>
   );
