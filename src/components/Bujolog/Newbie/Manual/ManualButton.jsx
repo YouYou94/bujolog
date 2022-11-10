@@ -6,7 +6,7 @@ const ManualButton = () => {
 
   return (
     <Styled.ManualWrap>
-      <Styled.ManualButton onClick={() => navigate('/make')}>
+      <Styled.ManualButton onClick={() => navigate('/bujolog/mine/make')}>
         시작하기
       </Styled.ManualButton>
     </Styled.ManualWrap>
