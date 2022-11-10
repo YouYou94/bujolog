@@ -28,8 +28,6 @@ export const AuthContainer = styled.div`
 
 /* Not Found Page */
 export const NotFoundContainer = styled.div`
-  flex: 1;
-
   display: flex;
   flex-direction: column;
 `;

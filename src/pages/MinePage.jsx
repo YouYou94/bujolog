@@ -13,7 +13,6 @@ import * as Styled from './PageStyled.jsx';
 
 const MinePage = () => {
   const userIs = useSelector(state => state.jourReducer.is);
-  console.log(userIs);
 
   return (
     <Styled.PageContainer>
