@@ -37,18 +37,11 @@ export const RightContents = () => {
   const pathName = useLocation().pathname;
   const isLogin = useSelector(state => state.isLoginReducer.login);
 
+  // 오른쪽 사이트 컨텐츠 무엇을 넣을까 고민해보자
   return (
     <Styled.ContentsContainer>
       {/* 로그인 여부 확인하기 */}
-      {isLogin ? (
-        pathName === '/bujolog' ? (
-          <StartButton />
-        ) : (
-          <></>
-        )
-      ) : (
-        <LoginButton />
-      )}
+      {isLogin ? pathName === '/bujolog' ? <></> : <></> : <LoginButton />}
     </Styled.ContentsContainer>
   );
 };

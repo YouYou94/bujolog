@@ -1,6 +1,7 @@
 import { useNavigate } from 'react-router-dom';
 import * as Styled from '../TopBarStyled.jsx';
 
+// 바꾸기
 const StartButton = () => {
   const navigate = useNavigate();
 
