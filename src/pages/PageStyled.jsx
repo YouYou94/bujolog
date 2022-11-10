@@ -5,7 +5,6 @@ export const PageContainer = styled.div`
 
   display: flex;
   justify-content: center;
-  align-items: center;
 
   margin: 0 10rem;
 
@@ -30,6 +29,7 @@ export const AuthContainer = styled.div`
 export const NotFoundContainer = styled.div`
   display: flex;
   flex-direction: column;
+  justify-content: center;
 `;
 
 export const NotFoundTitle = styled.div`
