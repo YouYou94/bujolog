@@ -4,9 +4,10 @@ import styled from 'styled-components';
 export const NoticeWrap = styled.div`
   flex: 1;
 
-  padding-top: 5rem;
-
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 `;
 
 export const NoticeText = styled.p`
@@ -26,21 +27,24 @@ export const NoticeTextEmphasisEnglish = styled.em`
 
 /* Button */
 export const MakeStartButtonWrap = styled.div`
-  height: 5rem;
+  height: 10rem;
 
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 `;
 
 export const MakeStartButton = styled.button`
-  width: 25rem;
-  height: 2rem;
+  width: 30rem;
+  height: 3rem;
 
   margin-top: 1rem;
   border: 1px solid gray;
   border-radius: 2rem;
 
   font-family: 'GowunDodum';
-  font-size: 1rem;
+  font-size: 1.3rem;
 
   color: black;
   background-color: white;

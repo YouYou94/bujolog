@@ -4,6 +4,7 @@ export const PageContainer = styled.div`
   flex: 1;
 
   display: flex;
+  flex-direction: column;
 `;
 
 /* Auth Page */
@@ -94,5 +95,5 @@ export const MakePageContainer = styled.div`
   flex: 1;
 
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
 `;

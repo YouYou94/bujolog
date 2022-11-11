@@ -7,10 +7,8 @@ import * as Styled from './PageStyled.jsx';
 const MakePage = () => {
   return (
     <Styled.PageContainer>
-      <Styled.MakePageContainer>
-        <ProgressContainer />
-        <Outlet />
-      </Styled.MakePageContainer>
+      <ProgressContainer />
+      <Outlet />
     </Styled.PageContainer>
   );
 };
