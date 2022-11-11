@@ -11,6 +11,7 @@ import AuthPage from '../pages/AuthPage.jsx';
 import MakePage from '../pages/MakePage.jsx';
 import MinePage from '../pages/MinePage.jsx';
 import NotFound from '../pages/NotFound.jsx';
+import MakeStartContainer from '../components/Make/Container/MakeStartContainer.jsx';
 
 //const EFFECTIVEPATH = ['/bujolog', '/bujolog/auth/login', '/bujolog/mine'];
 
@@ -31,6 +32,7 @@ const Router = () => {
         {/* User Page */}
         <Route path="/bujolog/mine" element={<MinePage />} />
         <Route path="/bujolog/make" element={<MakePage />}>
+          <Route path="" element={<MakeStartContainer />} />
           <Route path="bullet" element={<BulletContainer />} />
           <Route path="monthly" element={<MonthlyContainer />} />
           <Route path="daily" element={<DailyContainer />} />
