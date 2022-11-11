@@ -9,4 +9,6 @@ export const JournalMakingContainer = styled.div`
 
   display: flex;
   flex-direction: column;
+
+  padding-top: 2rem;
 `;

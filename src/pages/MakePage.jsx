@@ -8,7 +8,9 @@ const MakePage = () => {
   return (
     <Styled.PageContainer>
       <ProgressContainer />
-      <Outlet />
+      <Styled.MakePageContainer>
+        <Outlet />
+      </Styled.MakePageContainer>
     </Styled.PageContainer>
   );
 };
