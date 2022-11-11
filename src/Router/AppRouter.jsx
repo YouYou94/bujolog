@@ -13,15 +13,14 @@ import MinePage from '../pages/MinePage.jsx';
 import NotFound from '../pages/NotFound.jsx';
 import MakeStartContainer from '../components/Make/Container/MakeStartContainer.jsx';
 
-//const EFFECTIVEPATH = ['/bujolog', '/bujolog/auth/login', '/bujolog/mine'];
+const EFFECTIVEPATH = ['/bujolog', '/bujolog/auth/login', '/bujolog/mine'];
 
 const Router = () => {
-  //const nowPath = useLocation().pathname;
+  const nowPath = useLocation().pathname;
 
   return (
     <>
-      <TopBar />
-      {/* {EFFECTIVEPATH.find(path => path === nowPath) ? <TopBar /> : <></>} */}
+      {EFFECTIVEPATH.find(path => path === nowPath) ? <TopBar /> : <></>}
       <Routes>
         {/* NotFound */}
         <Route path="*" element={<NotFound />} />

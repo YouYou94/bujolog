@@ -4,13 +4,6 @@ export const PageContainer = styled.div`
   flex: 1;
 
   display: flex;
-  justify-content: center;
-
-  margin: 0 10rem;
-
-  @media screen and (max-width: 768px) {
-    margin: 0 1rem;
-  }
 `;
 
 /* Auth Page */
@@ -22,14 +15,19 @@ export const AuthContainer = styled.div`
   justify-content: center;
   align-items: center;
 
-  margin-bottom: 10rem;
+  margin: 10rem;
 `;
 
 /* Not Found Page */
 export const NotFoundContainer = styled.div`
+  flex: 1;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
+
+  margin: 10rem;
 `;
 
 export const NotFoundTitle = styled.div`
@@ -84,8 +82,6 @@ export const NotFoundButton = styled.button`
 
 /* Mine Page */
 export const MinePageContainer = styled.div`
-  height: 100%;
-
   flex: 1;
 
   display: flex;
