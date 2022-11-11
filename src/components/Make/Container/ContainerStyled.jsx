@@ -8,4 +8,7 @@ export const ProgressBarContainer = styled.div`
 
 export const JournalMakingContainer = styled.div`
   flex: 1;
+
+  display: flex;
+  flex-direction: column;
 `;

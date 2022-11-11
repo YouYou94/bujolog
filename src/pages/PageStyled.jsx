@@ -96,4 +96,7 @@ export const MinePageContainer = styled.div`
 /* Make Page */
 export const MakePageContainer = styled.div`
   flex: 1;
+
+  display: flex;
+  flex-direction: column;
 `;
