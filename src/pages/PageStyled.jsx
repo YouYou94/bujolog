@@ -92,3 +92,8 @@ export const MinePageContainer = styled.div`
   justify-content: center;
   align-items: center;
 `;
+
+/* Make Page */
+export const MakePageContainer = styled.div`
+  flex: 1;
+`;
