@@ -1,0 +1,11 @@
+import styled from 'styled-components';
+
+export const ProgressBarContainer = styled.div`
+  height: 3rem;
+
+  margin-top: 2rem;
+`;
+
+export const JournalMakingContainer = styled.div`
+  flex: 1;
+`;
