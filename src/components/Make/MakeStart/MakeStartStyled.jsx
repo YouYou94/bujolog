@@ -26,7 +26,7 @@ export const NoticeTextEmphasisEnglish = styled.em`
 
 /* Button */
 export const MakeStartButtonWrap = styled.div`
-  height: 10rem;
+  height: 5rem;
 
   text-align: center;
 `;
@@ -35,6 +35,7 @@ export const MakeStartButton = styled.button`
   width: 25rem;
   height: 2rem;
 
+  margin-top: 1rem;
   border: 1px solid gray;
   border-radius: 2rem;
 
