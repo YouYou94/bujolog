@@ -1,6 +1,7 @@
 // Containers
 import SideMenuHeader from './SideMenuHeader.jsx';
 import SideMenuFooter from './SideMenuFooter.jsx';
+import SideMenuSection from './SideMenuSection.jsx';
 
 // Redux
 import { useSelector, useDispatch } from 'react-redux';
@@ -19,6 +20,7 @@ const SideMenuContainer = () => {
     <>
       <Styled.MenuContainer display={display}>
         <SideMenuHeader />
+        <SideMenuSection />
         <SideMenuFooter />
       </Styled.MenuContainer>
       {display === 'open' ? (
