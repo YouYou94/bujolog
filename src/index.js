@@ -7,9 +7,9 @@ import App from './App.js';
 //Redux
 
 // CSS
-import FontStyles from './styles/FontStyles.js';
 import './index.css';
 import './Reset.css';
+import './styles/font.css';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
