@@ -1,0 +1,9 @@
+@font-face {
+  font-family: 'GowunDodum';
+  src: url('./fonts/GowunDodum-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'CormorantGaramond';
+  src: url('./fonts/CormorantGaramond-MediumItalic.ttf') format('truetype');
+}
