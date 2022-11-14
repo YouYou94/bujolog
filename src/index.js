@@ -5,12 +5,11 @@ import ReactDOM from 'react-dom/client';
 import App from './App.js';
 
 //Redux
-import { Provider } from 'react-redux';
-import { legacy_createStore as createStore } from 'redux';
 
 // CSS
 import FontStyles from './styles/FontStyles.js';
 import './index.css';
+import './Reset.css';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
