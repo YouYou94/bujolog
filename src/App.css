@@ -15,21 +15,12 @@ font style
 etc..
 
 */
-body {
-  font-size: 16px;
-}
-
 .App {
   height: 100vh;
-
-  box-sizing: border-box;
 
   display: flex;
   flex-direction: column;
 }
 
 .practice {
-  align-items: center;
-  color:rgb(88, 91, 255);
-  color:rgb(0, 0, 0);
 }
