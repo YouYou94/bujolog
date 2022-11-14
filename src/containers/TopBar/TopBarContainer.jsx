@@ -1,6 +1,10 @@
+// Components
 import TopBarTitle from '../../components/TopBar/TopBarTitle.jsx';
 import TopBarSideMenuBars from '../../components/TopBar/TopBarSideMenuBars.jsx';
 import TapBarLoginButton from '../../components/TopBar/TopBarLoginButton.jsx';
+import SideMenuContainer from '../SideMenu/SideMenuContainer.jsx';
+
+// styled-components
 import * as Styled from './ContainerStyled.jsx';
 
 const TopBar = () => {
@@ -10,6 +14,7 @@ const TopBar = () => {
       <Styled.ElementContainer>
         <TopBarSideMenuBars />
         <TopBarTitle />
+        <SideMenuContainer />
       </Styled.ElementContainer>
       {/* Right Element */}
       <Styled.ElementContainer>
