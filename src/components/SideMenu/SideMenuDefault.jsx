@@ -11,7 +11,6 @@ const SideMenuDefault = () => {
   const dispatch = useDispatch();
 
   const handleClickOutSide = e => {
-    //console.log('기본메뉴', ref.current.contains(e.target));
     if (isDisplay && !ref.current.contains(e.target)) {
       setIsDisplay(false);
     }

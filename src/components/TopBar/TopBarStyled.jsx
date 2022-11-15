@@ -1,26 +1,5 @@
 import styled from 'styled-components';
 
-/* Common */
-export const Container = styled.div`
-  position: relative;
-
-  height: 4rem;
-
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  border-bottom: 1px solid gray;
-`;
-
-export const ElementContainer = styled.div`
-  display: flex;
-  align-items: center;
-
-  margin: 0 3rem;
-`;
-
-/* TopBar Element */
 export const Title = styled.h1`
   margin: 0 0.5rem;
 

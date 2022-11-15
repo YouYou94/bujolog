@@ -11,7 +11,6 @@ const SideMenuUser = () => {
   const dispatch = useDispatch();
 
   const handleClickOutSide = e => {
-    //console.log('유저메뉴', ref.current.contains(e.target));
     if (isDisplay && !ref.current.contains(e.target)) {
       setIsDisplay(false);
     }
@@ -23,7 +22,6 @@ const SideMenuUser = () => {
       document.removeEventListener('mousedown', handleClickOutSide);
     };
   });
-  console.log('유저메뉴:', isDisplay);
 
   return (
     <Styled.AccodianContainer ref={ref}>
