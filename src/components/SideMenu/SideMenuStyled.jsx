@@ -27,7 +27,7 @@ export const AccodianHeader = styled.div`
 `;
 
 export const AccodianArticle = styled.div`
-  height: ${prop => (prop.isDisplay ? '9rem' : '0')};
+  height: ${prop => (prop.isDisplay ? '' : '0')};
 
   display: flex;
   flex-direction: column;
@@ -46,12 +46,15 @@ export const AccodianTitle = styled.h2`
 `;
 
 export const AccodianItem = styled.div`
-  flex: 1;
+  height: 3rem;
 
   display: flex;
   align-items: center;
 
   padding-left: 7rem;
+
+  font-family: 'GowunDodum';
+  font-size: 1.1rem;
 
   cursor: pointer;
 
