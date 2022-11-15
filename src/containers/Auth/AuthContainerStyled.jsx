@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  max-width: 48rem;
   min-width: 30rem;
 
   flex: 1;
@@ -11,7 +10,7 @@ export const Container = styled.div`
   justify-content: center;
   align-items: center;
 
-  padding-bottom: 8rem;
+  padding-bottom: 15rem;
 `;
 
 export const Wrapper = styled.div`
