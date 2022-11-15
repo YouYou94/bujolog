@@ -1,35 +1,38 @@
 import { BrowserRouter } from 'react-router-dom';
-import { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useEffect, useState, createContext } from 'react';
 import { onAuthStateChanged } from 'firebase/auth';
 import { authService } from './Firebase.js';
-import { defaultUser, setUser } from './store/modules/UserModule.jsx';
-import { setTrueLogin, setFalseLogin } from './store/modules/IsLoginModule.jsx';
 import AppRouter from './router/AppRouter.jsx';
 import './App.css';
 
+export const MyContext = createContext();
+
 function App() {
-  const dispatch = useDispatch();
-  const is = useSelector(state => state.isLogin);
-  console.log(is);
+  const [user, setUser] = useState(null);
+  const [isLogin, setIsLogin] = useState(false);
 
   useEffect(() => {
     onAuthStateChanged(authService, user => {
       if (user) {
-        dispatch(setUser({ name: user.displayName, userId: user.uid }));
-        dispatch(setTrueLogin());
+        setIsLogin(true);
+        setUser({
+          name: user.displayName,
+          userId: user.uid,
+        });
       } else {
-        dispatch(defaultUser());
-        dispatch(setFalseLogin());
+        setIsLogin(false);
+        setUser(null);
       }
     });
   }, []);
 
   return (
     <div className="App">
-      <BrowserRouter>
-        <AppRouter />
-      </BrowserRouter>
+      <MyContext.Provider value={{ user, isLogin }}>
+        <BrowserRouter>
+          <AppRouter />
+        </BrowserRouter>
+      </MyContext.Provider>
     </div>
   );
 }
