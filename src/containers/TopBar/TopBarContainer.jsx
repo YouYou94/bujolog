@@ -1,4 +1,5 @@
-import { useSelector } from 'react-redux';
+import { useContext } from 'react';
+import { MyContext } from '../../App.js';
 
 // Components
 import TopBarTitle from '../../components/TopBar/TopBarTitle.jsx';
@@ -10,7 +11,7 @@ import SideMenuContainer from '../SideMenu/SideMenuContainer.jsx';
 import * as Styled from './TopBarContainerStyled.jsx';
 
 const TopBar = () => {
-  const isLogin = useSelector(state => state.isLogin);
+  const isLogin = useContext(MyContext).isLogin;
 
   return (
     <Styled.Container>

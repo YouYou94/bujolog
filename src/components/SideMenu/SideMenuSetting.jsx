@@ -1,12 +1,14 @@
-import { useDispatch, useSelector } from 'react-redux';
+import { useContext } from 'react';
+import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
+import { MyContext } from '../../App.js';
 import { close } from '../../store/modules/SideMenuModule.jsx';
 import * as Styled from './SideMenuStyled.jsx';
 
 const SideMenuSetting = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
-  const isLogin = useSelector(state => state.isLogin);
+  const isLogin = useContext(MyContext).isLogin;
 
   const goAuth = () => {
     navigate('/bujolog/auth/login');

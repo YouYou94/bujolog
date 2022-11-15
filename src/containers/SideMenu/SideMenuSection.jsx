@@ -1,4 +1,5 @@
-import { useSelector } from 'react-redux';
+import { useContext } from 'react';
+import { MyContext } from '../../App.js';
 
 // Components
 import SideMenuDefault from '../../components/SideMenu/SideMenuDefault.jsx';
@@ -9,7 +10,7 @@ import * as Styled from './SideMenuContainerStyled.jsx';
 
 // 로그인 여부 확인하기
 const SideMenuSection = () => {
-  const isLogin = useSelector(state => state.isLogin);
+  const isLogin = useContext(MyContext).isLogin;
 
   return (
     <Styled.MenuSection>
