@@ -5,7 +5,7 @@ import TapBarLoginButton from '../../components/TopBar/TopBarLoginButton.jsx';
 import SideMenuContainer from '../SideMenu/SideMenuContainer.jsx';
 
 // styled-components
-import * as Styled from './ContainerStyled.jsx';
+import * as Styled from './TopBarContainerStyled.jsx';
 
 const TopBar = () => {
   return (

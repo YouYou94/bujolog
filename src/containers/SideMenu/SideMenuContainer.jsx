@@ -8,7 +8,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { close } from '../../store/modules/SideMenuModule.jsx';
 
 // styled-components
-import * as Styled from './ContainerStyled.jsx';
+import * as Styled from './SideMenuContainerStyled.jsx';
 
 const SideMenuContainer = () => {
   const display = useSelector(state => state.sideMenu.display);

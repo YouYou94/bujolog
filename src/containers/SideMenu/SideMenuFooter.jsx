@@ -3,7 +3,7 @@ import SideMenuContact from '../../components/SideMenu/SideMenuContact.jsx';
 import SideMenuSetting from '../../components/SideMenu/SideMenuSetting.jsx';
 
 // styled-components
-import * as Styled from './ContainerStyled.jsx';
+import * as Styled from './SideMenuContainerStyled.jsx';
 
 const SideMenuFooter = () => {
   return (
