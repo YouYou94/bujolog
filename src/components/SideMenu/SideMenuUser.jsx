@@ -27,17 +27,17 @@ const SideMenuUser = () => {
 
   const goMyPage = () => {
     dispatch(close());
-    navigate('/bujolog/mine');
+    navigate('/bujolog/my');
   };
 
   const goBulletSetting = () => {
     dispatch(close());
-    navigate('/bujolog/mine/bullet');
+    navigate('/bujolog/my/bullet');
   };
 
   const writeJournal = () => {
     dispatch(close());
-    navigate('/bujolog/mine/journal');
+    navigate('/bujolog/my/journal');
   };
 
   return (
