@@ -1,13 +1,15 @@
+import { useNavigate } from 'react-router-dom';
 import * as Styled from './NotFoundContainerStyled.jsx';
 
 const NotFoundContainer = () => {
-  const returnMainPage = () => {};
+  const navigate = useNavigate();
+
+  const goHome = () => navigate('/bujolog');
+
   return (
     <Styled.Container>
       <Styled.NotFoundWrapper>
-        <Styled.NotFoundTitle onClick={returnMainPage}>
-          Bujo-log
-        </Styled.NotFoundTitle>
+        <Styled.NotFoundTitle onClick={goHome}>Bujo-log</Styled.NotFoundTitle>
         <Styled.NotFoundSubTitle>죄송합니다.</Styled.NotFoundSubTitle>
         <Styled.NotFoundSubTitle>
           요청하신 페이지를 찾을 수 없습니다.
@@ -25,7 +27,7 @@ const NotFoundContainer = () => {
         <Styled.NotFoundExplanation>감사합니다.</Styled.NotFoundExplanation>
       </Styled.NotFoundWrapper>
       <Styled.NotFoundWrapper center="true">
-        <Styled.NotFoundButton onClick={returnMainPage}>
+        <Styled.NotFoundButton onClick={goHome}>
           메인으로 돌아가기
         </Styled.NotFoundButton>
       </Styled.NotFoundWrapper>
