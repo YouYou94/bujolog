@@ -6,7 +6,7 @@ const BulletContainer = () => {
   return (
     <Styled.ParentContainer>
       {/* 왼쪽 페이지 컨테이너 */}
-      <Styled.ChildContainer>
+      <Styled.ChildContainer borderline="true">
         <BulletTitle />
         <BulletOption />
       </Styled.ChildContainer>

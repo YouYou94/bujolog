@@ -12,4 +12,6 @@ export const ChildContainer = styled.div`
 
   display: flex;
   flex-direction: column;
+
+  border: ${prop => (prop.borderline ? '1px solid rgb(220, 220, 220)' : '')};
 `;
