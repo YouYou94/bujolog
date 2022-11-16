@@ -1,5 +1,9 @@
 import styled from 'styled-components';
 
+/*
+  Left
+*/
+/* Title */
 export const Title = styled.h1`
   height: 15%;
 
@@ -8,11 +12,14 @@ export const Title = styled.h1`
   font-family: 'CormorantGaramond';
   font-size: 3.5rem;
 
+  border-bottom: 1px solid rgb(220, 220, 220);
+
   text-align: center;
 
   user-select: none;
 `;
 
+/* Option */
 export const OptionWrapper = styled.div`
   flex: 1;
 
@@ -52,4 +59,32 @@ export const OptionItem = styled.div`
   background-image: url(${prop => prop.icon});
   background-repeat: no-repeat;
   background-size: cover;
+`;
+
+/*
+  Right
+*/
+/* Select */
+export const SelectWrapper = styled.div`
+  flex: 1;
+
+  border-bottom: 1px solid rgb(220, 220, 220);
+`;
+
+/* Setting */
+export const SettingWrapper = styled.div`
+  height: 10%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
+export const Button = styled.button`
+  width: 10rem;
+  height: 2.5rem;
+
+  margin: 0 1rem;
+
+  font-size: 1.2rem;
 `;
