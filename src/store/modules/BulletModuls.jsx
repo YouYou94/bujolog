@@ -6,22 +6,22 @@ const commonState = {
     {
       key: DOT,
       name: 'Task',
-      value: '해야 할 일',
+      description: '해야 할 일',
     },
     {
       key: SQUARE,
       name: 'Task Completed',
-      value: '완료',
+      description: '완료',
     },
     {
       key: NEXT,
       name: 'Task Migrated',
-      value: '일정 연기',
+      description: '일정 연기',
     },
     {
       key: PREV,
       name: 'Task Scheduled',
-      value: '일정 변경',
+      description: '일정 변경',
     },
   ],
 };
