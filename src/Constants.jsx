@@ -33,3 +33,20 @@ export const ICONLIST = [
   heart,
   music,
 ];
+
+export const SQUARE = square;
+export const FILLSQUARE = fillsquare;
+export const TRIANGLE = triangle;
+export const FILLTRIANGLE = filltriangle;
+export const CIRCLE = circle;
+export const FILLCIRCLE = fillcircle;
+export const DOT = dot;
+export const X = x;
+export const UP = up;
+export const DOWN = down;
+export const NEXT = next;
+export const PREV = prev;
+export const CAKE = cake;
+export const STAR = star;
+export const HEART = heart;
+export const MUSIC = music;
