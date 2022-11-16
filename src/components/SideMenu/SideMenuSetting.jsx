@@ -1,9 +1,9 @@
-import { signOut } from 'firebase/auth';
 import { useContext } from 'react';
 import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
 import { MyContext } from '../../App.js';
+import { authService } from '../../Firebase.js';
 import { close } from '../../store/modules/SideMenuModule.jsx';
 import * as Styled from './SideMenuStyled.jsx';
 
@@ -27,7 +27,7 @@ const SideMenuSetting = () => {
       showCancelButton: true,
     }).then(async result => {
       if (result.isConfirmed) {
-        await signOut();
+        await authService.signOut();
         navigate('/bujolog');
         dispatch(close());
       }
