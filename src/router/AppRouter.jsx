@@ -6,7 +6,7 @@ import Footer from '../containers/Footer/Footer.jsx';
 import Main from '../containers/Main/Main.jsx';
 
 /* Pages */
-import CoverPage from '../pages/CoverPage/CoverPage.jsx';
+import CoverPage from '../pages/CoverPage.jsx';
 
 const AppRouter = () => {
   return (
