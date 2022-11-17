@@ -7,6 +7,8 @@ export const Caption = styled.div`
 
   border: 1px solid rgb(220, 220, 220);
 
+  background-color: rgb(245, 246, 247, 0.2);
+
   @media screen and (min-width: 1024px) {
     flex: 1;
 
@@ -21,5 +23,9 @@ export const Caption = styled.div`
 export const Contents = styled.div`
   flex: 1;
 
+  display: flex;
+
   border: 1px solid rgb(220, 220, 220);
+
+  background-color: rgb(245, 246, 247, 0.2);
 `;
