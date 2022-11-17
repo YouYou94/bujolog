@@ -2,6 +2,8 @@ import styled from 'styled-components';
 
 /* TopBar Home Components */
 export const HomeWrapper = styled.div`
+  width: 5rem;
+
   padding: 0 2rem;
 
   cursor: pointer;
@@ -31,4 +33,6 @@ export const Name = styled.h1`
 `;
 
 /* TopBar Notice Components */
-export const NoticeWrapper = styled.div``;
+export const NoticeWrapper = styled.div`
+  width: 5rem;
+`;
