@@ -9,28 +9,26 @@ const CoverContents = () => {
 
   const goAuth = () => navigate('auth/login');
 
+  const goJournal = () => navigate('mine');
+
   return (
-    <>
-      {isLogin ? (
-        <Styled.ContentsWrapper></Styled.ContentsWrapper>
-      ) : (
-        <Styled.ContentsWrapper>
-          <Styled.Emphasis>Bullet Journal</Styled.Emphasis>
-          <Styled.Letter>'불렛 저널'</Styled.Letter>
-          <Styled.Space />
-          <Styled.Emphasis>Bullet Key</Styled.Emphasis>
-          <Styled.Letter>'기호'</Styled.Letter>
-          <Styled.Space />
-          <Styled.Emphasis>Future</Styled.Emphasis>
-          <Styled.Letter>'미래'</Styled.Letter>
-          <Styled.Space />
-          <Styled.Emphasis>Journal Log</Styled.Emphasis>
-          <Styled.Letter>'자신만의 기록'</Styled.Letter>
-          <Styled.Space />
-          <Styled.Button onClick={goAuth}>시작 하기</Styled.Button>
-        </Styled.ContentsWrapper>
-      )}
-    </>
+    <Styled.ContentsWrapper>
+      <Styled.Emphasis>Bullet Journal</Styled.Emphasis>
+      <Styled.Letter>'불렛 저널'</Styled.Letter>
+      <Styled.Space />
+      <Styled.Emphasis>Bullet Key</Styled.Emphasis>
+      <Styled.Letter>'기호'</Styled.Letter>
+      <Styled.Space />
+      <Styled.Emphasis>Future</Styled.Emphasis>
+      <Styled.Letter>'미래'</Styled.Letter>
+      <Styled.Space />
+      <Styled.Emphasis>Journal Log</Styled.Emphasis>
+      <Styled.Letter>'자신만의 기록'</Styled.Letter>
+      <Styled.Space />
+      <Styled.Button onClick={isLogin ? goJournal : goAuth}>
+        {isLogin ? '나의 저널' : '시작 하기'}
+      </Styled.Button>
+    </Styled.ContentsWrapper>
   );
 };
 
