@@ -1,18 +1,22 @@
 {
   "files": {
-    "main.css": "/bujolog/static/css/main.d604c0dd.css",
-    "main.js": "/bujolog/static/js/main.100510e0.js",
+    "main.css": "/bujolog/static/css/main.f493a76c.css",
+    "main.js": "/bujolog/static/js/main.19c84504.js",
     "static/media/GowunDodum-Regular.ttf": "/bujolog/static/media/GowunDodum-Regular.39c9a39c246c3c54c53e.ttf",
-    "static/media/YeonSung-Regular.ttf": "/bujolog/static/media/YeonSung-Regular.7ed1d94edc5aa5a9e78a.ttf",
-    "static/media/Nabla-Regular.ttf": "/bujolog/static/media/Nabla-Regular.987a0a27b3d98e6ae920.ttf",
-    "static/media/BlackHanSans-Regular.ttf": "/bujolog/static/media/BlackHanSans-Regular.f4f89062321390018f92.ttf",
     "static/media/CormorantGaramond-MediumItalic.ttf": "/bujolog/static/media/CormorantGaramond-MediumItalic.9cfefa19b48747b36e42.ttf",
+    "static/media/GreatVibes-Regular.ttf": "/bujolog/static/media/GreatVibes-Regular.6d246c3b51d7eb58b13a.ttf",
+    "static/media/cake.png": "/bujolog/static/media/cake.5e6b41b666b75451479f.png",
+    "static/media/circle.png": "/bujolog/static/media/circle.4478e008d47d63a188f9.png",
+    "static/media/triangle.png": "/bujolog/static/media/triangle.cb709103b591a3407599.png",
+    "static/media/star.png": "/bujolog/static/media/star.21597dc93ab3ec7dc93f.png",
+    "static/media/music.png": "/bujolog/static/media/music.19bdfe8fd2e37ff4cf27.png",
+    "static/media/fillcircle.png": "/bujolog/static/media/fillcircle.1d2f623bf2b0d3470eb9.png",
     "index.html": "/bujolog/index.html",
-    "main.d604c0dd.css.map": "/bujolog/static/css/main.d604c0dd.css.map",
-    "main.100510e0.js.map": "/bujolog/static/js/main.100510e0.js.map"
+    "main.f493a76c.css.map": "/bujolog/static/css/main.f493a76c.css.map",
+    "main.19c84504.js.map": "/bujolog/static/js/main.19c84504.js.map"
   },
   "entrypoints": [
-    "static/css/main.d604c0dd.css",
-    "static/js/main.100510e0.js"
+    "static/css/main.f493a76c.css",
+    "static/js/main.19c84504.js"
   ]
 }
