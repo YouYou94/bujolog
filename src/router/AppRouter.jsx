@@ -7,6 +7,7 @@ import Main from '../containers/Main/Main.jsx';
 
 /* Pages */
 import CoverPage from '../pages/CoverPage.jsx';
+import AuthPage from '../pages/AuthPage.jsx';
 
 const AppRouter = () => {
   return (
@@ -15,6 +16,7 @@ const AppRouter = () => {
       <Routes>
         <Route path="/bujolog" element={<Main />}>
           <Route path="" element={<CoverPage />} />
+          <Route path="auth/login" element={<AuthPage />} />
         </Route>
       </Routes>
       <Footer />
