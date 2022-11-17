@@ -16,7 +16,7 @@ export const Caption = styled.div`
   }
 
   @media screen and (max-width: 1024px) {
-    height: 4rem;
+    height: 3rem;
   }
 `;
 

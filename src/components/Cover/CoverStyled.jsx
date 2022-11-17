@@ -18,12 +18,28 @@ export const Caption = styled.h1`
 `;
 
 /* Contents */
-export const ContentsWrapper = styled.div`
+export const ContentsContainer = styled.div`
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+`;
+
+export const LetterWrapper = styled.div`
   flex: 1;
 
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
+`;
+
+export const ButtonWrapper = styled.div`
+  width: 100%;
+  height: 5rem;
+
+  display: flex;
+  justify-content: flex-end;
   align-items: center;
 `;
 
@@ -42,6 +58,10 @@ export const Space = styled.div`
 `;
 
 export const Button = styled.button`
-  width: 20rem;
-  height: 2.5rem;
+  margin-right: 2rem;
+  border: none;
+
+  background-color: none;
+
+  font-size: 2rem;
 `;
