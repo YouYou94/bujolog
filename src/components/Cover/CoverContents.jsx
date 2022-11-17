@@ -7,7 +7,7 @@ const CoverContents = () => {
   const navigate = useNavigate();
   const isLogin = useContext(MyContext).isLogin;
 
-  const goAuth = () => navigate('bujolog/auth/login');
+  const goAuth = () => navigate('auth/login');
 
   return (
     <>
