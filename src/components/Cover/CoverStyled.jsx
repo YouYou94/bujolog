@@ -7,13 +7,23 @@ export const Caption = styled.h1`
   @media screen and (min-width: 1024px) {
     font-size: 5rem;
 
-    margin: 1rem 0;
+    margin: 0.5rem 0;
   }
 
   @media screen and (max-width: 1024px) {
     font-size: 2rem;
 
     margin: 0 1rem;
+    padding-top: 1rem;
+  }
+`;
+
+export const SubCaption = styled.h1`
+  font-family: 'GowunDodum';
+  font-size: 1.5rem;
+
+  @media screen and (max-width: 1024px) {
+    display: none;
   }
 `;
 
@@ -36,7 +46,7 @@ export const LetterWrapper = styled.div`
 
 export const ButtonWrapper = styled.div`
   width: 100%;
-  height: 5rem;
+  height: 4rem;
 
   display: flex;
   justify-content: flex-end;
@@ -59,9 +69,6 @@ export const Space = styled.div`
 
 export const Button = styled.button`
   margin-right: 2rem;
-  border: none;
-
-  background-color: none;
 
   font-size: 2rem;
 `;

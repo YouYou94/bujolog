@@ -1,16 +1,13 @@
 import styled from 'styled-components';
 
-export const ButtonContainer = styled.div`
-  height: 4rem;
-
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-`;
-
 export const Button = styled.button`
-  margin: 0 2rem;
+  width: 8rem;
 
-  font-family: 'CormorantGaramond';
-  font-size: 2rem;
+  margin: 0 1rem;
+
+  font-size: 1.5rem;
+
+  &:hover {
+    background-color: rgb(209, 210, 255, 0.1);
+  }
 `;

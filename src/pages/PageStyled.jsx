@@ -5,9 +5,7 @@ export const Caption = styled.div`
   justify-content: center;
   align-items: center;
 
-  border: 1px solid rgb(220, 220, 220);
-
-  background-color: rgb(245, 246, 247, 0.2);
+  border-right: 1px solid rgb(220, 220, 220);
 
   @media screen and (min-width: 1024px) {
     flex: 1;
@@ -16,7 +14,7 @@ export const Caption = styled.div`
   }
 
   @media screen and (max-width: 1024px) {
-    height: 3rem;
+    height: 5rem;
   }
 `;
 
@@ -25,7 +23,5 @@ export const Contents = styled.div`
 
   display: flex;
 
-  border: 1px solid rgb(220, 220, 220);
-
-  background-color: rgb(245, 246, 247, 0.2);
+  background-color: rgb(251, 253, 252);
 `;

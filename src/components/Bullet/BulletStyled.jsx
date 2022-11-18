@@ -6,14 +6,22 @@ export const Caption = styled.h1`
 
   @media screen and (min-width: 1024px) {
     font-size: 5rem;
-
-    margin: 1rem 0;
   }
 
   @media screen and (max-width: 1024px) {
     font-size: 2rem;
 
     margin: 0 1rem;
+    padding-top: 1rem;
+  }
+`;
+
+export const SubCaption = styled.h1`
+  font-family: 'GowunDodum';
+  font-size: 1.5rem;
+
+  @media screen and (max-width: 1024px) {
+    display: none;
   }
 `;
 
@@ -32,8 +40,6 @@ export const BulletContainer = styled.div`
 
   display: flex;
   flex-direction: column;
-
-  border-bottom: 2px solid rgb(220, 220, 220);
 `;
 
 export const ButtonContainer = styled.div`
@@ -42,4 +48,8 @@ export const ButtonContainer = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  border-top: 1px solid rgb(220, 220, 220);
+
+  background-color: white;
 `;
