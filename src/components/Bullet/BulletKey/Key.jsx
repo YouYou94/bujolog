@@ -1,11 +1,18 @@
-import { useState } from 'react';
+import { useState, useContext } from 'react';
+import { BulletContext } from '../../../pages/BulletPage.jsx';
+
 import { useDispatch } from 'react-redux';
 import { delBullet, saveBullet } from '../../../store/modules/BulletModuls.jsx';
+
+import { faPlus } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
 import * as Styled from './BulletKeyStyled.jsx';
 
 const Key = ({ item, index }) => {
   const dispatch = useDispatch();
-  const [key, setKey] = useState(item.key);
+  const isTool = useContext(BulletContext).isTool;
+  const setIsTool = useContext(BulletContext).setIsTool;
   const [description, setDescription] = useState(item.description);
 
   const onChangeDescription = event => setDescription(event.target.value);
@@ -14,7 +21,7 @@ const Key = ({ item, index }) => {
     dispatch(
       saveBullet({
         id: Number(event.target.parentElement.id),
-        key: key,
+        key: item.key,
         description: description,
       })
     );
@@ -23,16 +30,24 @@ const Key = ({ item, index }) => {
   const deleteKey = event =>
     dispatch(delBullet(Number(event.target.parentElement.id)));
 
+  const updateIcon = () => {
+    setIsTool(!isTool);
+  };
+
   return (
     <Styled.KeyWrapper>
-      <Styled.IconWrapper width="4rem" title="Modify Icon On Click">
-        <Styled.Key icon={item.key} />
+      <Styled.IconWrapper title="Modify Icon On Click" onClick={updateIcon}>
+        <Styled.Key icon={item.key}>
+          {item.key === null ? <FontAwesomeIcon icon={faPlus} /> : ''}
+        </Styled.Key>
       </Styled.IconWrapper>
       <Styled.DescriptionWrapper id={index}>
         :
         <Styled.Description
-          value={description}
+          type="text"
+          defaultValue={description}
           onChange={onChangeDescription}
+          placeholder="ex. 오늘 할 일, 이벤트"
         />
       </Styled.DescriptionWrapper>
       <Styled.ButtonWrapper id={index}>
