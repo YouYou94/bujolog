@@ -29,14 +29,6 @@ export const KeyWrapper = styled.div`
   }
 `;
 
-export const CommonWrapper = styled.div`
-  width: ${prop => prop.width};
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-`;
-
 export const IconWrapper = styled.div`
   width: 1.5rem;
 
