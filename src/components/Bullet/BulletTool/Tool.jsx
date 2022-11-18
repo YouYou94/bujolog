@@ -1,6 +1,5 @@
-import { useEffect } from 'react';
+import { useContext, useEffect } from 'react';
 import { useRef } from 'react';
-import { useContext } from 'react';
 import { BulletContext } from '../../../pages/BulletPage.jsx';
 import ToolArticle from './ToolArticle.jsx';
 import ToolHeader from './ToolHeader.jsx';
@@ -8,9 +7,8 @@ import ToolHeader from './ToolHeader.jsx';
 import * as Styled from './ToolStyled.jsx';
 
 const Tool = () => {
-  const isTool = useContext(BulletContext).isTool;
-  const setIsTool = useContext(BulletContext).setIsTool;
   const ref = useRef();
+  const { isTool, setIsTool } = useContext(BulletContext);
 
   const handleClickOutSide = e => {
     if (isTool && !ref.current.contains(e.target)) {
