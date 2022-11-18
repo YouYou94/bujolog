@@ -3,9 +3,8 @@ import * as Styled from './CoverStyled.jsx';
 const CoverCaption = () => {
   return (
     <>
-      <Styled.Caption>Bullet</Styled.Caption>
-      <Styled.Caption>Journal</Styled.Caption>
-      <Styled.Caption>Log</Styled.Caption>
+      <Styled.Caption>Bullet Journal Log</Styled.Caption>
+      <Styled.SubCaption>‘불렛저널 로그’</Styled.SubCaption>
     </>
   );
 };
