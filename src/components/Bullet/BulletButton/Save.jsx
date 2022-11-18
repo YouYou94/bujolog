@@ -1,6 +1,6 @@
 import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
-import { saveBullet } from '../../../store/modules/BulletModuls.jsx';
+import { saveAllBullet } from '../../../store/modules/BulletModuls.jsx';
 import * as Styled from './BulletButtonStyled.jsx';
 
 const Save = () => {
@@ -8,8 +8,8 @@ const Save = () => {
   const dispatch = useDispatch();
 
   const saveBulletSetting = () => {
-    dispatch(saveBullet());
-    navigate('/bujolog/mine');
+    dispatch(saveAllBullet());
+    navigate('/bujolog');
   };
 
   return (

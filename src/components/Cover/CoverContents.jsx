@@ -11,7 +11,7 @@ const CoverContents = () => {
 
   const goAuth = () => navigate('auth/login');
 
-  const goJournal = () => navigate('mine');
+  const goJournal = () => navigate('mine/bullet');
 
   return (
     <Styled.ContentsContainer>
