@@ -76,6 +76,8 @@ export const Key = styled.div`
   background-repeat: no-repeat;
   background-size: cover;
 
+  text-align: center;
+
   cursor: pointer;
 `;
 

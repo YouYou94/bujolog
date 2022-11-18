@@ -19,6 +19,8 @@ export const Caption = styled.div`
 `;
 
 export const Contents = styled.div`
+  position: relative;
+
   flex: 1;
 
   display: flex;
