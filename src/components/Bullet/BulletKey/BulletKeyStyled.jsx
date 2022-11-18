@@ -24,6 +24,8 @@ export const KeyWrapper = styled.div`
   margin: 0.8rem 0;
   padding: 0.5rem 3rem;
 
+  border: ${prop => (prop.isFocus ? '2px solid rgb(120, 200, 200)' : 'none')};
+
   &:hover {
     border: 2px solid rgb(120, 200, 200);
   }

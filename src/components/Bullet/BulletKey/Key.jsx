@@ -1,4 +1,4 @@
-import { useState, useContext } from 'react';
+import { useContext, useState } from 'react';
 import { BulletContext } from '../../../pages/BulletPage.jsx';
 
 import { useDispatch } from 'react-redux';
@@ -11,9 +11,10 @@ import * as Styled from './BulletKeyStyled.jsx';
 
 const Key = ({ item, index }) => {
   const dispatch = useDispatch();
-  const isTool = useContext(BulletContext).isTool;
-  const setIsTool = useContext(BulletContext).setIsTool;
+  const { setIsTool, setSelect, focusIndex, setFocusIndex } =
+    useContext(BulletContext);
   const [description, setDescription] = useState(item.description);
+  const isFocus = focusIndex === index ? true : false;
 
   const onChangeDescription = event => setDescription(event.target.value);
 
@@ -30,13 +31,15 @@ const Key = ({ item, index }) => {
   const deleteKey = event =>
     dispatch(delBullet(Number(event.target.parentElement.id)));
 
-  const updateIcon = () => {
-    setIsTool(!isTool);
+  const displayKeyTool = () => {
+    setIsTool(true);
+    setSelect(item.key);
+    setFocusIndex(index);
   };
 
   return (
-    <Styled.KeyWrapper>
-      <Styled.IconWrapper title="Modify Icon On Click" onClick={updateIcon}>
+    <Styled.KeyWrapper isFocus={isFocus}>
+      <Styled.IconWrapper title="Modify Icon On Click" onClick={displayKeyTool}>
         <Styled.Key icon={item.key}>
           {item.key === null ? <FontAwesomeIcon icon={faPlus} /> : ''}
         </Styled.Key>
