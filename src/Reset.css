@@ -26,20 +26,14 @@ ul {
 }
 
 button {
-  border: 1px solid gray;
-  border-radius: 2rem;
-
   font-family: 'GowunDodum';
   font-size: 1rem;
 
   color: black;
-  background-color: white;
+  background-color: transparent;
+  border: none;
 
   cursor: pointer;
-}
-
-button:hover {
-  color: gray;
 }
 
 a {
