@@ -7,11 +7,13 @@ export const BulletContext = createContext();
 
 const BulletPage = () => {
   const [isTool, setIsTool] = useState(false);
-  const [key, setKey] = useState('');
+  const [keyIcon, setKeyIcon] = useState('');
+
+  const value = { isTool, setIsTool, keyIcon, setKeyIcon };
 
   return (
     <>
-      <BulletContext.Provider value={{ isTool, setIsTool, key, setKey }}>
+      <BulletContext.Provider value={value}>
         <Styled.Caption>
           <BulletCaption />
         </Styled.Caption>
