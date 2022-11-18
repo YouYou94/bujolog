@@ -2,7 +2,7 @@ import { useState } from 'react';
 import Back from './BulletButton/Back.jsx';
 import Save from './BulletButton/Save.jsx';
 import BulletTitle from './BulletTitle/BulletTitle.jsx';
-import Key from './BulletKey/Key.jsx';
+import KeyContainer from './BulletKey/KeyContainer.jsx';
 import Tool from './BulletTool/Tool.jsx';
 import * as Styled from './BulletStyled.jsx';
 
@@ -14,7 +14,7 @@ const BulletContents = () => {
     <Styled.ContentsContainer>
       <Styled.BulletContainer>
         <BulletTitle />
-        <Key isTool={isTool} setIsTool={setIsTool} setMode={setMode} />
+        <KeyContainer isTool={isTool} setIsTool={setIsTool} setMode={setMode} />
         <Tool
           isTool={isTool}
           setIsTool={setIsTool}
