@@ -34,12 +34,12 @@ export const ContentsContainer = styled.div`
 `;
 
 export const BulletContainer = styled.div`
-  position: relative;
-
   flex: 1;
 
   display: flex;
   flex-direction: column;
+
+  overflow: hidden;
 `;
 
 export const ButtonContainer = styled.div`

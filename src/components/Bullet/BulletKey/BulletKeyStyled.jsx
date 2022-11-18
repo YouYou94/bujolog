@@ -2,7 +2,17 @@ import styled from 'styled-components';
 
 /* Key */
 export const KeyContainer = styled.div`
-  flex: 1;
+  height: calc(100vh - 11rem);
+
+  overflow-y: auto;
+
+  &::-webkit-scrollbar {
+    width: 0.4rem;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: rgb(120, 200, 200);
+  }
 `;
 
 export const KeyWrapper = styled.div`
@@ -109,8 +119,6 @@ export const AddWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-
-  margin: 1rem 0;
 `;
 
 export const AddButton = styled.button`
@@ -123,7 +131,6 @@ export const AddButton = styled.button`
   font-size: 1.5rem;
 
   &:hover {
-    background-color: rgb(220, 220, 220, 0.8);
-    color: black;
+    background-color: rgb(220, 220, 220, 0.3);
   }
 `;
