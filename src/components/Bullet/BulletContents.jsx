@@ -1,5 +1,5 @@
 import Back from './BulletButton/Back.jsx';
-import Save from './BulletButton/Save.jsx';
+import Next from './BulletButton/Next.jsx';
 import BulletTitle from './BulletTitle/BulletTitle.jsx';
 import KeyContainer from './BulletKey/KeyContainer.jsx';
 import Tool from './BulletTool/Tool.jsx';
@@ -15,7 +15,7 @@ const BulletContents = () => {
       </Styled.BulletContainer>
       <Styled.ButtonContainer>
         <Back />
-        <Save />
+        <Next />
       </Styled.ButtonContainer>
     </Styled.ContentsContainer>
   );
