@@ -5,8 +5,8 @@ import * as Styled from './BulletKeyStyled.jsx';
 const KeyContainer = () => {
   return (
     <Styled.KeyContainer>
-      <KeyList />
       <KeyAdd />
+      <KeyList />
     </Styled.KeyContainer>
   );
 };
