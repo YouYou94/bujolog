@@ -4,7 +4,7 @@ import * as Styled from './BulletButtonStyled.jsx';
 const Back = () => {
   const navigate = useNavigate();
 
-  return <Styled.Button onClick={() => navigate(-1)}>Back</Styled.Button>;
+  return <Styled.Button onClick={() => navigate(-1)}>이전</Styled.Button>;
 };
 
 export default Back;

@@ -12,7 +12,11 @@ const Save = () => {
     navigate('/bujolog/mine');
   };
 
-  return <Styled.Button onClick={saveBulletSetting}>Save</Styled.Button>;
+  return (
+    <Styled.Button onClick={saveBulletSetting} color="rgb(138, 43, 226)">
+      저장
+    </Styled.Button>
+  );
 };
 
 export default Save;
