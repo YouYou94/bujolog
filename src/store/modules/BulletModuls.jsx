@@ -1,7 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit';
 import { DOT, SQUARE, NEXT, PREV } from '../../Constants.jsx';
 
-const commonState = {
+const initialState = {
   bullet: [
     {
       key: DOT,
@@ -26,23 +26,16 @@ const commonState = {
   ],
 };
 
-const userState = {
-  is: 'NEWBIE',
-  bullet: commonState.bullet,
-};
-
 const bulletSlice = createSlice({
   name: 'bullet',
-  initialState: { commonState, userState },
+  initialState,
   reducers: {
     addBullet(state, action) {
-      state.commonState.bullet.push(action.payload);
+      state.bullet.push(action.payload);
     },
     delBullet(state, action) {
       const id = action.payload;
-      state.commonState.bullet = state.commonState.bullet.filter(
-        (e, index) => index !== id
-      );
+      state.bullet = state.bullet.filter((e, index) => index !== id);
     },
     saveBullet(state, action) {
       const { id, key, description } = action.payload;
@@ -53,6 +46,7 @@ const bulletSlice = createSlice({
       };
     },
     saveAllBullet(state) {
+      // 모두 true로 변경하기
       state.userState.is = 'OLDBIE';
       state.userState.bullet = state.commonState.bullet.filter(
         bullet => bullet.save === true
@@ -60,9 +54,17 @@ const bulletSlice = createSlice({
 
       state.commonState.bullet = state.userState.bullet;
     },
+    initialBullet(state) {
+      state.bullet = state.bullet.filter(bullet => bullet.save === true);
+    },
   },
 });
 
-export const { addBullet, delBullet, saveBullet, saveAllBullet } =
-  bulletSlice.actions;
+export const {
+  addBullet,
+  delBullet,
+  saveBullet,
+  saveAllBullet,
+  initialBullet,
+} = bulletSlice.actions;
 export default bulletSlice;
