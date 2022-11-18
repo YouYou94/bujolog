@@ -15,6 +15,7 @@ export const KeyContainer = styled.div`
   }
 `;
 
+/* Key List */
 export const KeyWrapper = styled.div`
   height: 3rem;
 
@@ -22,9 +23,8 @@ export const KeyWrapper = styled.div`
   justify-content: space-between;
 
   margin: 0.8rem 0;
-  padding: 0.5rem 3rem;
-
   border: ${prop => (prop.isFocus ? '2px solid rgb(120, 200, 200)' : 'none')};
+  padding: 0.5rem 3rem;
 
   &:hover {
     border: 2px solid rgb(120, 200, 200);
@@ -32,6 +32,82 @@ export const KeyWrapper = styled.div`
 `;
 
 export const IconWrapper = styled.div`
+  width: 1.5rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 50%;
+`;
+
+export const DescriptionWrapper = styled.div`
+  flex: 1;
+
+  display: flex;
+  align-items: center;
+  margin: 0 1rem;
+`;
+
+export const ButtonWrapper = styled.div`
+  width: 10rem;
+
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+`;
+
+export const Key = styled.div`
+  width: 1.3rem;
+  height: 1.3rem;
+
+  background-image: url(${prop => prop.icon});
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  text-align: center;
+`;
+
+export const Description = styled.div`
+  width: 100%;
+  height: 2rem;
+
+  margin: 0 5rem 0 1rem;
+
+  background-color: transparent;
+
+  font-family: 'GowunDodum';
+  font-size: 1.2rem;
+`;
+
+export const Button = styled.button`
+  width: 7rem;
+
+  margin: 0 0.5rem;
+  border: 1px solid rgb(220, 220, 220);
+  border-radius: 0.5rem;
+
+  color: gray;
+
+  &:hover {
+    color: black;
+    border: 1px solid black;
+  }
+`;
+
+/* Add Key */
+export const AddKeyWrapper = styled.div`
+  height: 3rem;
+
+  display: flex;
+  justify-content: space-between;
+
+  margin: 0.8rem 1rem;
+  border: 2px solid rgb(0, 0, 0, 0.5);
+  padding: 0.5rem 2rem;
+`;
+
+export const AddIconWrapper = styled.div`
   width: 1.5rem;
 
   display: flex;
@@ -47,22 +123,7 @@ export const IconWrapper = styled.div`
   }
 `;
 
-export const DescriptionWrapper = styled.div`
-  flex: 1;
-
-  display: flex;
-  align-items: center;
-  margin: 0 1rem;
-`;
-
-export const ButtonWrapper = styled.div`
-  width: 10rem;
-
-  display: flex;
-  align-items: center;
-`;
-
-export const Key = styled.div`
+export const AddKey = styled.div`
   width: 1.3rem;
   height: 1.3rem;
 
@@ -75,7 +136,7 @@ export const Key = styled.div`
   cursor: pointer;
 `;
 
-export const Description = styled.input`
+export const AddDescription = styled.input`
   width: 100%;
   height: 2rem;
 
@@ -94,39 +155,17 @@ export const Description = styled.input`
   }
 `;
 
-export const Button = styled.button`
-  width: 3rem;
+export const AddButton = styled.button`
+  width: 7rem;
 
   margin: 0 0.5rem;
-  border: 1px solid rgb(220, 220, 220);
+  border: 1px solid black;
   border-radius: 0.5rem;
 
-  color: gray;
+  color: black;
 
   &:hover {
     color: black;
     border: 1px solid black;
-  }
-`;
-
-export const AddWrapper = styled.div`
-  height: 3.5rem;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-`;
-
-export const AddButton = styled.button`
-  width: 3rem;
-  height: 3rem;
-
-  border-radius: 50%;
-
-  font-family: 'CormorantGaramond';
-  font-size: 1.5rem;
-
-  &:hover {
-    background-color: rgb(220, 220, 220, 0.3);
   }
 `;
