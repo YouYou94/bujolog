@@ -50,3 +50,21 @@ export const CAKE = cake;
 export const STAR = star;
 export const HEART = heart;
 export const MUSIC = music;
+
+/* Month */
+
+// 해당하는 달부터 다시 만들어 보자
+export const MONTH = [
+  'January',
+  'February',
+  'March',
+  'April',
+  'May',
+  'June',
+  'July',
+  'August',
+  'September',
+  'October',
+  'November',
+  'December',
+];
