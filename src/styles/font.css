@@ -12,3 +12,8 @@
   font-family: 'GreatVibes';
   src: url('./fonts/GreatVibes-Regular.ttf') format('truetype');
 }
+
+@font-face {
+  font-family: 'IBMPlexSans';
+  src: url('./fonts/IBMPlexSans-Light.ttf') format('truetype');
+}
