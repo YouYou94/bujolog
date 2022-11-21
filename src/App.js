@@ -11,20 +11,20 @@ function App() {
   const [user, setUser] = useState(null);
   const [isLogin, setIsLogin] = useState(false);
 
-  useEffect(() => {
-    onAuthStateChanged(authService, user => {
-      if (user) {
-        setIsLogin(true);
-        setUser({
-          name: user.displayName,
-          userId: user.uid,
-        });
-      } else {
-        setIsLogin(false);
-        setUser(null);
-      }
-    });
-  }, []);
+  // useEffect(() => {
+  //   onAuthStateChanged(authService, user => {
+  //     if (user) {
+  //       setIsLogin(true);
+  //       setUser({
+  //         name: user.displayName,
+  //         userId: user.uid,
+  //       });
+  //     } else {
+  //       setIsLogin(false);
+  //       setUser(null);
+  //     }
+  //   });
+  // }, []);
 
   return (
     <div className="App">

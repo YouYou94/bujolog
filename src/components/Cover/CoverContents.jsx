@@ -29,7 +29,7 @@ const CoverContents = () => {
         <Styled.Letter>'자신만의 기록'</Styled.Letter>
       </Styled.LetterWrapper>
       <Styled.ButtonWrapper>
-        <Styled.Button onClick={isLogin ? goJournal : goAuth}>
+        <Styled.Button onClick={goJournal}>
           <FontAwesomeIcon icon={faArrowRight} />
         </Styled.Button>
       </Styled.ButtonWrapper>
