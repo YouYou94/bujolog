@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 
+/* Default Page */
 export const Caption = styled.div`
   display: flex;
   justify-content: center;
@@ -21,6 +22,23 @@ export const Caption = styled.div`
 export const Contents = styled.div`
   position: relative;
 
+  flex: 1;
+
+  display: flex;
+
+  background-color: rgb(251, 253, 252);
+`;
+
+/* Log Page */
+export const LeftLogPage = styled.div`
+  flex: 1;
+
+  display: flex;
+
+  border-right: 1px solid rgb(220, 220, 220);
+`;
+
+export const RightLogPage = styled.div`
   flex: 1;
 
   display: flex;
