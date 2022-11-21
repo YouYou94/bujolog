@@ -4,6 +4,7 @@ import * as Styled from './HeaderStyled.jsx';
 
 const MonthlyLeftTitle = () => {
   const { nowMonth } = useContext(MonthlyContext);
+
   return <Styled.LeftTitle>{nowMonth}</Styled.LeftTitle>;
 };
 
