@@ -1,16 +1,13 @@
-import MonthlyCaption from '../components/Monthly/MonthlyCaption.jsx';
-import MonthlyContents from '../components/Monthly/MonthlyContents.jsx';
+import MonthlyLeftContainer from '../components/Monthly/MonthlyLeft/MonthlyLeftContainer.jsx';
 import * as Styled from './PageStyled.jsx';
 
 const MonthlyLogPage = () => {
   return (
     <>
-      <Styled.Caption>
-        <MonthlyCaption />
-      </Styled.Caption>
-      <Styled.Contents>
-        <MonthlyContents />
-      </Styled.Contents>
+      <Styled.LeftLogPage>
+        <MonthlyLeftContainer />
+      </Styled.LeftLogPage>
+      <Styled.RightLogPage></Styled.RightLogPage>
     </>
   );
 };
