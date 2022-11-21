@@ -53,3 +53,9 @@ export const ButtonContainer = styled.div`
 
   background-color: white;
 `;
+
+// 반응형 웹 필요
+// 1. 툴 메뉴에 X 버튼 생성하기
+// 2. 아이콘 전부 다 줄이기
+// 3. 인풋 전부 다 줄이기
+// 4. 버튼 전부 다 줄이기

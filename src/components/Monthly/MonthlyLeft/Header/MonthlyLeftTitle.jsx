@@ -1,4 +1,4 @@
-import * as Styled from './MonthlyLeftStyled.jsx';
+import * as Styled from './HeaderStyled.jsx';
 
 const MonthlyLeftTitle = () => {
   return <Styled.LeftTitle></Styled.LeftTitle>;

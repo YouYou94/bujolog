@@ -1,6 +1,6 @@
 import { faChevronRight } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import * as Styled from './MonthlyLeftStyled.jsx';
+import * as Styled from './HeaderStyled.jsx';
 
 const RightMileStone = () => {
   return (
