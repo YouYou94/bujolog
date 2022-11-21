@@ -15,32 +15,15 @@ export const LeftHeader = styled.div`
   justify-content: space-between;
   align-items: center;
 
-  padding: 1rem 3rem 0 3rem;
-  margin-bottom: 2rem;
+  padding: 1rem 2rem 0;
 `;
 
-export const LeftTitle = styled.h1`
-  font-family: 'GreatVibes';
-  font-size: 3rem;
-
-  text-align: center;
-`;
-
-export const MileStone = styled.div`
-  width: 2rem;
-  height: 2rem;
+/* Section */
+export const LeftSection = styled.div`
+  flex: 1;
 
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column;
 
-  border-radius: 50%;
-
-  font-size: 1.2rem;
-
-  cursor: pointer;
-
-  &:hover {
-    background-color: rgb(220, 220, 220);
-  }
+  padding: 1rem 2rem;
 `;
