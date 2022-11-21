@@ -1,8 +1,12 @@
 import { faChevronRight } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { useContext } from 'react';
+import { MonthlyContext } from '../../../../pages/MonthlyLogPage.jsx';
 import * as Styled from './HeaderStyled.jsx';
 
-const RightMileStone = ({ currentMonth, setCurrentMonth }) => {
+const RightMileStone = () => {
+  const { currentMonth, setCurrentMonth } = useContext(MonthlyContext);
+
   const goNextMonth = () => {
     if (currentMonth < 11) setCurrentMonth(currentMonth + 1);
   };
