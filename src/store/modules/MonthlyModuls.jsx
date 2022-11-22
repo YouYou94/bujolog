@@ -92,9 +92,40 @@ const monthlySlice = createSlice({
         [date]: { schedule: '' },
       };
     },
+    addTask(state, action) {
+      const { month, icon, log } = action.payload;
+
+      state[month].task.push({ icon, log });
+    },
+    delTask(state, action) {
+      const { month, id } = action.payload;
+
+      state[month].task = state[month].task.filter(
+        (e, index) => index !== Number(id)
+      );
+    },
+    addGoal(state, action) {
+      const { month, icon, log } = action.payload;
+
+      state[month].goals.push({ icon, log });
+    },
+    delGoal(state, action) {
+      const { month, id } = action.payload;
+
+      state[month].goals = state[month].goals.filter(
+        (e, index) => index !== Number(id)
+      );
+    },
   },
 });
 
-export const { checkScheduled, addScheduled, delSceduled } =
-  monthlySlice.actions;
+export const {
+  checkScheduled,
+  addScheduled,
+  delSceduled,
+  addTask,
+  delTask,
+  addGoal,
+  delGoal,
+} = monthlySlice.actions;
 export default monthlySlice;
