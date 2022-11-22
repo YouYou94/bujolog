@@ -44,4 +44,53 @@ export const RightLogPage = styled.div`
   display: flex;
 
   background-color: rgb(251, 253, 252);
+
+  @media screen and (max-width: 1024px) {
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+
+    right: ${prop => (prop.transform ? '0' : '-100%')};
+
+    transition: all 0.35s;
+  }
+`;
+
+export const PageTransform = styled.div`
+  display: none;
+
+  @media screen and (max-width: 1024px) {
+    width: 6rem;
+    height: 2rem;
+
+    top: 50%;
+    ${prop => (prop.transform ? 'left:-4rem;' : 'right:-4rem;')}
+
+    position: absolute;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: 2px solid rgb(220, 220, 220);
+    border-radius: 2rem;
+
+    font-family: 'CormorantGaramond';
+    font-size: 1.2rem;
+
+    background-color: white;
+    color: rgb(220, 220, 220);
+
+    cursor: pointer;
+
+    transition: all 0.35s;
+
+    &:hover {
+      ${prop => (prop.transform ? 'left:0;' : 'right:0;')}
+
+      border: 2px solid rgb(150, 150, 150);
+      color: black;
+    }
+  }
 `;

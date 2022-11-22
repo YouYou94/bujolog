@@ -16,6 +16,8 @@ const MonthlyLogPage = () => {
 
   const [isTool, setIsTool] = useState(false);
 
+  const [transform, setTransForm] = useState(false);
+
   const value = {
     currentYear,
     currentMonth,
@@ -37,9 +39,15 @@ const MonthlyLogPage = () => {
         <Styled.LeftLogPage>
           <ScheduleContainer />
         </Styled.LeftLogPage>
-        <Styled.RightLogPage>
+        <Styled.RightLogPage transform={transform}>
           <LogContainer />
         </Styled.RightLogPage>
+        <Styled.PageTransform
+          transform={transform}
+          onClick={() => setTransForm(!transform)}
+        >
+          {transform ? '< Schedule' : 'Log >'}
+        </Styled.PageTransform>
       </MonthlyContext.Provider>
     </>
   );
