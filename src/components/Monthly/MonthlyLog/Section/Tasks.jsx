@@ -7,14 +7,14 @@ import Log from './Log.jsx';
 import LogAdd from './LogAdd.jsx';
 import * as Styled from './SectionStyled.jsx';
 
-const Goals = ({ tap }) => {
+const Tasks = ({ tap }) => {
   const { currentMonth } = useContext(MonthlyContext);
   const { setKeyIcon } = useContext(LogContext);
-  const goalList = useSelector(state => state.monthly[currentMonth].goals);
+  const taskList = useSelector(state => state.monthly[currentMonth].task);
 
   const [showAdd, setShowAdd] = useState(false);
 
-  const goal = goalList.map((item, index) => {
+  const task = taskList.map((item, index) => {
     const { icon, log } = item;
     return <Log key={nanoid()} icon={icon} log={log} tap={tap} index={index} />;
   });
@@ -26,7 +26,7 @@ const Goals = ({ tap }) => {
   return (
     <Styled.SectionContainer>
       <Styled.LogItemContainer>
-        {goal}
+        {task}
         {showAdd ? (
           <LogAdd tap={tap} showAdd={showAdd} setShowAdd={setShowAdd} />
         ) : (
@@ -41,4 +41,4 @@ const Goals = ({ tap }) => {
   );
 };
 
-export default Goals;
+export default Tasks;
