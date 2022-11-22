@@ -51,7 +51,7 @@ export const RightLogPage = styled.div`
     width: 100%;
     height: 100%;
 
-    right: ${prop => (prop.transform ? '0' : '-100%')};
+    right: ${prop => (prop.isTransform ? '0' : '-100%')};
 
     transition: all 0.35s;
   }
@@ -65,7 +65,7 @@ export const PageTransform = styled.div`
     height: 2rem;
 
     top: 50%;
-    ${prop => (prop.transform ? 'left:-4rem;' : 'right:-4rem;')}
+    ${prop => (prop.isTransform ? 'left:-4rem;' : 'right:-4rem;')}
 
     position: absolute;
 
@@ -87,7 +87,7 @@ export const PageTransform = styled.div`
     transition: all 0.35s;
 
     &:hover {
-      ${prop => (prop.transform ? 'left:0;' : 'right:0;')}
+      ${prop => (prop.isTransform ? 'left:0;' : 'right:0;')}
 
       border: 2px solid rgb(150, 150, 150);
       color: black;
