@@ -46,7 +46,7 @@ const ScheduleTool = () => {
         onChange={onChangeSchedule}
       />
       <Styled.ToolButton onClick={onHandlerAddSchedules}>
-        추가
+        확 인
       </Styled.ToolButton>
     </Styled.ToolContainer>
   );

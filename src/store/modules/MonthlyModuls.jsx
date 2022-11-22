@@ -70,7 +70,7 @@ const monthlySlice = createSlice({
     checkScheduled(state, action) {
       const { month, date } = action.payload;
 
-      if (state[month].date === undefined) {
+      if (state[month][`${date}`] === undefined) {
         state[month] = {
           ...state[month],
           [date]: { schedule: '' },
