@@ -39,3 +39,15 @@ export const Text = styled.div`
 
   font-family: 'GowunDodum';
 `;
+
+export const DelButton = styled.div`
+  width: 4rem;
+
+  font-family: 'GowunDodum';
+
+  color: rgb(220, 220, 220);
+
+  &:hover {
+    color: black;
+  }
+`;

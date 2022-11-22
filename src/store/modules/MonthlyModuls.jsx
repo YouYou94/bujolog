@@ -84,8 +84,17 @@ const monthlySlice = createSlice({
         [date]: { schedule: schedule },
       };
     },
+    delSceduled(state, action) {
+      const { month, date } = action.payload;
+
+      state[month] = {
+        ...state[month],
+        [date]: { schedule: '' },
+      };
+    },
   },
 });
 
-export const { checkScheduled, addScheduled } = monthlySlice.actions;
+export const { checkScheduled, addScheduled, delSceduled } =
+  monthlySlice.actions;
 export default monthlySlice;

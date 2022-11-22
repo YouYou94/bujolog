@@ -1,11 +1,46 @@
 import { nanoid } from '@reduxjs/toolkit';
-import { useContext } from 'react';
+import { useContext, useRef } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { checkScheduled } from '../../../../store/modules/MonthlyModuls.jsx';
+import {
+  checkScheduled,
+  delSceduled,
+} from '../../../../store/modules/MonthlyModuls.jsx';
 import { MonthlyContext } from '../../../../pages/MonthlyLogPage.jsx';
 import * as Styled from './SectionStyled.jsx';
 
+const ScheduleValue = state => {
+  if (state !== undefined) return state.schedule;
+  else return '';
+};
+
+const DayFullName = day => {
+  switch (day) {
+    case 0:
+      return 'S';
+    case 1:
+      return 'M';
+    case 2:
+      return 'T';
+    case 3:
+      return 'W';
+    case 4:
+      return 'T';
+    case 5:
+      return 'F';
+    case 6:
+      return 'S';
+    default:
+      break;
+  }
+};
+
+const IsDelete = state => {
+  if (state !== undefined && state.schedule !== '') return true;
+  else return false;
+};
+
 const MonthCalendar = () => {
+  const ref = useRef();
   const dispatch = useDispatch();
   const scheduleState = useSelector(state => state.monthly);
   const {
@@ -24,42 +59,23 @@ const MonthCalendar = () => {
 
     dispatch(checkScheduled({ month: currentMonth, date: date }));
     setClickDate(date);
-    setIsTool(!isTool);
+
+    if (event.target.innerText !== '삭제') setIsTool(!isTool);
+  };
+
+  const onDeleteSchedule = event => {
+    const date = event.currentTarget.id;
+
+    dispatch(delSceduled({ month: currentMonth, date: date }));
   };
 
   for (let i = 1; i <= currentEndDate; i++) {
     const date = new Date(currentYear, currentMonth, i).getDate();
-    const schedule =
-      scheduleState[currentMonth][`${date}`] !== undefined
-        ? scheduleState[currentMonth][`${date}`].schedule
-        : '';
-    let day = '';
+    const schedule = ScheduleValue(scheduleState[currentMonth][`${date}`]);
 
-    switch (new Date(currentYear, currentMonth, i).getDay()) {
-      case 0:
-        day = 'S';
-        break;
-      case 1:
-        day = 'M';
-        break;
-      case 2:
-        day = 'T';
-        break;
-      case 3:
-        day = 'W';
-        break;
-      case 4:
-        day = 'T';
-        break;
-      case 5:
-        day = 'F';
-        break;
-      case 6:
-        day = 'S';
-        break;
-      default:
-        break;
-    }
+    const isDel = IsDelete(scheduleState[currentMonth][`${date}`]);
+
+    let day = DayFullName(new Date(currentYear, currentMonth, i).getDay());
 
     currentCalendar.push(
       <Styled.CalendarItemContainer
@@ -71,6 +87,13 @@ const MonthCalendar = () => {
         <Styled.Date>{date}</Styled.Date>
         <Styled.Day>{day}</Styled.Day>
         <Styled.Text>{schedule}</Styled.Text>
+        {isDel ? (
+          <Styled.DelButton onClick={onDeleteSchedule} id={date} ref={ref}>
+            삭제
+          </Styled.DelButton>
+        ) : (
+          ''
+        )}
       </Styled.CalendarItemContainer>
     );
 
