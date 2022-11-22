@@ -17,18 +17,26 @@ export const SectionNav = styled.div`
 
 export const MenuIsTask = styled.div`
   flex: 1;
+  height: 100%;
 
   ${prop =>
     prop.menuIs === TASK
-      ? 'border-top:1px solid rgb(220,220,220); border-left:1px solid rgb(220,220,220); border-right:1px solid rgb(220,220,220); background-color:white;'
-      : ''}
+      ? 'border-top:2px solid rgb(220,220,220); border-left:2px solid rgb(220,220,220); border-right:2px solid rgb(220,220,220); background-color:white;'
+      : 'border-top:1px solid rgb(220,220,220); border-left:1px solid rgb(220,220,220); border-bottom:2px solid rgb(220,220,220);'}
+
+  border-top-left-radius:1rem;
+  border-top-right-radius: 1rem;
 `;
 
 export const MenuIsGoal = styled.div`
   flex: 1;
+  height: 100%;
 
   ${prop =>
     prop.menuIs === GOAL
-      ? 'border-top:1px solid rgb(220,220,220); border-left:1px solid rgb(220,220,220); border-right:1px solid rgb(220,220,220); background-color:white;'
-      : ''}
+      ? 'border-top:2px solid rgb(220,220,220); border-left:2px solid rgb(220,220,220); border-right:2px solid rgb(220,220,220); background-color:white;'
+      : 'border-top:1px solid rgb(220,220,220); border-right:1px solid rgb(220,220,220); border-bottom:2px solid rgb(220,220,220);'}
+
+  border-top-left-radius:1rem;
+  border-top-right-radius: 1rem;
 `;
