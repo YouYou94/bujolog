@@ -8,6 +8,7 @@ import CoverPage from '../pages/CoverPage.jsx';
 import AuthPage from '../pages/AuthPage.jsx';
 import BulletPage from '../pages/BulletPage.jsx';
 import MonthlyLogPage from '../pages/MonthlyLogPage.jsx';
+import DailyLogPage from '../pages/DailyLogPage.jsx';
 
 const AppRouter = () => {
   return (
@@ -18,6 +19,7 @@ const AppRouter = () => {
           <Route path="auth/login" element={<AuthPage />} />
           <Route path="mine/bullet" element={<BulletPage />} />
           <Route path="mine/monthly" element={<MonthlyLogPage />} />
+          <Route path="mine/daily" element={<DailyLogPage />} />
         </Route>
       </Routes>
     </>
