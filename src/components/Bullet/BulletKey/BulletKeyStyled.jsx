@@ -13,6 +13,10 @@ export const KeyContainer = styled.div`
   &::-webkit-scrollbar-thumb {
     background-color: rgb(120, 200, 200);
   }
+
+  @media screen and (max-width: 1024px) {
+    height: calc(100vh - 16rem);
+  }
 `;
 
 /* Key List */
@@ -28,16 +32,26 @@ export const KeyWrapper = styled.div`
   &:hover {
     border: 2px solid rgb(120, 200, 200);
   }
+
+  @media screen and (max-width: 1024px) {
+    height: 2rem;
+    margin: 0.4rem 1rem;
+    padding: 0 1rem;
+  }
 `;
 
 export const IconWrapper = styled.div`
-  width: 1.5rem;
+  width: 2rem;
 
   display: flex;
   justify-content: center;
   align-items: center;
 
   border-radius: 50%;
+
+  @media screen and (max-width: 1024px) {
+    width: 1.5rem;
+  }
 `;
 
 export const DescriptionWrapper = styled.div`
@@ -54,6 +68,10 @@ export const ButtonWrapper = styled.div`
   display: flex;
   justify-content: flex-end;
   align-items: center;
+
+  @media screen and (max-width: 1024px) {
+    width: 6rem;
+  }
 `;
 
 export const Key = styled.div`
@@ -65,11 +83,19 @@ export const Key = styled.div`
   background-size: cover;
 
   text-align: center;
+
+  @media screen and (max-width: 1024px) {
+    width: 1rem;
+    height: 1rem;
+  }
 `;
 
 export const Description = styled.div`
   width: 100%;
   height: 2rem;
+
+  display: flex;
+  align-items: center;
 
   margin: 0 5rem 0 1rem;
 
@@ -77,6 +103,10 @@ export const Description = styled.div`
 
   font-family: 'GowunDodum';
   font-size: 1.2rem;
+
+  @media screen and (max-width: 1024px) {
+    font-size: 1rem;
+  }
 `;
 
 export const Button = styled.button`
@@ -92,6 +122,10 @@ export const Button = styled.button`
     color: black;
     border: 1px solid black;
   }
+
+  @media screen and (max-width: 1024px) {
+    width: 5rem;
+  }
 `;
 
 /* Add Key */
@@ -104,6 +138,10 @@ export const AddKeyWrapper = styled.div`
   margin: 0.8rem 1rem;
   border: 2px solid rgb(0, 0, 0, 0.5);
   padding: 0.5rem 2rem;
+
+  @media screen and (max-width: 1024px) {
+    padding: 0.5rem 1rem;
+  }
 `;
 
 export const AddIconWrapper = styled.div`
@@ -152,6 +190,11 @@ export const AddDescription = styled.input`
   &:focus {
     border-bottom: 1px solid black;
   }
+
+  @media screen and (max-width: 1024px) {
+    margin: 0 1rem 0 1rem;
+    font-size: 1rem;
+  }
 `;
 
 export const AddButton = styled.button`
@@ -166,5 +209,9 @@ export const AddButton = styled.button`
   &:hover {
     color: black;
     border: 1px solid black;
+  }
+
+  @media screen and (max-width: 1024px) {
+    width: 5rem;
   }
 `;
