@@ -29,7 +29,7 @@ export const Contents = styled.div`
   background-color: rgb(251, 253, 252);
 `;
 
-/* Log Page */
+/* MonthlyLog Page */
 export const LeftLogPage = styled.div`
   flex: 1;
 
@@ -93,4 +93,32 @@ export const PageTransform = styled.div`
       color: black;
     }
   }
+`;
+
+/* DailyLog Page */
+export const AdditionPage = styled.div`
+  display: flex;
+
+  border-right: 1px solid rgb(220, 220, 220);
+
+  @media screen and (min-width: 1024px) {
+    flex: 1;
+  }
+
+  @media screen and (max-width: 1024px) {
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+
+    left: -100%;
+  }
+`;
+
+export const WritePage = styled.div`
+  flex: 1;
+
+  display: flex;
+
+  background-color: rgb(251, 253, 252);
 `;
