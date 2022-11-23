@@ -5,15 +5,16 @@ import * as Styled from './ToolStyled.jsx';
 
 const ToolArticle = () => {
   const { setIsTool, setKeyIcon } = useContext(BulletContext);
+
   const selectIcon = event => {
     setIsTool(false);
-    setKeyIcon(event.target.parentElement.id);
+    setKeyIcon(event.currentTarget.id);
   };
 
   const option = ICONLIST.map((item, index) => {
     return (
-      <Styled.OptionWrapper key={index} id={item}>
-        <Styled.Option icon={item} onClick={selectIcon} />
+      <Styled.OptionWrapper key={index} id={item} onClick={selectIcon}>
+        <Styled.Option icon={item} />
       </Styled.OptionWrapper>
     );
   });

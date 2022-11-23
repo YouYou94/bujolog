@@ -64,7 +64,7 @@ export const PageTransform = styled.div`
     width: 6rem;
     height: 2rem;
 
-    top: 50%;
+    top: 7%;
     ${prop => (prop.isTransform ? 'left:-4rem;' : 'right:-4rem;')}
 
     position: absolute;

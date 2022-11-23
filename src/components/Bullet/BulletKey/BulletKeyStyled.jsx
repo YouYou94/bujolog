@@ -23,7 +23,6 @@ export const KeyWrapper = styled.div`
   justify-content: space-between;
 
   margin: 0.8rem 0;
-  border: ${prop => (prop.isFocus ? '2px solid rgb(120, 200, 200)' : 'none')};
   padding: 0.5rem 3rem;
 
   &:hover {
