@@ -8,6 +8,7 @@ import * as Styled from './WriteSectionStyled.jsx';
 import {
   addDailyLog,
   checkTodayLog,
+  delDailyLog,
 } from '../../../../store/modules/DailyModule.jsx';
 
 const DailyLog = () => {
@@ -34,7 +35,9 @@ const DailyLog = () => {
     }
   };
 
-  const handleOnClickDelDailyLog = () => {};
+  const handleOnClickDelDailyLog = event => {
+    dispatch(delDailyLog({ today: today, id: event.currentTarget.id }));
+  };
 
   const handleOnKeyPressDailyLog = event => {
     if (event.key === 'Enter') handleOnClickAddDailyLog();
@@ -69,7 +72,7 @@ const DailyLog = () => {
   });
 
   const dailyLogList = dailyState[`${today}`]
-    ? dailyState[`${today}`].map(item => {
+    ? dailyState[`${today}`].map((item, index) => {
         const { icon, log } = item;
 
         return (
@@ -78,6 +81,7 @@ const DailyLog = () => {
             <Styled.Log>{log}</Styled.Log>
             <Styled.ButtonWrapper>
               <Styled.SettingButton
+                id={index}
                 onClick={handleOnClickDelDailyLog}
                 log={true}
               >
