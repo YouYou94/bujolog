@@ -23,7 +23,12 @@ const daillySlice = createSlice({
 
       state.daily[`${today}`].push({ icon: icon, log: log });
     },
-    delDailyLog(state, action) {},
+    delDailyLog(state, action) {
+      const { today, id } = action.payload;
+      state.daily[`${today}`] = state.daily[`${today}`].filter(
+        (e, index) => index !== Number(id)
+      );
+    },
   },
 });
 
