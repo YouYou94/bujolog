@@ -5,6 +5,7 @@ import WriteBack from './Footer/WriteBack.jsx';
 import WriteConfirm from './Footer/WriteConfirm.jsx';
 import WriteTitle from './Header/WriteTitle.jsx';
 import DailyLog from './Section/DailyLog.jsx';
+import DailyTool from './Tool/DailyTool.jsx';
 import * as Styled from './WriteStyled.jsx';
 
 export const Today = new Date();
@@ -21,6 +22,7 @@ const WriteContainer = () => {
   return (
     <DailyContext.Provider value={value}>
       <Styled.Container>
+        <DailyTool />
         <Styled.WriteHeader>
           <WriteTitle />
         </Styled.WriteHeader>
