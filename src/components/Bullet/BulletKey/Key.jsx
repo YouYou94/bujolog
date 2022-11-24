@@ -1,5 +1,5 @@
 import { useDispatch } from 'react-redux';
-import { delBullet } from '../../../store/modules/BulletModuls.jsx';
+import { delBullet } from '../../../store/modules/BulletModule.jsx';
 
 import * as Styled from './BulletKeyStyled.jsx';
 

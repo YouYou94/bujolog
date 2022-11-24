@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import {
   checkScheduled,
   delSceduled,
-} from '../../../../store/modules/MonthlyModuls.jsx';
+} from '../../../../store/modules/MonthlyModule.jsx';
 import { MonthlyContext } from '../../../../pages/MonthlyLogPage.jsx';
 import * as Styled from './SectionStyled.jsx';
 

@@ -1,6 +1,6 @@
 import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
-import { initialBullet } from '../../../store/modules/BulletModuls.jsx';
+import { initialBullet } from '../../../store/modules/BulletModule.jsx';
 import * as Styled from './BulletButtonStyled.jsx';
 
 const BulletBack = () => {

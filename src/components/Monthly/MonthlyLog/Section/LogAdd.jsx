@@ -5,7 +5,7 @@ import { LogContext, TASK } from '../LogContainer.jsx';
 import { MonthlyContext } from '../../../../pages/MonthlyLogPage.jsx';
 import * as Styled from './SectionStyled.jsx';
 import { useDispatch } from 'react-redux';
-import { addGoal, addTask } from '../../../../store/modules/MonthlyModuls.jsx';
+import { addGoal, addTask } from '../../../../store/modules/MonthlyModule.jsx';
 
 const LogAdd = ({ tap, showAdd, setShowAdd }) => {
   const dispatch = useDispatch();
