@@ -14,22 +14,57 @@ export const LogBox = styled.div`
   flex-direction: column;
 `;
 
-export const AddBox = styled.div`
-  height: 3rem;
+export const DailyBox = styled.div`
+  height: 2rem;
 
   display: flex;
+  align-items: center;
 
-  padding: 0.5rem 0;
+  padding-left: 1rem;
+  margin-bottom: 1rem;
 
-  &:hover {
-    border: 2px solid rgb(120, 200, 200);
-  }
+  border-bottom: 1px solid rgb(220, 220, 220);
 `;
 
-export const AddItem = styled.div`
+export const Key = styled.div`
+  width: 1rem;
+  height: 1rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-image: url(${prop => prop.icon});
+  background-repeat: no-repeat;
+  background-size: cover;
+`;
+
+export const Log = styled.div`
   flex: 1;
 
   display: flex;
+  align-items: center;
+
+  padding-left: 1.5rem;
+
+  font-family: 'GowunDodum';
+`;
+
+export const SettingButton = styled.button`
+  ${prop => (prop.log ? 'color: transparent;' : 'color: gray;')};
+
+  ${DailyBox}:hover & {
+    ${prop => (prop.log ? 'color: gray;' : '')};
+
+    &:hover {
+      color: black;
+      text-decoration: underline;
+    }
+  }
+
+  &:hover {
+    color: black;
+  }
 `;
 
 export const KeyWrapper = styled.div`
@@ -42,22 +77,22 @@ export const KeyWrapper = styled.div`
   cursor: pointer;
 `;
 
-export const Key = styled.div`
-  width: 2rem;
-  height: 2rem;
+export const AddKey = styled.div`
+  width: 1rem;
+  height: 1rem;
 
   display: flex;
   justify-content: center;
   align-items: center;
 
-  border-radius: 50%;
-
   background-image: url(${prop => prop.icon});
   background-repeat: no-repeat;
   background-size: cover;
 
+  cursor: pointer;
+
   &:hover {
-    background-color: rgb(220, 220, 220, 0.5);
+    background-color: rgb(120, 200, 200);
   }
 `;
 
@@ -65,10 +100,10 @@ export const LogInput = styled.input`
   flex: 1;
 
   border: none;
-  border-bottom: 1px solid rgb(220, 220, 220);
+  padding-left: 1.5rem;
 
   font-family: 'GowunDodum';
-  font-size: 1.2rem;
+  font-size: 1rem;
 
   background-color: transparent;
 
@@ -85,6 +120,8 @@ export const ButtonWrapper = styled.div`
 
 export const AddButton = styled.button`
   color: gray;
+
+  padding-left: 2.5rem;
 
   &:hover {
     color: black;
