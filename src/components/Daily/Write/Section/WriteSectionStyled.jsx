@@ -15,9 +15,15 @@ export const LogBox = styled.div`
 `;
 
 export const AddBox = styled.div`
-  height: 2rem;
+  height: 3rem;
 
   display: flex;
+
+  padding: 0.5rem 0;
+
+  &:hover {
+    border: 2px solid rgb(120, 200, 200);
+  }
 `;
 
 export const AddItem = styled.div`
@@ -32,15 +38,27 @@ export const KeyWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+
+  cursor: pointer;
 `;
 
 export const Key = styled.div`
   width: 2rem;
   height: 2rem;
 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 50%;
+
   background-image: url(${prop => prop.icon});
   background-repeat: no-repeat;
   background-size: cover;
+
+  &:hover {
+    background-color: rgb(220, 220, 220, 0.5);
+  }
 `;
 
 export const LogInput = styled.input`
@@ -57,4 +75,19 @@ export const LogInput = styled.input`
   outline: none;
 `;
 
-export const AddButton = styled.button``;
+export const ButtonWrapper = styled.div`
+  width: 7rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
+export const AddButton = styled.button`
+  color: gray;
+
+  &:hover {
+    color: black;
+    text-decoration: underline;
+  }
+`;
