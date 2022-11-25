@@ -16,8 +16,15 @@ h3,
 h4,
 h5,
 h6 {
-  font-size: 100%;
   font-weight: 500;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.5rem;
 }
 
 ol,
@@ -26,26 +33,24 @@ ul {
 }
 
 button {
-  font-family: 'GowunDodum';
+  /* font-family: 'GowunDodum';
   font-size: 1rem;
 
   color: black;
   background-color: transparent;
-  border: none;
+  border: none; */
 
   cursor: pointer;
 }
 
 a {
-  color: gray;
-
   font-size: 1rem;
 
   text-decoration: none;
 }
 
 a:visited {
-  color: gray;
+  color: black;
 }
 
 a:hover {

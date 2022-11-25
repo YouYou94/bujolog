@@ -1,4 +1,3 @@
-import { BrowserRouter } from 'react-router-dom';
 import { useEffect, useState, createContext } from 'react';
 import { onAuthStateChanged } from 'firebase/auth';
 import { authService } from './Firebase.js';
@@ -29,9 +28,7 @@ function App() {
   return (
     <div className="App">
       <MyContext.Provider value={{ user, isLogin }}>
-        <BrowserRouter>
-          <AppRouter />
-        </BrowserRouter>
+        <AppRouter />
       </MyContext.Provider>
     </div>
   );
