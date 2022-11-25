@@ -38,6 +38,13 @@ export const ItemWrapper = styled.div`
   &:hover {
     border: 2px solid rgb(120, 200, 200);
   }
+
+  @media screen and (max-width: 1024px) {
+    margin-top: 0.5rem;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    padding: 0;
+  }
 `;
 
 export const IconWrapper = styled.div`
@@ -54,8 +61,12 @@ export const LogWrapper = styled.div`
   flex: 1;
 
   display: flex;
-  align-items: center;
+
   margin: 0 1rem;
+
+  @media screen and (max-width: 1024px) {
+    margin: 0;
+  }
 `;
 
 export const ButtonWrapper = styled.div`
@@ -64,6 +75,10 @@ export const ButtonWrapper = styled.div`
   display: flex;
   justify-content: flex-end;
   align-items: center;
+
+  @media screen and (max-width: 1024px) {
+    width: 6rem;
+  }
 `;
 
 export const Key = styled.div`
@@ -75,18 +90,31 @@ export const Key = styled.div`
   background-size: cover;
 
   text-align: center;
+
+  @media screen and (max-width: 1024px) {
+    width: 1rem;
+    height: 1rem;
+  }
 `;
 
 export const Log = styled.div`
-  width: 100%;
-  height: 2rem;
+  flex: 1;
 
-  margin: 0 5rem 0 1rem;
+  display: flex;
+  align-items: center;
+
+  margin: 0 1rem 0 1rem;
 
   background-color: transparent;
 
   font-family: 'GowunDodum';
   font-size: 1.2rem;
+
+  @media screen and (max-width: 1024px) {
+    margin: 0 1rem;
+
+    font-size: 1rem;
+  }
 `;
 
 export const Button = styled.button`
@@ -101,6 +129,10 @@ export const Button = styled.button`
   &:hover {
     color: black;
     border: 1px solid black;
+  }
+
+  @media screen and (max-width: 1024px) {
+    width: 4rem;
   }
 `;
 
