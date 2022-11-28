@@ -1,5 +1,5 @@
 import { Outlet } from 'react-router-dom';
-import * as Styled from './MainContainerStyled.jsx';
+import * as Styled from './MainStyled.jsx';
 
 const Main = () => {
   return (

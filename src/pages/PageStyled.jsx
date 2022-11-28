@@ -98,6 +98,8 @@ export const PageTransform = styled.div`
 /* DailyLog Page */
 export const AdditionPage = styled.div`
   display: flex;
+  justify-content: center;
+  align-items: center;
 
   border-right: 1px solid rgb(220, 220, 220);
 
