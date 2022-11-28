@@ -44,6 +44,8 @@ Javascript | styled-components | React | Redux | Context
 
 - map 함수를 이용하여 여러 컴포넌트를 구현할 당시 key prop에 map 함수의 index 값을 주어 구현하였습니다. 그러나, CRUD 구현 과정에서 Delete 기능에 문제가 생겼고, 원하는 값을 삭제할 시 자꾸만 다른 값이 삭제되는 버그가 발생하였습니다. 이를 해결하고자 공식 문서를 살폈고, map 함수의 key 값에 index를 지양하는 이유에 대해 알게 되어 key prop에 index 값이 아닌 `nanoid()`를 이용하여 key 값을 전달하여 해당 문제를 해결하였습니다.
 
+- styled-components를 이용하여 `@font-face`를 사용할 경우 리렌더링이 발생 시 폰트의 깜빡임 현상(FOUT : Flash of Unstyled Font)이 일어났고, 이는 UX에 좋지 않은 영향을 주므로 이를 해결하기 위하여 styled-components와 폰트 관련 css를 따로 분리하여 설정하였습니다.
+
 </br>
 </br>
 
