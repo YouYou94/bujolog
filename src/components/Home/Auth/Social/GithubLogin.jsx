@@ -1,9 +1,9 @@
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useNavigate } from 'react-router-dom';
-import { authService } from '../../Firebase.js';
+import { authService } from '../../../../Firebase.js';
 import { GithubAuthProvider, signInWithPopup } from 'firebase/auth';
-import * as Styled from './AuthStyled.jsx';
+import * as Styled from './SocialStyled.jsx';
 
 const GithubLogin = () => {
   const navigate = useNavigate();
