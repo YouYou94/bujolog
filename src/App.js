@@ -10,24 +10,26 @@ function App() {
   const [user, setUser] = useState(null);
   const [isLogin, setIsLogin] = useState(false);
 
-  // useEffect(() => {
-  //   onAuthStateChanged(authService, user => {
-  //     if (user) {
-  //       setIsLogin(true);
-  //       setUser({
-  //         name: user.displayName,
-  //         userId: user.uid,
-  //       });
-  //     } else {
-  //       setIsLogin(false);
-  //       setUser(null);
-  //     }
-  //   });
-  // }, []);
+  useEffect(() => {
+    onAuthStateChanged(authService, user => {
+      if (user) {
+        setIsLogin(true);
+        setUser({
+          name: user.displayName,
+          userId: user.uid,
+        });
+      } else {
+        setIsLogin(false);
+        setUser(null);
+      }
+    });
+  }, []);
+
+  const value = { user, isLogin };
 
   return (
     <div className="App">
-      <MyContext.Provider value={{ user, isLogin }}>
+      <MyContext.Provider value={value}>
         <AppRouter />
       </MyContext.Provider>
     </div>
