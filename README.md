@@ -14,6 +14,23 @@
 </br>
 </br>
 
+## 사용 방법
+
+1. 저장소 복제
+
+```
+git clone https://github.com/YouYou94/bujolog
+```
+
+2. 실행
+
+```
+npm start
+```
+
+</br>
+</br>
+
 ## 사용 기술
 
 Javascript | styled-components | React | Redux | Context
