@@ -2,6 +2,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 /* Containers */
 import Main from '../containers/Main/Main.jsx';
+import Journal from '../containers/Journal/Journal.jsx';
 
 /* Pages */
 import BulletPage from '../pages/BulletPage.jsx';
@@ -17,9 +18,11 @@ const AppRouter = () => {
         <Route path="/bujolog" element={<Main />}>
           <Route path="" element={<Home />} />
           <Route path="mine" element={<Mine />} />
-          {/* <Route path="mine/bullet" element={<BulletPage />} />
-          <Route path="mine/monthly" element={<MonthlyLogPage />} />
-          <Route path="mine/daily" element={<DailyLogPage />} /> */}
+        </Route>
+        <Route path="journal" element={<Journal />}>
+          <Route path="bullet" element={<BulletPage />} />
+          <Route path="monthly" element={<MonthlyLogPage />} />
+          <Route path="daily" element={<DailyLogPage />} />
         </Route>
       </Routes>
     </BrowserRouter>

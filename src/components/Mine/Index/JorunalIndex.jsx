@@ -4,11 +4,11 @@ import * as Styled from './IndexStyled.jsx';
 const JournalIndex = () => {
   const navigate = useNavigate();
 
-  const handleOnClickGoBullet = () => navigate('bullet');
+  const handleOnClickGoBullet = () => navigate('/journal/bullet');
 
-  const handleOnClickGoMonthly = () => navigate('monthly');
+  const handleOnClickGoMonthly = () => navigate('/journal/monthly');
 
-  const handleOnClickGoDaily = () => navigate('daily');
+  const handleOnClickGoDaily = () => navigate('/journal/daily');
   return (
     <Styled.IndexLayout>
       <Styled.IndexTitle>Index</Styled.IndexTitle>
