@@ -1,5 +1,4 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { DOT, NEXT } from '../../Constants';
 
 const initialState = [
   {
@@ -54,20 +53,8 @@ const initialState = [
   },
   {
     // 11월
-    goals: [
-      { icon: DOT, log: 'Next.js 공부하기' },
-      { icon: DOT, log: 'TypeScript 공부하기' },
-    ],
-    task: [
-      { icon: NEXT, log: '이력서 작성 (~ 12월)' },
-      { icon: DOT, log: 'TypeScript 변수 공부' },
-      { icon: DOT, log: 'Rest API 공부' },
-    ],
-    3: { schedule: '예비군 원격 교육' },
-    9: { schedule: '예비군 훈련' },
-    10: { schedule: '동생 생일' },
-    17: { schedule: '수능' },
-    26: { schedule: '주현이 형 결혼식' },
+    goals: [],
+    task: [],
   },
   {
     // 12월
