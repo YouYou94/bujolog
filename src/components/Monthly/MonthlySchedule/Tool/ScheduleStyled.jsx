@@ -37,6 +37,9 @@ export const ToolButton = styled.button`
   border: 2px solid rgb(220, 220, 220);
   border-radius: 0.5rem;
 
+  background-color: transparent;
+
+  font-family: 'GowunDodum';
   color: rgb(20, 20, 20);
 
   &:hover {

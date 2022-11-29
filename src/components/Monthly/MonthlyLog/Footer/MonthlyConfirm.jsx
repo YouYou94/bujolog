@@ -5,7 +5,7 @@ const MonthlyConfirm = () => {
   const navigate = useNavigate();
 
   const goConfirm = () => {
-    navigate('/bujolog/mine/daily');
+    navigate('/bujolog/mine');
   };
 
   return <Styled.Button onClick={goConfirm}>확인</Styled.Button>;
