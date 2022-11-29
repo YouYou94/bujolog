@@ -4,7 +4,7 @@ import { authService } from './Firebase.js';
 import AppRouter from './router/AppRouter.jsx';
 import './App.css';
 
-export const MyContext = createContext();
+export const AuthContext = createContext();
 
 function App() {
   const [user, setUser] = useState(null);
@@ -17,6 +17,7 @@ function App() {
         setUser({
           name: user.displayName,
           userId: user.uid,
+          photoURL: user.photoURL,
         });
       } else {
         setIsLogin(false);
@@ -29,9 +30,9 @@ function App() {
 
   return (
     <div className="App">
-      <MyContext.Provider value={value}>
+      <AuthContext.Provider value={value}>
         <AppRouter />
-      </MyContext.Provider>
+      </AuthContext.Provider>
     </div>
   );
 }
