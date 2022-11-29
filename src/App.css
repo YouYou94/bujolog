@@ -19,8 +19,7 @@ etc..
   height: 100vh;
 
   display: flex;
-  flex-direction: column;
-}
+  justify-content: center;
 
-.practice {
+  background-color: rgb(246, 246, 246);
 }
