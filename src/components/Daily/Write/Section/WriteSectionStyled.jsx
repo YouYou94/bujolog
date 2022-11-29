@@ -51,6 +51,12 @@ export const Log = styled.div`
 `;
 
 export const SettingButton = styled.button`
+  border: none;
+
+  background-color: transparent;
+
+  font-family: 'GowunDodum';
+
   ${prop => (prop.log ? 'color: transparent;' : 'color: gray;')};
 
   ${DailyBox}:hover & {
@@ -122,6 +128,11 @@ export const AddButton = styled.button`
   color: gray;
 
   padding-left: 2.5rem;
+  border: none;
+
+  background-color: transparent;
+
+  font-family: 'GowunDodum';
 
   &:hover {
     color: black;
