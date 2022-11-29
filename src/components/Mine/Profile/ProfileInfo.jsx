@@ -28,7 +28,10 @@ const ProfileInfo = () => {
   };
 
   useEffect(() => {
-    if (user) setUserName(user.name);
+    if (user) {
+      const name = user.name ? user.name : '클릭하여 이름 설정하기';
+      setUserName(name);
+    }
   }, [user]);
 
   return (
