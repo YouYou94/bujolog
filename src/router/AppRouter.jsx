@@ -8,6 +8,7 @@ import BulletPage from '../pages/BulletPage.jsx';
 import MonthlyLogPage from '../pages/MonthlyLogPage.jsx';
 import DailyLogPage from '../pages/DailyLogPage.jsx';
 import Home from '../pages/Home/Home.jsx';
+import Mine from '../pages/Mine/Mine.jsx';
 
 const AppRouter = () => {
   return (
@@ -15,6 +16,7 @@ const AppRouter = () => {
       <Routes>
         <Route path="/bujolog" element={<Main />}>
           <Route path="" element={<Home />} />
+          <Route path="mine" element={<Mine />} />
           {/* <Route path="mine/bullet" element={<BulletPage />} />
           <Route path="mine/monthly" element={<MonthlyLogPage />} />
           <Route path="mine/daily" element={<DailyLogPage />} /> */}
