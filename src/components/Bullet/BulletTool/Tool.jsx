@@ -1,6 +1,6 @@
 import { useContext, useEffect } from 'react';
 import { useRef } from 'react';
-import { BulletContext } from '../../../pages/BulletPage.jsx';
+import { BulletContext } from '../../../pages/Journal/Bullet.jsx';
 import ToolArticle from './ToolArticle.jsx';
 import ToolHeader from './ToolHeader.jsx';
 

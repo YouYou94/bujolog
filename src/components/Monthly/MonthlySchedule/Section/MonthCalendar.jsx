@@ -5,7 +5,7 @@ import {
   checkScheduled,
   delSceduled,
 } from '../../../../store/modules/MonthlyModule.jsx';
-import { MonthlyContext } from '../../../../pages/MonthlyLogPage.jsx';
+import { MonthlyContext } from '../../../../pages/Journal/MonthlyLog.jsx';
 import * as Styled from './SectionStyled.jsx';
 
 const ScheduleValue = state => {

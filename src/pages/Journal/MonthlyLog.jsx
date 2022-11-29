@@ -1,12 +1,12 @@
 import { createContext, useEffect } from 'react';
 import { useState } from 'react';
-import ScheduleContainer from '../components/Monthly/MonthlySchedule/ScheduleContainer.jsx';
-import LogContainer from '../components/Monthly/MonthlyLog/LogContainer.jsx';
-import * as Styled from './PageStyled.jsx';
+import ScheduleContainer from '../../components/Monthly/MonthlySchedule/ScheduleContainer.jsx';
+import LogContainer from '../../components/Monthly/MonthlyLog/LogContainer.jsx';
+import * as Styled from './JournalStyled.jsx';
 
 export const MonthlyContext = createContext();
 
-const MonthlyLogPage = () => {
+const MonthlyLog = () => {
   const currentYear = new Date().getFullYear();
   const [currentMonth, setCurrentMonth] = useState(new Date().getMonth());
   const [clickDate, setClickDate] = useState('');
@@ -53,4 +53,4 @@ const MonthlyLogPage = () => {
   );
 };
 
-export default MonthlyLogPage;
+export default MonthlyLog;

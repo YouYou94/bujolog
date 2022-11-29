@@ -1,6 +1,6 @@
 import { useContext, useEffect, useRef, useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { MonthlyContext } from '../../../../pages/MonthlyLogPage.jsx';
+import { MonthlyContext } from '../../../../pages/Journal/MonthlyLog.jsx';
 import { addScheduled } from '../../../../store/modules/MonthlyModule.jsx';
 import * as Styled from './ScheduleStyled.jsx';
 

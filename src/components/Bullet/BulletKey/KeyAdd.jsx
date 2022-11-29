@@ -5,7 +5,7 @@ import { faPlus } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import { useContext, useState } from 'react';
-import { BulletContext } from '../../../pages/BulletPage.jsx';
+import { BulletContext } from '../../../pages/Journal/Bullet.jsx';
 
 import * as Styled from './BulletKeyStyled.jsx';
 

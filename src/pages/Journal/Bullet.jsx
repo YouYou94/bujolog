@@ -1,11 +1,11 @@
 import { createContext, useState } from 'react';
-import BulletCaption from '../components/Bullet/BulletCaption.jsx';
-import BulletContents from '../components/Bullet/BulletContents.jsx';
-import * as Styled from './PageStyled.jsx';
+import BulletCaption from '../../components/Bullet/BulletCaption.jsx';
+import BulletContents from '../../components/Bullet/BulletContents.jsx';
+import * as Styled from './JournalStyled.jsx';
 
 export const BulletContext = createContext();
 
-const BulletPage = () => {
+const Bullet = () => {
   const [isTool, setIsTool] = useState(false);
   const [keyIcon, setKeyIcon] = useState('');
 
@@ -25,4 +25,4 @@ const BulletPage = () => {
   );
 };
 
-export default BulletPage;
+export default Bullet;

@@ -1,6 +1,6 @@
 import { useContext } from 'react';
 import { ICONLIST } from '../../../Constants.jsx';
-import { BulletContext } from '../../../pages/BulletPage.jsx';
+import { BulletContext } from '../../../pages/Journal/Bullet.jsx';
 import * as Styled from './ToolStyled.jsx';
 
 const ToolArticle = () => {

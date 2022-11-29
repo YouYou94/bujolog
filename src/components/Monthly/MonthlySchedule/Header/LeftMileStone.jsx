@@ -1,7 +1,7 @@
 import { faChevronLeft } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useContext } from 'react';
-import { MonthlyContext } from '../../../../pages/MonthlyLogPage.jsx';
+import { MonthlyContext } from '../../../../pages/Journal/MonthlyLog.jsx';
 import * as Styled from './HeaderStyled.jsx';
 
 const LeftMileStone = () => {

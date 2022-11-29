@@ -1,7 +1,7 @@
 import { useEffect, useState, useContext } from 'react';
 import { useSelector } from 'react-redux';
 import { nanoid } from '@reduxjs/toolkit';
-import { MonthlyContext } from '../../../../pages/MonthlyLogPage.jsx';
+import { MonthlyContext } from '../../../../pages/Journal/MonthlyLog.jsx';
 import { LogContext } from '../LogContainer.jsx';
 import Log from './Log.jsx';
 import LogAdd from './LogAdd.jsx';

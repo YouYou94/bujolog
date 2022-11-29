@@ -1,6 +1,6 @@
 import { useContext } from 'react';
 import { useDispatch } from 'react-redux';
-import { MonthlyContext } from '../../../../pages/MonthlyLogPage.jsx';
+import { MonthlyContext } from '../../../../pages/Journal/MonthlyLog.jsx';
 import { delGoal, delTask } from '../../../../store/modules/MonthlyModule.jsx';
 import { TASK } from '../LogContainer.jsx';
 
