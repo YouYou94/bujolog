@@ -4,11 +4,11 @@ import * as Styled from './BulletButtonStyled.jsx';
 const BulletNext = () => {
   const navigate = useNavigate();
 
-  const next = () => {
+  const goConfirm = () => {
     navigate('/bujolog/mine');
   };
 
-  return <Styled.Button onClick={next}>확인</Styled.Button>;
+  return <Styled.Button onClick={goConfirm}>확인</Styled.Button>;
 };
 
 export default BulletNext;
