@@ -5,10 +5,10 @@ const BulletNext = () => {
   const navigate = useNavigate();
 
   const next = () => {
-    navigate('/bujolog/mine/monthly');
+    navigate('/bujolog/mine');
   };
 
-  return <Styled.Button onClick={next}>다음</Styled.Button>;
+  return <Styled.Button onClick={next}>확인</Styled.Button>;
 };
 
 export default BulletNext;

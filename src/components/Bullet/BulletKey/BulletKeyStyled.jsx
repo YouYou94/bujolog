@@ -115,6 +115,11 @@ export const Button = styled.button`
   margin: 0 0.5rem;
   border: 1px solid rgb(220, 220, 220);
   border-radius: 0.5rem;
+  border: none;
+
+  background-color: transparent;
+
+  font-family: 'GowunDodum';
 
   color: gray;
 
@@ -203,6 +208,11 @@ export const AddButton = styled.button`
   margin: 0 0.5rem;
   border: 1px solid black;
   border-radius: 0.5rem;
+  border: none;
+
+  background-color: transparent;
+
+  font-family: 'GowunDodum';
 
   color: black;
 
