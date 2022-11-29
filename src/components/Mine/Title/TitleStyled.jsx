@@ -12,4 +12,5 @@ export const MineTitleBox = styled.div`
 
 export const MineTitle = styled.h1`
   font-family: 'CormorantGaramond';
+  font-size: 2.5rem;
 `;
