@@ -22,18 +22,38 @@
 git clone https://github.com/YouYou94/bujolog
 ```
 
-2. 실행
+2. Firebase 추가
+
+```
+# src 폴더 안에 .env 파일 추가
+# .env 폴더 안에 자신의 Firebase 키 추가
+# 구글 파이어베이스에서 인증 기능 사용
+# 구글 & 깃허브 & 이메일 로그인 기능 선택 추가
+# src
+#  ├─ .env
+#  └─ ...
+
+REACT_APP_API_KEY=
+REACT_APP_AUTH_DOMAIN=
+REACT_APP_PROJECT_ID=
+REACT_APP_STORAGE_BUCKET=
+REACT_APP_MESSAING_SENDER_ID=
+REACT_APP_APP_ID=
+REACT_APP_MEASUREMENT_ID=
+```
+
+3. 실행
 
 ```
 npm start
 ```
 
-3. 게스트용 아이디
+4. 게스트용 아이디
 
 ```
-id : guest00@gmail.com
+id : guest1234@email.com
 
-pw : guest00
+pw : guest1234
 ```
 
 </br>
