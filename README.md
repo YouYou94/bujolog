@@ -68,11 +68,13 @@ Javascript | styled-components | React | Redux | Context
 
 ## 프로젝트를 통해 배운 점
 
-- 처음 컴포넌트를 구현할 때, 상위 컴포넌트의 데이터를 하위 컴포넌트에 prop으로 전달하는 형식으로 코드를 구현을 하였습니다. 그러나 하위 컴포넌트의 깊이가 깊어질수록 코드를 읽을 때, 해당 prop의 추적이 어려워졌고, 버그가 발생할 경우 버그를 고치는데 있어 매우 많은 양의 코드를 고쳐야 했습니다. 이것은 유지보수 또한 어려워진다는 것을 알게 되었고, 과도한 **props drilling**을 피하기 위해 전역 상태 관리 라이브러리인 `Redux`와 `Context Api`를 사용하였습니다.
+- 처음 상태관리를 구현할 때, React hooks의 useState를 이용하여 상태관리를 하였습니다. 데이터를 상위 컴포넌트에서 하위 컴포넌트에 prop drilling 과정을 거쳐 전달하였으나 컴포넌트 구조가 깊어질수록 prop의 추적 및 유지보수가 어려워진다는 것을 알게 되었습니다.
+  이러한 문제를 해결하고자 전역 상태관리 라이브러리인 Redux와 Context API를 사용하였습니다. 단순히 **prop drilling**을 피하고 낮은 규모와 빈도의 업데이트가 이루어지는 데이터에는 `Context API`를 사용하였고, 복잡한 주요 기능들의 상태관리에서는 `Redux`를 사용하였습니다.
 
-- map 함수를 이용하여 컴포넌트를 구현할 당시 key prop에 map 함수의 index 값을 주어 구현하였습니다. 그러나 CRUD 구현 과정에서 문제가 발생했고, 원하는 값을 처리할 때 자꾸만 다른 값이 처리되는 버그가 발생하였습니다. 문제를 해결하고자 공식 문서를 살폈고, 이를 통해 **map 함수의 key prop에 index를 지양하는 이유**에 대해 알게 되어 index 값이 아닌 `nanoid()`를 이용하여 key 값을 전달하여 해당 문제를 해결하였습니다.
+- map 함수를 이용하여 반복되는 컴포넌트를 구현할 당시 key prop에 map 함수의 index 값을 주어 구현하였습니다. 그러나 CRUD 기능에서 원하는 값을 처리할 때 다른 값이 처리되는 문제가 발생하였습니다.
+  이를 해결하기 위해 React 공식 문서를 살펴보았고, 공식문서에서 key prop에 index를 넣었을 때, 배열이 재배열이 될 경우 state와 관련된 문제가 발생할 수 있다는 것을 알게 되었습니다. 결과적으로 key prop에 index 대신 `nanoid`라는 랜덤 문자열 생성기를 이용하여 문제를 해결할 수 있었습니다.
 
-- styled-components를 이용하여 `@font-face`를 사용할 경우 리렌더링이 발생 시 **폰트의 깜빡임 현상(FOUT : Flash of Unstyled Font)**이 일어났고, 이는 UX에 좋지 않은 영향을 주므로 이를 해결하기 위하여 styled-components와 폰트 관련 css를 따로 분리하여 설정하였습니다.
+- styled-components를 이용하여 `@font-face`를 사용할 경우, 리렌더링 발생 시 **폰트의 깜빡임 현상(FOUT : Flash of Unstlyed Font)**이 일어나는 것을 발견하였습니다. 이는 사용자 UX에 좋지 않은 영향을 끼쳤고, styled-components 자체의 문제였기 때문에 이를 해결하기 위해 styled-components와 폰트 관련 CSS를 따로 분리하여 설정하였습니다.
 
 </br>
 </br>
