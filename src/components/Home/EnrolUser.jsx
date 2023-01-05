@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { customAlphabet } from 'nanoid';
-import { Container, Title, Input } from './EnrolUserStyled.jsx';
+import { Container, Title, Input } from './Styled';
 
 export const EnrolUser = () => {
   const nanoid = customAlphabet('0123456789abcedfghi', 8);
