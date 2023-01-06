@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import {
   CommonContainer,
   ViewContainer,
@@ -8,13 +9,19 @@ import {
 } from '../components';
 
 export function HomePage() {
+  const [isEnrol, setIsEnrol] = useState(true);
+
   return (
     <CommonContainer>
       <WriteContainer>
         <Cover />
       </WriteContainer>
       <ViewContainer>
-        <EnrolUser />
+        {isEnrol ? (
+          <EnrolUser setIsEnrol={setIsEnrol} />
+        ) : (
+          <LoadUser setIsEnrol={setIsEnrol} />
+        )}
       </ViewContainer>
     </CommonContainer>
   );

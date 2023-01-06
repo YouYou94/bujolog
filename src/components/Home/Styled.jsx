@@ -36,7 +36,7 @@ export const Title = styled.h2`
 `;
 
 export const Input = styled.input`
-  width: 30rem;
+  width: 40rem;
   height: 4rem;
 
   padding: 1rem;
@@ -48,9 +48,44 @@ export const Input = styled.input`
   outline: none;
 `;
 
+export const LoadBox = styled.div`
+  width: 40rem;
+  height: 4rem;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  border: 2px solid rgb(155, 155, 155);
+  border-radius: 1rem;
+  padding: 0 1rem;
+
+  box-shadow: 0 5px 10px 0 hsl(240deg 5% 41% / 20%);
+
+  cursor: pointer;
+
+  &:hover {
+    transform: scale(1.05);
+    transition: transform 0.1s;
+  }
+`;
+
+export const LoadNickName = styled.label`
+  font-family: 'GowunDodum';
+  font-size: 1.4rem;
+`;
+
+export const LoadRecentDate = styled.label`
+  padding: 0 1rem;
+
+  font-style: italic;
+  font-family: 'GowunDodum';
+
+  text-align: end;
+`;
+
 export const ValidLabel = styled.label`
-  width: 30rem;
-  height: 2rem;
+  width: 40rem;
 
   padding: 0 1rem;
 
@@ -58,4 +93,25 @@ export const ValidLabel = styled.label`
   font-size: 1.1rem;
 
   color: red;
+`;
+
+export const ChangeLabel = styled.label`
+  width: 40rem;
+  height: 2rem;
+
+  padding: 0 1rem;
+
+  font-style: italic;
+  font-family: 'GowunDodum';
+  font-size: 1.3rem;
+
+  transition: 0.1s all;
+
+  cursor: pointer;
+
+  &:hover {
+    font-size: 1.4rem;
+
+    text-decoration: underline;
+  }
 `;
