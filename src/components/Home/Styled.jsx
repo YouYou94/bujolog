@@ -9,7 +9,7 @@ export const Container = styled.div`
 
   padding-top: 10rem;
 
-  gap: 3rem;
+  gap: 1rem;
 `;
 
 /* Cover */
@@ -44,4 +44,16 @@ export const Input = styled.input`
   font-size: 1.2rem;
 
   outline: none;
+`;
+
+export const ValidLabel = styled.label`
+  width: 30rem;
+  height: 2rem;
+
+  padding: 0 1rem;
+
+  font-family: 'GowunDodum';
+  font-size: 1.1rem;
+
+  color: red;
 `;
