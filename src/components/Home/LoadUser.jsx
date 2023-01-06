@@ -1,5 +1,6 @@
 import { customAlphabet } from 'nanoid';
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
 import {
   Container,
@@ -11,8 +12,9 @@ import {
   ValidLabel,
 } from './Styled';
 
-export function LoadUser({ setIsEnrol }) {
+export function LoadUser() {
   const nanoid = customAlphabet('0123456789abcedfghi', 6);
+  const navigate = useNavigate();
 
   const [userList, setUserList] = useState(
     JSON.parse(localStorage.getItem('user'))
@@ -70,7 +72,7 @@ export function LoadUser({ setIsEnrol }) {
       ) : (
         <ValidLabel>등록된 사용자가 없습니다!</ValidLabel>
       )}
-      <ChangeLabel onClick={() => setIsEnrol(true)}>
+      <ChangeLabel onClick={() => navigate('/bujolog/auth/enrol')}>
         ← 사용자를 등록하시겠습니까?
       </ChangeLabel>
     </Container>

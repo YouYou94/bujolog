@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useParams } from 'react-router-dom';
 import {
   CommonContainer,
   ViewContainer,
@@ -9,7 +9,7 @@ import {
 } from '../components';
 
 export function HomePage() {
-  const [isEnrol, setIsEnrol] = useState(true);
+  const params = useParams();
 
   return (
     <CommonContainer>
@@ -17,11 +17,8 @@ export function HomePage() {
         <Cover />
       </WriteContainer>
       <ViewContainer>
-        {isEnrol ? (
-          <EnrolUser setIsEnrol={setIsEnrol} />
-        ) : (
-          <LoadUser setIsEnrol={setIsEnrol} />
-        )}
+        {params.id === 'enrol' ? <EnrolUser /> : ''}
+        {params.id === 'load' ? <LoadUser /> : ''}
       </ViewContainer>
     </CommonContainer>
   );

@@ -9,9 +9,11 @@
 import { useState } from 'react';
 import { customAlphabet } from 'nanoid';
 import { Container, Title, Input, ValidLabel, ChangeLabel } from './Styled';
+import { useNavigate } from 'react-router-dom';
 
-export const EnrolUser = ({ setIsEnrol }) => {
+export const EnrolUser = () => {
   const nanoid = customAlphabet('0123456789abcedfghi', 8);
+  const navigate = useNavigate();
   const [nickname, setNickname] = useState('');
   const [valid, setValid] = useState('');
 
@@ -78,7 +80,11 @@ export const EnrolUser = ({ setIsEnrol }) => {
         placeholder="사용자명을 입력해주세요."
       />
       <ValidLabel>{valid}</ValidLabel>
-      <ChangeLabel onClick={() => setIsEnrol(false)}>
+      <ChangeLabel
+        onClick={() => {
+          navigate('/bujolog/auth/load');
+        }}
+      >
         혹시 등록되어 있는 정보가 있으신가요? →
       </ChangeLabel>
     </Container>
