@@ -2,16 +2,20 @@ import {
   CommonContainer,
   ViewContainer,
   WriteContainer,
+  Cover,
   EnrolUser,
+  LoadUser,
 } from '../components';
 
 export function HomePage() {
   return (
     <CommonContainer>
       <WriteContainer>
-        <EnrolUser />
+        <Cover />
       </WriteContainer>
-      <ViewContainer></ViewContainer>
+      <ViewContainer>
+        <EnrolUser />
+      </ViewContainer>
     </CommonContainer>
   );
 }

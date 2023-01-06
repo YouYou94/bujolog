@@ -5,7 +5,6 @@ export const Container = styled.div`
 
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
   align-items: center;
 
   padding-top: 10rem;
@@ -13,7 +12,23 @@ export const Container = styled.div`
   gap: 3rem;
 `;
 
-export const Title = styled.h1`
+/* Cover */
+export const CoverTitle = styled.h1`
+  font-family: 'GreatVibes';
+  font-size: 5rem;
+
+  text-align: center;
+`;
+
+export const CoverCaption = styled.h3`
+  font-family: 'GowunDodum';
+  font-size: 2rem;
+
+  text-align: center;
+`;
+
+/* User */
+export const Title = styled.h2`
   font-family: 'GowunDodum';
   font-size: 3rem;
 `;

@@ -6,4 +6,5 @@ export {
 } from './common/Container';
 
 /* Home */
-export { EnrolUser } from './Home/EnrolUser/EnrolUser';
+export { Cover } from './Home/Cover';
+export { EnrolUser } from './Home/EnrolUser';
