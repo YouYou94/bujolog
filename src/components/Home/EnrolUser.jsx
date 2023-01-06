@@ -8,27 +8,41 @@
 
 import { useState } from 'react';
 import { customAlphabet } from 'nanoid';
-import { Container, Title, Input } from './Styled';
+import { Container, Title, Input, ValidLabel } from './Styled';
 
 export const EnrolUser = () => {
   const nanoid = customAlphabet('0123456789abcedfghi', 8);
   const [nickname, setNickname] = useState('');
+  const [valid, setValid] = useState('');
 
   const onHandlerChangeNickname = event => {
     const { value } = event.target;
 
+    setValid('');
     setNickname(value);
   };
 
   const onHandlerKeyPressEnter = event => {
+    const userList = localStorage.getItem('user');
+
+    /* 유효성 검사 */
+    if (!nickname) {
+      setValid('사용자명이 비어있습니다!');
+      return;
+    }
+
+    if (userList.includes(nickname)) {
+      setValid('동일한 사용자명이 있습니다!');
+      return;
+    }
+
     if (event.key === 'Enter') {
-      if (!localStorage.getItem('user')) {
+      if (!userList) {
         const user = [{ nickname: nickname, id: nanoid() }];
 
         localStorage.setItem('user', JSON.stringify(user));
         localStorage.setItem('recent-connect', JSON.stringify(user));
       } else {
-        const userList = JSON.parse(localStorage.getItem('user'));
         const user = { nickname: nickname, id: nanoid() };
         userList.push(user);
 
@@ -47,8 +61,9 @@ export const EnrolUser = () => {
         value={nickname}
         onChange={onHandlerChangeNickname}
         onKeyPress={onHandlerKeyPressEnter}
-        placeholder="사용하실 이름이나 닉네임을 입력해주세요."
+        placeholder="사용자명을 입력해주세요."
       />
+      <ValidLabel>{valid}</ValidLabel>
     </Container>
   );
 };
