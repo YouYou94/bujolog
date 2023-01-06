@@ -37,13 +37,25 @@ export const EnrolUser = ({ setIsEnrol }) => {
     }
 
     if (event.key === 'Enter') {
+      const now = new Date();
+
       if (!userList) {
-        const user = [{ nickname: nickname, id: nanoid() }];
+        const user = [
+          {
+            nickname: nickname,
+            id: nanoid(),
+            last_connect: now.toLocaleDateString(),
+          },
+        ];
 
         localStorage.setItem('user', JSON.stringify(user));
         localStorage.setItem('recent-connect', JSON.stringify(user));
       } else {
-        const user = { nickname: nickname, id: nanoid() };
+        const user = {
+          nickname: nickname,
+          id: nanoid(),
+          last_connect: now.toLocaleDateString(),
+        };
         userList.push(user);
 
         localStorage.setItem('user', JSON.stringify(userList));
@@ -67,7 +79,7 @@ export const EnrolUser = ({ setIsEnrol }) => {
       />
       <ValidLabel>{valid}</ValidLabel>
       <ChangeLabel onClick={() => setIsEnrol(false)}>
-        혹시 등록되어 있는 정보가 있으신가요?
+        혹시 등록되어 있는 정보가 있으신가요? →
       </ChangeLabel>
     </Container>
   );
