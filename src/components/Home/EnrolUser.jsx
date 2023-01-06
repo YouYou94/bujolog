@@ -25,7 +25,7 @@ export const EnrolUser = () => {
   };
 
   const onHandlerKeyPressEnter = event => {
-    const userList = JSON.parse(localStorage.getItem('user'));
+    const userList = JSON.parse(localStorage.getItem('user')) || [];
 
     /* 유효성 검사 */
     if (!nickname) {
@@ -42,15 +42,15 @@ export const EnrolUser = () => {
       const now = new Date();
 
       if (!userList) {
-        const user = [
-          {
-            nickname: nickname,
-            id: nanoid(),
-            last_connect: now.toLocaleDateString(),
-          },
-        ];
+        const user = {
+          nickname: nickname,
+          id: nanoid(),
+          last_connect: now.toLocaleDateString(),
+        };
 
-        localStorage.setItem('user', JSON.stringify(user));
+        userList.push(user);
+
+        localStorage.setItem('user', JSON.stringify(userList));
         localStorage.setItem('recent-connect', JSON.stringify(user));
       } else {
         const user = {
@@ -67,6 +67,8 @@ export const EnrolUser = () => {
       alert('사용자 등록이 완료되었습니다!');
 
       setNickname('');
+
+      navigate('/bujolog');
     }
   };
 
