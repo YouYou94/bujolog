@@ -1,3 +1,11 @@
+/*
+  사용자 등록
+
+  - Input에 사용자 입력
+  - 로컬스토리지에 사용자 저장
+  - 최근 연결한 사용자 저장
+*/
+
 import { useState } from 'react';
 import { customAlphabet } from 'nanoid';
 import { Container, Title, Input } from './Styled';
@@ -15,14 +23,17 @@ export const EnrolUser = () => {
   const onHandlerKeyPressEnter = event => {
     if (event.key === 'Enter') {
       if (!localStorage.getItem('user')) {
-        const object = [{ nickname: nickname, id: nanoid() }];
+        const user = [{ nickname: nickname, id: nanoid() }];
 
-        localStorage.setItem('user', JSON.stringify(object));
+        localStorage.setItem('user', JSON.stringify(user));
+        localStorage.setItem('recent-connect', JSON.stringify(user));
       } else {
-        const object = JSON.parse(localStorage.getItem('user'));
-        object.push({ nickname: nickname, id: nanoid() });
+        const userList = JSON.parse(localStorage.getItem('user'));
+        const user = { nickname: nickname, id: nanoid() };
+        userList.push(user);
 
-        localStorage.setItem('user', JSON.stringify(object));
+        localStorage.setItem('user', JSON.stringify(userList));
+        localStorage.setItem('recent-connect', JSON.stringify(user));
       }
 
       setNickname('');
