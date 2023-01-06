@@ -6,7 +6,8 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/bujolog/auth/:id" element={<HomePage />} />
+        <Route path="/bujolog" element={<HomePage />} />
+        <Route path="/bujolog/:id" element={<HomePage />} />
       </Routes>
     </BrowserRouter>
   );
