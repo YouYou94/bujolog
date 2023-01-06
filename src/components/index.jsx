@@ -9,3 +9,4 @@ export {
 export { Cover } from './Home/Cover';
 export { EnrolUser } from './Home/EnrolUser';
 export { LoadUser } from './Home/LoadUser';
+export { ReadUser } from './Home/ReadUser';

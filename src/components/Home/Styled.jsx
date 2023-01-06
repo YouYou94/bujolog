@@ -35,6 +35,12 @@ export const Title = styled.h2`
   font-size: 3rem;
 `;
 
+export const SubTitle = styled.label`
+  font-style: italic;
+  font-family: 'GowunDodum';
+  font-size: 2rem;
+`;
+
 export const Input = styled.input`
   width: 40rem;
   height: 4rem;
@@ -113,5 +119,32 @@ export const ChangeLabel = styled.label`
     font-size: 1.4rem;
 
     text-decoration: underline;
+  }
+`;
+
+export const JournalLabel = styled.label`
+  width: 35rem;
+
+  font-family: 'CormorantGaramond';
+  font-size: 3rem;
+`;
+
+export const JournalIndex = styled.div`
+  width: 35rem;
+  height: 4rem;
+
+  display: flex;
+  align-items: center;
+
+  border-radius: 1rem;
+  padding: 0 1rem;
+
+  font-family: 'CormorantGaramond';
+  font-size: 2rem;
+
+  cursor: pointer;
+
+  &:hover {
+    background-color: rgb(120, 200, 200, 0.3);
   }
 `;

@@ -6,6 +6,7 @@ import {
   Cover,
   EnrolUser,
   LoadUser,
+  ReadUser,
 } from '../components';
 
 export function HomePage() {
@@ -17,6 +18,7 @@ export function HomePage() {
         <Cover />
       </WriteContainer>
       <ViewContainer>
+        {!params.id ? <ReadUser /> : ''}
         {params.id === 'enrol' ? <EnrolUser /> : ''}
         {params.id === 'load' ? <LoadUser /> : ''}
       </ViewContainer>
