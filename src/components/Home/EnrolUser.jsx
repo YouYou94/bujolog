@@ -8,9 +8,9 @@
 
 import { useState } from 'react';
 import { customAlphabet } from 'nanoid';
-import { Container, Title, Input, ValidLabel } from './Styled';
+import { Container, Title, Input, ValidLabel, ChangeLabel } from './Styled';
 
-export const EnrolUser = () => {
+export const EnrolUser = ({ setIsEnrol }) => {
   const nanoid = customAlphabet('0123456789abcedfghi', 8);
   const [nickname, setNickname] = useState('');
   const [valid, setValid] = useState('');
@@ -23,7 +23,7 @@ export const EnrolUser = () => {
   };
 
   const onHandlerKeyPressEnter = event => {
-    const userList = localStorage.getItem('user');
+    const userList = JSON.parse(localStorage.getItem('user'));
 
     /* 유효성 검사 */
     if (!nickname) {
@@ -31,7 +31,7 @@ export const EnrolUser = () => {
       return;
     }
 
-    if (userList.includes(nickname)) {
+    if (userList && userList.includes(nickname)) {
       setValid('동일한 사용자명이 있습니다!');
       return;
     }
@@ -50,6 +50,8 @@ export const EnrolUser = () => {
         localStorage.setItem('recent-connect', JSON.stringify(user));
       }
 
+      alert('사용자 등록이 완료되었습니다!');
+
       setNickname('');
     }
   };
@@ -64,6 +66,9 @@ export const EnrolUser = () => {
         placeholder="사용자명을 입력해주세요."
       />
       <ValidLabel>{valid}</ValidLabel>
+      <ChangeLabel onClick={() => setIsEnrol(false)}>
+        혹시 등록되어 있는 정보가 있으신가요?
+      </ChangeLabel>
     </Container>
   );
 };
