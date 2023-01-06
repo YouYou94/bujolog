@@ -21,6 +21,8 @@ export const CoverTitle = styled.h1`
 `;
 
 export const CoverCaption = styled.h3`
+  margin-top: 2rem;
+
   font-family: 'GowunDodum';
   font-size: 2rem;
 
