@@ -11,7 +11,6 @@ import store from './store/store.jsx';
 // CSS
 import './index.css';
 import './Reset.css';
-
 import './styles/font.css';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
