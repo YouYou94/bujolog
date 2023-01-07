@@ -2,7 +2,8 @@
     커버 페이지
 */
 
-import { Container, CoverTitle, CoverCaption } from './Styled';
+import { Container, CoverCaption } from './Styled';
+import { CoverTitle } from '../index';
 
 export function Cover() {
   return (

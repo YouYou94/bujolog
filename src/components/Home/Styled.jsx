@@ -13,13 +13,6 @@ export const Container = styled.div`
 `;
 
 /* Cover */
-export const CoverTitle = styled.h1`
-  font-family: 'GreatVibes';
-  font-size: 5rem;
-
-  text-align: center;
-`;
-
 export const CoverCaption = styled.h3`
   margin-top: 2rem;
 
