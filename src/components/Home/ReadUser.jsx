@@ -32,9 +32,15 @@ export function ReadUser() {
           <SubTitle> 님의 불렛저널</SubTitle>
         </Title>
         <JournalLabel>Index</JournalLabel>
-        <JournalIndex>──　Key Setting</JournalIndex>
-        <JournalIndex>──　Monthly Log</JournalIndex>
-        <JournalIndex>──　Daily Log</JournalIndex>
+        <JournalIndex onClick={() => navigate('/bujolog/key')}>
+          ──　Key Setting
+        </JournalIndex>
+        <JournalIndex onClick={() => navigate('/bujolog/monthly')}>
+          ──　Monthly Log
+        </JournalIndex>
+        <JournalIndex onClick={() => navigate('/bujolog/daily')}>
+          ──　Daily Log
+        </JournalIndex>
       </Container>
     );
   else return null;
