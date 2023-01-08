@@ -17,10 +17,10 @@ export function ReadUser() {
   const connectUser = JSON.parse(localStorage.getItem('recent-connect'));
 
   useEffect(() => {
-    console.log('connectUser');
+    //console.log('connectUser');
     if (!connectUser) {
       navigate('/bujolog/enrol');
-      console.log('connectUser');
+      //console.log('connectUser');
     }
   }, [connectUser, navigate]);
 
