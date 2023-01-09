@@ -15,7 +15,7 @@ export const Header = styled.div`
 `;
 
 export const Title = styled.h1`
-  width: 30rem;
+  width: 25rem;
 
   color: rgb(245, 245, 245);
 
@@ -28,16 +28,16 @@ export const Title = styled.h1`
 export const IndexBox = styled.div`
   flex: 1;
 
-  width: 30rem;
+  width: 25rem;
 
   margin-bottom: 3rem;
   border-radius: 1rem;
-  padding: 3rem 2rem;
+  padding: 3rem 1rem;
 
   background-color: rgb(10, 10, 10, 0.5);
 `;
 
-export const IndexAccordion = styled.ul`
+export const IndexMenu = styled.ul`
   display: flex;
   flex-direction: column;
 
@@ -50,13 +50,13 @@ export const IndexItem = styled.li`
   color: rgb(245, 245, 245);
 
   font-family: 'Anton';
-  font-size: 2.2rem;
+  font-size: 2rem;
 
   cursor: pointer;
 
   transition: 0.2s all;
 
   &:hover {
-    padding-left: 2rem;
+    padding-left: 1.5rem;
   }
 `;
