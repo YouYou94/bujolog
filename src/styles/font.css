@@ -20,6 +20,6 @@
 
 /* 홈페이지 로고 폰트 */
 @font-face {
-  font-family: 'Oswald';
-  src: url('./fonts/Oswald-SemiBold.ttf') format('truetype');
+  font-family: 'Anton';
+  src: url('./fonts/Anton-Regular.ttf') format('truetype');
 }
