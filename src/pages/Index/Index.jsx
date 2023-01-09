@@ -5,7 +5,7 @@ import {
   Header,
   Title,
   IndexBox,
-  IndexAccordion,
+  IndexMenu,
   IndexItem,
 } from './IndexStyled';
 
@@ -19,7 +19,7 @@ export function Index() {
           <Title>INDEX.</Title>
         </Header>
         <IndexBox>
-          <IndexAccordion>
+          <IndexMenu>
             <IndexItem onClick={() => navigate('/bujolog/bullet')}>
               ─ BULLET KEY SETTING
             </IndexItem>
@@ -30,7 +30,7 @@ export function Index() {
               ─ DAILY LOG
             </IndexItem>
             <IndexItem>─ MOOD TRACKER</IndexItem>
-          </IndexAccordion>
+          </IndexMenu>
         </IndexBox>
       </Container>
     </BackgroundLayout>
