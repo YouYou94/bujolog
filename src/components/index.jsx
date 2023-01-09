@@ -1,7 +1,7 @@
 /* Common UI */
 
 /* Layout */
-export { BackgroundLayout } from './common/Layout/CommonLayout';
+export { BackgroundLayout, DefaultLayout } from './common/Layout/CommonLayout';
 
 /* Components */
 
