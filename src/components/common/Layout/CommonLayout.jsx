@@ -5,10 +5,6 @@ export function BackgroundLayout({ children }) {
   return <Background>{children}</Background>;
 }
 
-export function DefaultLayout({ children }) {
-  return;
-}
-
 export const Background = styled.div`
   width: 100%;
   height: 100vh;
@@ -20,11 +16,4 @@ export const Background = styled.div`
   background-blend-mode: multiply;
   background-repeat: no-repeat;
   background-size: cover;
-`;
-
-export const Default = styled.div`
-  width: 100%;
-  height: 100vh;
-
-  display: flex;
 `;

@@ -15,11 +15,10 @@ font style
 etc..
 
 */
-.App {
-  height: 100vh;
+.Practice {
+  /* 배경 */
+  background-color: rgb(245, 245, 245);
 
-  display: flex;
-  justify-content: center;
-
-  background-color: rgb(246, 246, 246);
+  /* Error Label */
+  color: rgb(255, 84, 84);
 }
