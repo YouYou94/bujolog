@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { customAlphabet } from 'nanoid';
 import styled from 'styled-components';
 
-export function EnrolUser() {
+export function EnrolUser({ setIsChange }) {
   const nanoid = customAlphabet('0123456abcdefg', 8);
   const [name, setName] = useState('');
   const [validMessage, setValidMessage] = useState('');
@@ -28,6 +28,7 @@ export function EnrolUser() {
       localStorage.setItem('user', JSON.stringify(object));
 
       setName('');
+      setIsChange(false);
     }
   };
 
