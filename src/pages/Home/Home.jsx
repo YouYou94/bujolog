@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { CommonLayout, EnrolUser } from '../../components';
+import { BackgroundLayout, EnrolUser } from '../../components';
 import { Container, GuideBox, Title, Text, GuideText } from './HomeStyled.jsx';
 
 export function Home() {
@@ -15,7 +15,7 @@ export function Home() {
   };
 
   return (
-    <CommonLayout>
+    <BackgroundLayout>
       <Container>
         <Title>BUJOLOG</Title>
         {isChange ? (
@@ -27,6 +27,6 @@ export function Home() {
           </GuideBox>
         )}
       </Container>
-    </CommonLayout>
+    </BackgroundLayout>
   );
 }

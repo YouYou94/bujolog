@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import HomeImage from '../../img/Background/HomeImage.jpg';
 
 export const Container = styled.div`
   flex: 1;
@@ -8,12 +7,6 @@ export const Container = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
-  background-image: url(${HomeImage});
-  background-color: rgb(0, 0, 0, 0.65);
-  background-blend-mode: multiply;
-  background-repeat: no-repeat;
-  background-size: cover;
 
   gap: 3rem;
 `;
