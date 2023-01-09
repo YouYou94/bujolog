@@ -10,16 +10,15 @@ export const Container = styled.div`
   align-items: center;
 
   background-image: url(${HomeImage});
-  background-color: rgb(0, 0, 0, 0.6);
+  background-color: rgb(0, 0, 0, 0.65);
   background-blend-mode: multiply;
   background-repeat: no-repeat;
   background-size: cover;
 
-  gap: 5rem;
+  gap: 3rem;
 `;
 
 export const Title = styled.h1`
-  width: 414px;
   height: 10rem;
 
   color: rgb(245, 245, 245);
@@ -49,7 +48,6 @@ export const Text = styled.label`
 export const GuideBox = styled.h2`
   position: relative;
 
-  width: 414px;
   height: 5rem;
 
   display: flex;
@@ -67,7 +65,7 @@ export const GuideText = styled.label`
   width: 13rem;
 
   top: 35%;
-  right: -20%;
+  right: -120%;
 
   font-family: 'GowunDodum';
   font-size: 1rem;
