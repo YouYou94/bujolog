@@ -1,12 +1,11 @@
 /* Common UI */
 /* Layout */
+export { BackgroundLayout, DefaultLayout } from './common/Layout/CommonLayout';
 export {
-  BackgroundLayout,
-  DefaultLayout,
-  WriteLayout,
-} from './common/Layout/CommonLayout';
-
-export { LogLayout, SettingLayout } from './common/Layout/JournalLayout';
+  SetupTemplate,
+  SetupArticle,
+  SetupFooter,
+} from './common/Layout/SetupLayout';
 
 /* Button */
 export { SettingButton } from './common/Button/Button';
@@ -14,9 +13,6 @@ export { SettingButton } from './common/Button/Button';
 /* Components */
 /* Home */
 export { EnrolUser } from './Home/EnrolUser';
-
-/* Bullet */
-export { BulletSetting } from './KeySetting/BulletSetting';
 
 /* Menual */
 export { KeySettingMenual } from './Menual/KeySettingMenual';
