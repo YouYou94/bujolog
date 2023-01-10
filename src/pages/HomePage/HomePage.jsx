@@ -1,9 +1,15 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { BackgroundLayout, EnrolUser } from '../../components';
-import { Container, GuideBox, Title, Text, GuideText } from './HomeStyled.jsx';
+import {
+  Container,
+  GuideBox,
+  Title,
+  Text,
+  GuideText,
+} from './HomePageStyled.jsx';
 
-export function Home() {
+export function HomePage() {
   const navigate = useNavigate();
   const [isChange, setIsChange] = useState(false);
 

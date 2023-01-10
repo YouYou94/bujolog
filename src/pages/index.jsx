@@ -1,2 +1,3 @@
-export { Home } from './Home/Home';
-export { Index } from './Index/Index';
+export { HomePage } from './HomePage/HomePage';
+export { IndexPage } from './IndexPage/IndexPage';
+export { KeySettingPage } from './KeySettingPage/KeySettingPage';

@@ -7,9 +7,9 @@ import {
   IndexBox,
   IndexMenu,
   IndexItem,
-} from './IndexStyled';
+} from './IndexPageStyled';
 
-export function Index() {
+export function IndexPage() {
   const navigate = useNavigate();
 
   return (
