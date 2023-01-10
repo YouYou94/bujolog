@@ -1,7 +1,10 @@
 import { useEffect, useState } from 'react';
+import { useNavigate, useParams } from 'react-router-dom';
 import { Container, Title, CaptionBox, Caption } from './MenualStyled';
 
 export function KeySettingMenual() {
+  const navigate = useNavigate();
+  const params = useParams();
   const [count, setCount] = useState(0);
 
   useEffect(() => {
@@ -44,7 +47,21 @@ export function KeySettingMenual() {
         ) : (
           <></>
         )}
-        {count >= 5 ? <Caption optional={'CLICK'}>CLICK ME</Caption> : <></>}
+        {params.id !== 'setting' ? (
+          count >= 5 ? (
+            <Caption
+              optional={'CLICK'}
+              none={(params.id === 'setting').toString()}
+              onClick={() => navigate('/bujolog/bullet/setting')}
+            >
+              CLICK ME
+            </Caption>
+          ) : (
+            <></>
+          )
+        ) : (
+          <></>
+        )}
       </CaptionBox>
     </Container>
   );
