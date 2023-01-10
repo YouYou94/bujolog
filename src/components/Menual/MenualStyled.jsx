@@ -1,4 +1,15 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
+import HomeImage from '../../img/Background/HomeImage.jpg';
+
+const FadeIn = keyframes`
+from {
+  opacity: 0;
+  transform: translateY(36px);
+}
+to{
+  opacity: 1;
+  transform: none;
+}`;
 
 export const Container = styled.div`
   flex: 1;
@@ -8,6 +19,14 @@ export const Container = styled.div`
   align-items: center;
 
   padding-top: 10rem;
+
+  background-image: url(${HomeImage});
+  background-color: rgb(0, 0, 0, 0.65);
+  background-blend-mode: multiply;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  color: rgb(245, 245, 245);
 
   gap: 3rem;
 `;
@@ -27,6 +46,14 @@ export const CaptionBox = styled.div`
 `;
 
 export const Caption = styled.label`
+  height: 4rem;
   font-family: 'GowunDodum';
   font-size: 2rem;
+
+  animation: ${FadeIn} 2s ease-in-out;
+
+  ${prop =>
+    prop.optional === 'CLICK'
+      ? 'text-align: right; font-size: 3rem; font-family: Anton; font-style:italic; transition: .3s all; cursor:pointer; &:hover {padding-right: .9rem;}'
+      : ''}
 `;
