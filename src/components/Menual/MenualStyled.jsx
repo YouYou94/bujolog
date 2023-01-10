@@ -4,7 +4,7 @@ import HomeImage from '../../img/Background/HomeImage.jpg';
 const FadeIn = keyframes`
 from {
   opacity: 0;
-  transform: translateY(36px);
+  transform: translateY(3rem);
 }
 to{
   opacity: 1;
@@ -50,7 +50,7 @@ export const Caption = styled.label`
   font-family: 'GowunDodum';
   font-size: 2rem;
 
-  animation: ${FadeIn} 2s ease-in-out;
+  animation: ${FadeIn} 1.5s ease-in-out;
 
   ${prop =>
     prop.optional === 'CLICK'

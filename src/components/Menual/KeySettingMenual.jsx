@@ -7,7 +7,7 @@ export function KeySettingMenual() {
   useEffect(() => {
     const interval = setInterval(() => {
       setCount(count + 1);
-    }, 1000);
+    }, 700);
     if (count === 5) {
       clearInterval(interval);
     }
