@@ -1,3 +1,6 @@
-export { HomePage } from './HomePage/HomePage';
-export { IndexPage } from './IndexPage/IndexPage';
-export { KeySettingPage } from './KeySettingPage/KeySettingPage';
+export { default as HomePage } from './HomePage';
+export { default as IndexPage } from './IndexPage';
+export { default as KeysettingPage } from './KeysettingPage';
+export { default as MonthlylogPage } from './MonthlylogPage';
+export { default as DailylogPage } from './DailylogPage';
+export { default as MoodtrackerPage } from './MoodtrackerPage';
