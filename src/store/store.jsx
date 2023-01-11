@@ -1,14 +1,12 @@
 import { configureStore } from '@reduxjs/toolkit';
 
-import bulletSlice from './modules/BulletModule.jsx';
+import keySlice from './modules/KeyModule.jsx';
 import daillySlice from './modules/DailyModule.jsx';
 import monthlySlice from './modules/MonthlyModule.jsx';
-import sideMenuSlice from './modules/SideMenuModule';
 
 const store = configureStore({
   reducer: {
-    sideMenu: sideMenuSlice.reducer,
-    bullet: bulletSlice.reducer,
+    key: keySlice.reducer,
     monthly: monthlySlice.reducer,
     daily: daillySlice.reducer,
   },
