@@ -14,6 +14,7 @@ import cake from './img/BulletIcon/cake.png';
 import star from './img/BulletIcon/star.png';
 import heart from './img/BulletIcon/heart.png';
 import music from './img/BulletIcon/music.png';
+import { customAlphabet } from 'nanoid';
 
 export const ICONLIST = [
   square,
@@ -50,3 +51,32 @@ export const CAKE = cake;
 export const STAR = star;
 export const HEART = heart;
 export const MUSIC = music;
+
+const nanoid = () => {
+  const randomID = customAlphabet('0123456789abcdefghijklmnop', 8);
+
+  return randomID();
+};
+
+export const INITIALKEY = [
+  {
+    icon: DOT,
+    id: nanoid(),
+    description: '해야 할 일',
+  },
+  {
+    icon: SQUARE,
+    id: nanoid(),
+    description: '완료',
+  },
+  {
+    icon: NEXT,
+    id: nanoid(),
+    description: '일정 연기',
+  },
+  {
+    icon: PREV,
+    id: nanoid(),
+    description: '일정 변경',
+  },
+];
