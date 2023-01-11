@@ -1,6 +1,7 @@
 import { customAlphabet } from 'nanoid';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { INITIALKEY } from '../../Constants';
 import HomePresenter from './HomePresenter';
 
 const HomeContainer = () => {
@@ -26,7 +27,13 @@ const HomeContainer = () => {
     const { key } = event;
 
     if (key === 'Enter') {
-      const object = { name: name, id: nanoid() };
+      const object = {
+        name: name,
+        id: nanoid(),
+        key: INITIALKEY,
+        monthlylog: {},
+        dailylog: {},
+      };
 
       if (!name) {
         setValidMessage('빈 이름이나 닉네임은 사용할 수 없습니다.');
