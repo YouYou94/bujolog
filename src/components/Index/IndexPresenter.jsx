@@ -8,7 +8,7 @@ const IndexPresenter = ({
   handleMoveMoodTracker,
 }) => {
   return (
-    <ImageLayout isFull={true}>
+    <ImageLayout>
       <Styled.Container>
         <Styled.Header>
           <Title width={25} size={7} color={'rgb(245,245,245)'} isShadow={true}>

@@ -10,7 +10,7 @@ const HomePresenter = ({
   onHandlerPressEnter,
 }) => {
   return (
-    <ImageLayout isFull={true}>
+    <ImageLayout>
       <Styled.Container>
         <Title size={7} color={'rgb(245, 245, 245)'} isShadow={true}>
           BUJOLOG
