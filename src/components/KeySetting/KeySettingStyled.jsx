@@ -14,9 +14,9 @@ export const KeyBox = styled.ul`
   display: flex;
   flex-direction: column;
 
-  padding: 4rem 2rem 0 2rem;
+  padding: 2rem 2rem 0 2rem;
 
-  gap: 1.5rem;
+  gap: 0.5rem;
 `;
 
 export const KeyList = styled.li`
@@ -32,7 +32,7 @@ export const KeyList = styled.li`
 export const Key = styled.div`
   flex: 1;
 
-  height: 3.5rem;
+  height: 2.5rem;
 
   display: flex;
   align-items: center;
@@ -57,8 +57,8 @@ export const Key = styled.div`
 `;
 
 export const Icon = styled.div`
-  width: 2rem;
-  height: 2rem;
+  width: 1.5rem;
+  height: 1.5rem;
 
   background-image: url(${prop => prop.icon});
   background-repeat: no-repeat;
@@ -73,14 +73,14 @@ export const Description = styled.label`
   padding-left: 2rem;
 
   font-family: 'GowunDodum';
-  font-size: 1.5rem;
+  font-size: 1.2rem;
 
   cursor: pointer;
 `;
 
 export const DeleteButton = styled.button`
   width: 4rem;
-  height: 3.5rem;
+  height: 2.5rem;
 
   border: none;
   border-radius: 1rem;
@@ -104,10 +104,11 @@ export const DeleteButton = styled.button`
 `;
 
 export const CreateLabel = styled.label`
-  padding: 0 2rem;
+  margin-top: 1rem;
+  padding-left: 2rem;
 
   font-family: 'GowunDodum';
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   font-style: italic;
 
   color: rgb(25, 25, 25);
@@ -124,7 +125,7 @@ export const CreateLabel = styled.label`
 `;
 
 export const ButtonBox = styled.div`
-  height: 6rem;
+  height: 4rem;
 
   display: flex;
   justify-content: space-between;

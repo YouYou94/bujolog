@@ -9,13 +9,13 @@ export const Container = styled.div`
 `;
 
 export const Header = styled.div`
-  height: 15rem;
+  height: 12rem;
 
-  padding-top: 5rem;
+  padding-top: 4rem;
 `;
 
 export const Title = styled.h1`
-  width: 25rem;
+  width: 20rem;
 
   color: rgb(245, 245, 245);
 
@@ -28,7 +28,7 @@ export const Title = styled.h1`
 export const IndexBox = styled.div`
   flex: 1;
 
-  width: 25rem;
+  width: 20rem;
 
   margin-bottom: 3rem;
   border-radius: 1rem;
@@ -50,7 +50,7 @@ export const IndexItem = styled.li`
   color: rgb(245, 245, 245);
 
   font-family: 'Anton';
-  font-size: 2rem;
+  font-size: 1.5rem;
 
   cursor: pointer;
 

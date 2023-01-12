@@ -13,7 +13,7 @@ export const Container = styled.div`
 
 export const Text = styled.label`
   font-family: 'Anton';
-  font-size: 3rem;
+  font-size: 2.5rem;
 
   transition: 0.3s all;
 
@@ -21,7 +21,7 @@ export const Text = styled.label`
 
   &:hover {
     text-decoration: underline;
-    font-size: 3.3rem;
+    font-size: 2.7rem;
   }
 `;
 
@@ -45,7 +45,7 @@ export const GuideText = styled.label`
   width: 13rem;
 
   top: 35%;
-  right: -120%;
+  right: -140%;
 
   font-family: 'GowunDodum';
   font-size: 1rem;

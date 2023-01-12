@@ -17,7 +17,7 @@ export const Container = styled.div`
   flex-direction: column;
   align-items: center;
 
-  padding-top: 10rem;
+  padding-top: 5rem;
 
   color: rgb(245, 245, 245);
 
@@ -26,20 +26,20 @@ export const Container = styled.div`
 
 export const Title = styled.h1`
   font-family: 'Anton';
-  font-size: 5rem;
+  font-size: 4rem;
 `;
 
 export const CaptionBox = styled.div`
   display: flex;
   flex-direction: column;
 
-  gap: 2rem;
+  gap: 1rem;
 `;
 
 export const Caption = styled.label`
-  height: 4rem;
+  height: 3rem;
   font-family: 'GowunDodum';
-  font-size: 1.6rem;
+  font-size: 1.3rem;
 
   animation: ${FadeIn} 1.5s ease-in-out;
 `;

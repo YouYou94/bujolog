@@ -11,7 +11,7 @@ const IndexPresenter = ({
     <ImageLayout>
       <Styled.Container>
         <Styled.Header>
-          <Title width={25} size={7} color={'rgb(245,245,245)'} isShadow={true}>
+          <Title width={20} size={5} color={'rgb(245,245,245)'} isShadow={true}>
             INDEX.
           </Title>
         </Styled.Header>
