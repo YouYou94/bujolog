@@ -1,24 +1,25 @@
 {
   "files": {
-    "main.css": "/bujolog/static/css/main.4ccf3322.css",
-    "main.js": "/bujolog/static/js/main.395055c1.js",
+    "main.css": "/bujolog/static/css/main.de28a247.css",
+    "main.js": "/bujolog/static/js/main.7eac863f.js",
     "static/media/GowunDodum-Regular.ttf": "/bujolog/static/media/GowunDodum-Regular.39c9a39c246c3c54c53e.ttf",
     "static/media/CormorantGaramond-MediumItalic.ttf": "/bujolog/static/media/CormorantGaramond-MediumItalic.9cfefa19b48747b36e42.ttf",
+    "static/media/HomeImage.jpg": "/bujolog/static/media/HomeImage.f825e1d9f210f72150e9.jpg",
     "static/media/IBMPlexSans-Light.ttf": "/bujolog/static/media/IBMPlexSans-Light.f6a1d8cf71c931e0b2aa.ttf",
+    "static/media/Anton-Regular.ttf": "/bujolog/static/media/Anton-Regular.170b842f9a8cd6150a0d.ttf",
     "static/media/GreatVibes-Regular.ttf": "/bujolog/static/media/GreatVibes-Regular.6d246c3b51d7eb58b13a.ttf",
     "static/media/cake.png": "/bujolog/static/media/cake.5e6b41b666b75451479f.png",
     "static/media/circle.png": "/bujolog/static/media/circle.4478e008d47d63a188f9.png",
     "static/media/triangle.png": "/bujolog/static/media/triangle.cb709103b591a3407599.png",
-    "static/media/blank.png": "/bujolog/static/media/blank.2fda6558cd58b877e14f.png",
     "static/media/star.png": "/bujolog/static/media/star.21597dc93ab3ec7dc93f.png",
     "static/media/music.png": "/bujolog/static/media/music.19bdfe8fd2e37ff4cf27.png",
     "static/media/fillcircle.png": "/bujolog/static/media/fillcircle.1d2f623bf2b0d3470eb9.png",
     "index.html": "/bujolog/index.html",
-    "main.4ccf3322.css.map": "/bujolog/static/css/main.4ccf3322.css.map",
-    "main.395055c1.js.map": "/bujolog/static/js/main.395055c1.js.map"
+    "main.de28a247.css.map": "/bujolog/static/css/main.de28a247.css.map",
+    "main.7eac863f.js.map": "/bujolog/static/js/main.7eac863f.js.map"
   },
   "entrypoints": [
-    "static/css/main.4ccf3322.css",
-    "static/js/main.395055c1.js"
+    "static/css/main.de28a247.css",
+    "static/js/main.7eac863f.js"
   ]
 }
