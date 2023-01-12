@@ -1,5 +1,7 @@
+import { MonthlyContainer } from '../components';
+
 const MonthlylogPage = () => {
-  return;
+  return <MonthlyContainer />;
 };
 
 export default MonthlylogPage;

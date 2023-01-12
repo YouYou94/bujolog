@@ -1,5 +1,7 @@
+import { IndexContainer } from '../components';
+
 const IndexPage = () => {
-  return;
+  return <IndexContainer />;
 };
 
 export default IndexPage;
