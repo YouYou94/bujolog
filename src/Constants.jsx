@@ -80,3 +80,20 @@ export const INITIALKEY = [
     description: '일정 변경',
   },
 ];
+
+export const MONTHNAME = [
+  'JAN',
+  'FEB',
+  'MAR',
+  'APR',
+  'MAY',
+  'JUN',
+  'JUL',
+  'AUG',
+  'SEP',
+  'OCT',
+  'NOV',
+  'DEC',
+];
+
+export const DAYSHORTNAME = ['S', 'M', 'T', 'W', 'T', 'F', 'S'];
