@@ -1,4 +1,10 @@
-import { DefaultLayout, ImageLayout, Menual, SettingButton } from '../index';
+import {
+  ButtonBox,
+  DefaultLayout,
+  ImageLayout,
+  Menual,
+  SettingButton,
+} from '../index';
 import { ICONLIST } from '../../Constants';
 import * as Styled from './KeySettingStyled';
 import { CREATE_METHOD } from './keySettingContainer';
@@ -74,11 +80,11 @@ const KeySettingPresenter = ({
             클릭하여 추가하기
           </Styled.CreateLabel>
         </Styled.KeyBox>
-        <Styled.ButtonBox>
+        <ButtonBox>
           <SettingButton handler={handleClickMoveOnBack}>
             뒤로가기
           </SettingButton>
-        </Styled.ButtonBox>
+        </ButtonBox>
       </DefaultLayout>
     </ImageLayout>
   );
