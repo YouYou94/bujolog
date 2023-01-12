@@ -1,131 +1,62 @@
 import { createSlice } from '@reduxjs/toolkit';
 
-const initialState = [
-  {
-    // 1월
-    goals: [],
-    task: [],
-  },
-  {
-    // 2월
-    goals: [],
-    task: [],
-  },
-  {
-    // 3월
-    goals: [],
-    task: [],
-  },
-  {
-    // 4월
-    goals: [],
-    task: [],
-  },
-  {
-    // 5월
-    goals: [],
-    task: [],
-  },
-  {
-    // 6월
-    goals: [],
-    task: [],
-  },
-  {
-    // 7월
-    goals: [],
-    task: [],
-  },
-  {
-    // 8월
-    goals: [],
-    task: [],
-  },
-  {
-    // 9월
-    goals: [],
-    task: [],
-  },
-  {
-    // 10월
-    goals: [],
-    task: [],
-  },
-  {
-    // 11월
-    goals: [],
-    task: [],
-  },
-  {
-    // 12월
-    goals: [],
-    task: [],
-  },
-];
+const initialState = {
+  monthly: localStorage.getItem('user')
+    ? JSON.parse(localStorage.getItem('user')).monthlylog
+    : {},
+};
 
 const monthlySlice = createSlice({
   name: 'monthly',
   initialState,
   reducers: {
-    checkScheduled(state, action) {
-      const { month, date } = action.payload;
+    createSchedule(state, action) {
+      const { selectedSchedule } = action.payload;
+      const { month, day, id, plan } = selectedSchedule;
 
-      if (state[month][`${date}`] === undefined) {
-        state[month] = {
-          ...state[month],
-          [date]: { schedule: '' },
-        };
-      }
-    },
-    addScheduled(state, action) {
-      const { month, date, schedule } = action.payload;
-      state[month] = {
-        ...state[month],
-        [date]: { schedule: schedule },
-      };
-    },
-    delSceduled(state, action) {
-      const { month, date } = action.payload;
+      state.monthly = { ...state.monthly, [`${month}.${day}`]: { id, plan } };
 
-      state[month] = {
-        ...state[month],
-        [date]: { schedule: '' },
-      };
-    },
-    addTask(state, action) {
-      const { month, icon, log } = action.payload;
+      const userState = JSON.parse(localStorage.getItem('user'));
 
-      state[month].task.push({ icon, log });
-    },
-    delTask(state, action) {
-      const { month, id } = action.payload;
-
-      state[month].task = state[month].task.filter(
-        (e, index) => index !== Number(id)
+      localStorage.setItem(
+        'user',
+        JSON.stringify({
+          ...userState,
+          monthlylog: {
+            ...userState.monthlylog,
+            [`${month}.${day}`]: { id, plan },
+          },
+        })
       );
-    },
-    addGoal(state, action) {
-      const { month, icon, log } = action.payload;
 
-      state[month].goals.push({ icon, log });
+      console.log('먼슬리로그 추가 완료!');
     },
-    delGoal(state, action) {
-      const { month, id } = action.payload;
+    updateSchedule(state, action) {
+      const { selectedSchedule } = action.payload;
+      const { month, day, id, plan } = selectedSchedule;
 
-      state[month].goals = state[month].goals.filter(
-        (e, index) => index !== Number(id)
+      Object.keys(state.monthly).forEach(key => {
+        if (`${month}.${day}` === key) {
+          state.monthly[key] = { id, plan };
+        }
+      });
+
+      const userState = JSON.parse(localStorage.getItem('user'));
+
+      localStorage.setItem(
+        'user',
+        JSON.stringify({
+          ...userState,
+          monthlylog: state.monthly,
+        })
       );
+
+      console.log('먼슬리로그 변경 완료!');
     },
+    deleteSchedule(state, action) {},
   },
 });
 
-export const {
-  checkScheduled,
-  addScheduled,
-  delSceduled,
-  addTask,
-  delTask,
-  addGoal,
-  delGoal,
-} = monthlySlice.actions;
+export const { createSchedule, updateSchedule, deleteSchedule } =
+  monthlySlice.actions;
 export default monthlySlice;
