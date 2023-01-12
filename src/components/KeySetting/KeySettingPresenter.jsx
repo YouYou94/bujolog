@@ -1,4 +1,4 @@
-import { DefaultLayout, ImageLayout, Menual } from '../index';
+import { DefaultLayout, ImageLayout, Menual, SettingButton } from '../index';
 import { ICONLIST } from '../../Constants';
 import * as Styled from './KeySettingStyled';
 import { CREATE_METHOD } from './keySettingContainer';
@@ -16,6 +16,7 @@ const KeySettingPresenter = ({
   handleUpdateKey,
   handleDeleteKey,
   handleSelectKey,
+  handleClickMoveOnBack,
 }) => {
   return (
     <ImageLayout>
@@ -73,6 +74,11 @@ const KeySettingPresenter = ({
             클릭하여 추가하기
           </Styled.CreateLabel>
         </Styled.KeyBox>
+        <Styled.ButtonBox>
+          <SettingButton handler={handleClickMoveOnBack}>
+            뒤로가기
+          </SettingButton>
+        </Styled.ButtonBox>
       </DefaultLayout>
     </ImageLayout>
   );

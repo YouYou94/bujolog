@@ -9,6 +9,8 @@ export const Container = styled.div`
 `;
 
 export const KeyBox = styled.ul`
+  flex: 1;
+
   display: flex;
   flex-direction: column;
 
@@ -119,6 +121,18 @@ export const CreateLabel = styled.label`
 
     text-decoration: underline;
   }
+`;
+
+export const ButtonBox = styled.div`
+  height: 6rem;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 0 2rem;
+
+  border-top: 1px solid rgb(204, 204, 204);
 `;
 
 /* Modal */

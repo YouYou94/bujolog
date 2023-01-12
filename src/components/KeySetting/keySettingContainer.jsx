@@ -1,6 +1,7 @@
 import { customAlphabet } from 'nanoid';
 import { useRef, useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
 import { createKey, deleteKey, updateKey } from '../../store/modules/KeyModule';
 import KeySettingPresenter from './KeySettingPresenter';
 
@@ -19,9 +20,9 @@ const MENUAL = {
 
 export const CREATE_METHOD = '키 추가하기';
 export const UPDATE_METHOD = '키 변경하기';
-export const DELETE_METHOD = '키 삭제하기';
 
 const KeySettingContainer = () => {
+  const navigate = useNavigate();
   const modalRef = useRef();
 
   const dispatch = useDispatch();
@@ -124,6 +125,9 @@ const KeySettingContainer = () => {
     dispatch(deleteKey({ id }));
   };
 
+  /* 세팅 버튼 기능 */
+  const handleClickMoveOnBack = () => navigate('/bujolog/index');
+
   /* 모달 영역 밖 클릭 시 모달창 닫힘 기능 */
   const handleClickOutSide = event => {
     if (isDisplayModal && !modalRef.current.contains(event.target)) {
@@ -154,6 +158,7 @@ const KeySettingContainer = () => {
       handleUpdateKey={handleUpdateKey}
       handleDeleteKey={handleDeleteKey}
       handleSelectKey={handleSelectKey}
+      handleClickMoveOnBack={handleClickMoveOnBack}
     />
   );
 };
