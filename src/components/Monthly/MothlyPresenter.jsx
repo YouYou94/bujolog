@@ -75,7 +75,7 @@ const MonthlyPresenter = ({
           </Styled.ScheduleArticle>
         </Styled.ScheduleBox>
         <ButtonBox>
-          <SettingButton onClick={handleClickMoveOnBack}>
+          <SettingButton handler={handleClickMoveOnBack}>
             뒤로가기
           </SettingButton>
         </ButtonBox>
