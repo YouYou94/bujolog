@@ -2,7 +2,7 @@
 export { ImageLayout, DefaultLayout } from './common/Layout/Layout';
 export { Title } from './common/Title/Title';
 export { Menual } from './common/Menual/Menual';
-export { SettingButton } from './common/Button/Button';
+export { BackButton } from './common/Button/Button';
 export { ButtonBox } from './common/Box/Box';
 
 /* Components */

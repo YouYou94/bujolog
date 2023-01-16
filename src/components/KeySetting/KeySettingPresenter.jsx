@@ -3,7 +3,7 @@ import {
   DefaultLayout,
   ImageLayout,
   Menual,
-  SettingButton,
+  BackButton,
 } from '../index';
 import { ICONLIST } from '../../Constants';
 import * as Styled from './KeySettingStyled';
@@ -22,7 +22,6 @@ const KeySettingPresenter = ({
   handleUpdateKey,
   handleDeleteKey,
   handleSelectKey,
-  handleClickMoveOnBack,
 }) => {
   return (
     <ImageLayout>
@@ -81,9 +80,7 @@ const KeySettingPresenter = ({
           </Styled.CreateLabel>
         </Styled.KeyBox>
         <ButtonBox>
-          <SettingButton handler={handleClickMoveOnBack}>
-            뒤로가기
-          </SettingButton>
+          <BackButton>뒤로가기</BackButton>
         </ButtonBox>
       </DefaultLayout>
     </ImageLayout>

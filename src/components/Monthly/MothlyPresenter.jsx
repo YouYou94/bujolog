@@ -1,4 +1,4 @@
-import { ImageLayout, Menual, ButtonBox, SettingButton } from '../index';
+import { ImageLayout, Menual, ButtonBox, BackButton } from '../index';
 import * as Styled from './MonthlyStyled';
 
 const MonthlyPresenter = ({
@@ -18,7 +18,6 @@ const MonthlyPresenter = ({
   getDayShortName,
   handleCreateMonthlyLog,
   handleUpdateMonthlyLog,
-  handleClickMoveOnBack,
 }) => {
   return (
     <ImageLayout>
@@ -75,9 +74,7 @@ const MonthlyPresenter = ({
           </Styled.ScheduleArticle>
         </Styled.ScheduleBox>
         <ButtonBox>
-          <SettingButton handler={handleClickMoveOnBack}>
-            뒤로가기
-          </SettingButton>
+          <BackButton>뒤로가기</BackButton>
         </ButtonBox>
       </Styled.Container>
     </ImageLayout>

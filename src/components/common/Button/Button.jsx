@@ -1,7 +1,12 @@
+import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
 
-export function SettingButton({ children, handler }) {
-  return <SettingBtn onClick={handler}>{children}</SettingBtn>;
+export function BackButton({ children }) {
+  const navigate = useNavigate();
+
+  const handleClickMoveOnBack = () => navigate('/bujolog/index');
+
+  return <SettingBtn onClick={handleClickMoveOnBack}>{children}</SettingBtn>;
 }
 
 export const SettingBtn = styled.button`

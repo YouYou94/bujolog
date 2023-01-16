@@ -1,7 +1,6 @@
 import { customAlphabet } from 'nanoid';
 import { useRef, useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { useNavigate } from 'react-router-dom';
 import { DAYSHORTNAME, MONTHNAME } from '../../Constants';
 import {
   createSchedule,
@@ -18,7 +17,7 @@ const MENUAL = {
     '1. 일정을 선택하세요.',
     '2. 계획을 작성하세요.',
     '3. 추가하기 또는 엔터키를 입력하여 셋업을 완료하세요.',
-    '4. 한달의 게획을 세우고 실천해보세요.',
+    '4. 한달의 계획을 세우고 실천해보세요.',
   ],
 };
 
@@ -26,7 +25,6 @@ export const CREATE_METHOD = '스케줄 추가하기';
 export const UPDATE_METHOD = '스케줄 변경하기';
 
 const MonthlyContainer = () => {
-  const navigate = useNavigate();
   const modalRef = useRef();
 
   const nanoid = customAlphabet('0123456789abcdefghijklmnop', 8);
@@ -149,9 +147,6 @@ const MonthlyContainer = () => {
     return day;
   };
 
-  /* 세팅 버튼 기능 */
-  const handleClickMoveOnBack = () => navigate('/bujolog/index');
-
   /* 모달 영역 밖 클릭 시 모달창 닫힘 기능 */
   const handleClickOutSide = event => {
     if (isDisplayModal && !modalRef.current.contains(event.target)) {
@@ -185,7 +180,6 @@ const MonthlyContainer = () => {
       getDayShortName={getDayShortName}
       handleCreateMonthlyLog={handleCreateMonthlyLog}
       handleUpdateMonthlyLog={handleUpdateMonthlyLog}
-      handleClickMoveOnBack={handleClickMoveOnBack}
     />
   );
 };
