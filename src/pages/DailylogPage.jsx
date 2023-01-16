@@ -1,5 +1,7 @@
+import { DailyContainer } from '../components';
+
 const DailylogPage = () => {
-  return;
+  return <DailyContainer />;
 };
 
 export default DailylogPage;
