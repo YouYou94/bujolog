@@ -33,9 +33,9 @@ export const LogList = styled.ul`
   display: flex;
   flex-direction: column;
 
-  padding: 2rem 2rem 0 2rem;
+  padding: 0.5rem 2rem 0 2rem;
 
-  gap: 0.5rem;
+  gap: 1rem;
 `;
 
 export const LogItem = styled.li`
@@ -43,9 +43,7 @@ export const LogItem = styled.li`
   justify-content: space-between;
   align-items: center;
 
-  padding: 0 1rem;
-
-  gap: 1rem;
+  gap: 0.5rem;
 `;
 
 export const LogView = styled.div`
@@ -77,8 +75,8 @@ export const LogView = styled.div`
 `;
 
 export const Icon = styled.div`
-  width: 1.5rem;
-  height: 1.5rem;
+  width: 1.3rem;
+  height: 1.3rem;
 
   background-image: url(${prop => prop.icon});
   background-repeat: no-repeat;
@@ -90,10 +88,8 @@ export const Icon = styled.div`
 export const Log = styled.label`
   flex: 1;
 
-  padding-left: 2rem;
-
   font-family: 'GowunDodum';
-  font-size: 1.2rem;
+  font-size: 1rem;
 
   cursor: pointer;
 `;
@@ -122,7 +118,7 @@ export const DeleteButton = styled.button`
   box-shadow: 0 5px 10px 0 hsl(240deg 5% 41% / 20%);
 
   font-family: 'GowunDodum';
-  font-size: 1.2rem;
+  font-size: 1rem;
 
   cursor: pointer;
 
