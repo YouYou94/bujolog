@@ -8,6 +8,7 @@ const DailyPresenter = ({
   createRef,
   today,
   userKeyList,
+  userDailyLogList,
   isDisplayModal,
   createState,
   handleDisplayModal,
@@ -22,6 +23,20 @@ const DailyPresenter = ({
         <Styled.DailyLogBox>
           <Styled.TodayLabel>{today}</Styled.TodayLabel>
           <Styled.LogList>
+            {userDailyLogList[today].map(dailylog => {
+              const { id, key, log } = dailylog;
+
+              return (
+                <Styled.LogItem key={id} id={id}>
+                  <Styled.LogView>
+                    <Styled.Icon icon={key} />
+                    <Styled.Log>{log}</Styled.Log>
+                  </Styled.LogView>
+                  <Styled.DeleteButton>체크</Styled.DeleteButton>
+                  <Styled.DeleteButton>삭제</Styled.DeleteButton>
+                </Styled.LogItem>
+              );
+            })}
             {createState.method === CREATE_METHOD ? (
               <Styled.LogItem ref={createRef}>
                 <Styled.LogView isCreate={true}>

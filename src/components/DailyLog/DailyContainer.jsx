@@ -128,6 +128,7 @@ const DailyContainer = () => {
       createRef={createRef}
       today={today}
       userKeyList={userKeyList}
+      userDailyLogList={userDailyLogList}
       isDisplayModal={isDisplayModal}
       createState={createState}
       handleDisplayModal={handleDisplayModal}
