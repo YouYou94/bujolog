@@ -83,16 +83,16 @@ const DailyContainer = () => {
     });
   };
 
-  /* 먼슬리로그 CRUD 기능 */
+  /* 데일리로그 CRUD 기능 */
   const handleCreateDailyLog = event => {
     const { key } = event;
 
-    if (!createState.key || !createState.log) {
-      alert('키 또는 로그가 비어있습니다!');
-      return;
-    }
-
     if (key === 'Enter') {
+      if (!createState.key || !createState.log) {
+        alert('키 또는 로그가 비어있습니다!');
+        return;
+      }
+
       dispatch(createDailyLog({ createState }));
 
       setIsDisplayModal(false);
