@@ -23,7 +23,7 @@ const DailyPresenter = ({
         <Styled.DailyLogBox>
           <Styled.TodayLabel>{today}</Styled.TodayLabel>
           <Styled.LogList>
-            {userDailyLogList[today].map(dailylog => {
+            {userDailyLogList[today]?.map(dailylog => {
               const { id, key, log } = dailylog;
 
               return (
