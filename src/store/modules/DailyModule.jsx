@@ -12,7 +12,7 @@ const daillySlice = createSlice({
   reducers: {
     createDailyLog(state, action) {
       const { createState } = action.payload;
-      const { id, today, key, log } = createState;
+      const { id, today, key, log, check } = createState;
 
       if (!state.daily[`${today}`]) {
         state.daily = {
@@ -22,7 +22,7 @@ const daillySlice = createSlice({
       }
 
       if (state.daily[`${today}`]) {
-        state.daily[`${today}`].push({ id, key, log });
+        state.daily[`${today}`].push({ id, key, log, check });
       }
 
       const userState = JSON.parse(localStorage.getItem('user'));
