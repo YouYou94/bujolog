@@ -40,7 +40,24 @@ const daillySlice = createSlice({
 
       console.log('데일리로그 추가 완료!');
     },
-    deleteDailyLog(state, action) {},
+    deleteDailyLog(state, action) {
+      const { today, id } = action.payload;
+
+      console.log(id);
+
+      const userState = JSON.parse(localStorage.getItem('user'));
+
+      const changeState = state.daily[`${today}`].filter(log => log.id !== id);
+
+      state.daily = { ...state.daily, [`${today}`]: changeState };
+
+      localStorage.setItem(
+        'user',
+        JSON.stringify({ ...userState, dailylog: state.daily })
+      );
+
+      console.log('데일리로그 삭제 완료!');
+    },
   },
 });
 
