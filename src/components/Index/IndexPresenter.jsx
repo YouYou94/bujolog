@@ -26,9 +26,9 @@ const IndexPresenter = ({
             <Styled.IndexItem onClick={handleMoveDailyLog}>
               ─ DAILY LOG
             </Styled.IndexItem>
-            <Styled.IndexItem onClick={handleMoveMoodTracker}>
+            {/* <Styled.IndexItem onClick={handleMoveMoodTracker}>
               ─ MOOD TRACKER
-            </Styled.IndexItem>
+            </Styled.IndexItem> */}
           </Styled.IndexMenu>
         </Styled.IndexBox>
       </Styled.Container>
