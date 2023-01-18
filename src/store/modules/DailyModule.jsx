@@ -43,8 +43,6 @@ const daillySlice = createSlice({
     deleteDailyLog(state, action) {
       const { today, id } = action.payload;
 
-      console.log(id);
-
       const userState = JSON.parse(localStorage.getItem('user'));
 
       const changeState = state.daily[`${today}`].filter(log => log.id !== id);
@@ -58,8 +56,34 @@ const daillySlice = createSlice({
 
       console.log('데일리로그 삭제 완료!');
     },
+    checkDailyLog(state, action) {
+      const { seletDailyLog, today, id } = action.payload;
+
+      const { key, log, check } = seletDailyLog;
+
+      console.log(id);
+
+      const userState = JSON.parse(localStorage.getItem('user'));
+
+      const checkState = { id, key, log, check: !check };
+
+      const changeState = state.daily[`${today}`].map(log =>
+        log.id === id ? checkState : log
+      );
+
+      state.daily = { ...state.daily, [`${today}`]: changeState };
+
+      localStorage.setItem(
+        'user',
+        JSON.stringify({
+          ...userState,
+          dailylog: state.daily,
+        })
+      );
+    },
   },
 });
 
-export const { createDailyLog, deleteDailyLog } = daillySlice.actions;
+export const { createDailyLog, deleteDailyLog, checkDailyLog } =
+  daillySlice.actions;
 export default daillySlice;
