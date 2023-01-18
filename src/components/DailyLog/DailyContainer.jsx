@@ -46,6 +46,7 @@ const DailyContainer = () => {
     today,
     key: '',
     log: '',
+    check: false,
   });
 
   const onInitialState = () => {
@@ -55,6 +56,7 @@ const DailyContainer = () => {
       today,
       key: '',
       log: '',
+      check: false,
     });
   };
 

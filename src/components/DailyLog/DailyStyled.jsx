@@ -47,6 +47,8 @@ export const LogItem = styled.li`
 `;
 
 export const LogView = styled.div`
+  position: relative;
+
   flex: 1;
 
   height: 2.5rem;
@@ -129,6 +131,16 @@ export const DeleteButton = styled.button`
 
     background-color: rgb(180, 200, 185);
   }
+`;
+
+export const CheckLine = styled.div`
+  position: absolute;
+
+  left: 5%;
+
+  width: 90%;
+
+  border-top: 1px solid rgb(35, 35, 35);
 `;
 
 export const CreateLabel = styled.label`

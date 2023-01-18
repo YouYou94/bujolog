@@ -25,13 +25,14 @@ const DailyPresenter = ({
           <Styled.TodayLabel>{today}</Styled.TodayLabel>
           <Styled.LogList>
             {userDailyLogList[today]?.map(dailylog => {
-              const { id, key, log } = dailylog;
+              const { id, key, log, check } = dailylog;
 
               return (
                 <Styled.LogItem key={id} id={id}>
                   <Styled.LogView>
                     <Styled.Icon icon={key} />
                     <Styled.Log>{log}</Styled.Log>
+                    {check ? <Styled.CheckLine /> : <></>}
                   </Styled.LogView>
                   <Styled.DeleteButton>체크</Styled.DeleteButton>
                   <Styled.DeleteButton id={id} onClick={handleDeleteDailyLog}>
