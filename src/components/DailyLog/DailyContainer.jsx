@@ -2,6 +2,7 @@ import { customAlphabet } from 'nanoid';
 import { useState, useRef, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import {
+  checkDailyLog,
   createDailyLog,
   deleteDailyLog,
 } from '../../store/modules/DailyModule';
@@ -111,6 +112,17 @@ const DailyContainer = () => {
     dispatch(deleteDailyLog({ today, id }));
   };
 
+  /* 데일리로그 체크 기능 */
+  const handleCheckDailyLog = event => {
+    const { id } = event.currentTarget;
+
+    const seletDailyLog = userDailyLogList[`${today}`].find(
+      log => log.id === id
+    );
+
+    dispatch(checkDailyLog({ seletDailyLog, today, id }));
+  };
+
   /* 모달 영역 밖 클릭 시 모달창 닫힘 기능 */
   const handleClickOutSide = event => {
     if (
@@ -147,6 +159,7 @@ const DailyContainer = () => {
       handleClickIcon={handleClickIcon}
       handleCreateDailyLog={handleCreateDailyLog}
       handleDeleteDailyLog={handleDeleteDailyLog}
+      handleCheckDailyLog={handleCheckDailyLog}
     />
   );
 };
