@@ -15,6 +15,7 @@ const DailyPresenter = ({
   handleChangeCreateStateLog,
   handleClickIcon,
   handleCreateDailyLog,
+  handleDeleteDailyLog,
 }) => {
   return (
     <ImageLayout>
@@ -33,7 +34,9 @@ const DailyPresenter = ({
                     <Styled.Log>{log}</Styled.Log>
                   </Styled.LogView>
                   <Styled.DeleteButton>체크</Styled.DeleteButton>
-                  <Styled.DeleteButton>삭제</Styled.DeleteButton>
+                  <Styled.DeleteButton id={id} onClick={handleDeleteDailyLog}>
+                    삭제
+                  </Styled.DeleteButton>
                 </Styled.LogItem>
               );
             })}

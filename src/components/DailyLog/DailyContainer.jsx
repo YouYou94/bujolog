@@ -1,7 +1,10 @@
 import { customAlphabet } from 'nanoid';
 import { useState, useRef, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { createDailyLog } from '../../store/modules/DailyModule';
+import {
+  createDailyLog,
+  deleteDailyLog,
+} from '../../store/modules/DailyModule';
 import DailyPresenter from './DailyPresenter';
 
 const MENUAL = {
@@ -100,6 +103,12 @@ const DailyContainer = () => {
     }
   };
 
+  const handleDeleteDailyLog = event => {
+    const { id } = event.currentTarget;
+
+    dispatch(deleteDailyLog({ today, id }));
+  };
+
   /* 모달 영역 밖 클릭 시 모달창 닫힘 기능 */
   const handleClickOutSide = event => {
     if (
@@ -135,6 +144,7 @@ const DailyContainer = () => {
       handleChangeCreateStateLog={handleChangeCreateStateLog}
       handleClickIcon={handleClickIcon}
       handleCreateDailyLog={handleCreateDailyLog}
+      handleDeleteDailyLog={handleDeleteDailyLog}
     />
   );
 };
