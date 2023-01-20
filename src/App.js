@@ -7,7 +7,6 @@ import {
   DailylogPage,
   MoodtrackerPage,
 } from './pages';
-import './App.css';
 
 function App() {
   return (
